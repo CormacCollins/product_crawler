@@ -102,3 +102,56 @@ descr = prod_descr.find_all(text=True)
 print(descr)
 
 # data table additional-attributes
+add_attr = soup.find(class_ = 'data table additional-attributes').find('tbody')
+rows = add_attr.find_all('th')
+row_data = add_attr.find_all('td')
+key_val_add_attr = {}
+for i in range(0, len(rows)):
+    key_val_add_attr[rows[i].text.strip()] = row_data[i].text.strip()
+print(key_val_add_attr)
+
+# nutrition-ingredient-value
+
+ingredients = soup.find(class_ = 'nutrition-ingredient-value').text
+print(ingredients)
+
+allergin_info = soup.find(class_ = 'nutrition-AllergenStatement-value').text
+print(allergin_info)
+
+#section serving-size
+serving_size = soup.find(class_ = 'section serving-size').text
+print(serving_size)
+
+# function to get these same data tables
+def get_table_data(class_heirarchy_list, row_class_class, row_data_class, soup):
+    add_attr = soup.find(class_ = class_heirarchy_list[0])
+    class_heirarchy_list.pop(0)
+    for i in class_heirarchy_list:
+        add_attr = add_attr.find(class_ = i)
+    
+    rows = add_attr.find_all(class_ = row_class_class)
+    row_data = add_attr.find_all(class_ = row_data_class)
+    key_val_nutr_d = {}
+    for i in range(0, len(rows)):
+        key_val_nutr_d[rows[i].text.strip()] = row_data[i].text.strip()
+    return key_val_nutr_d
+
+#section nutrient-data
+'''
+add_attr = soup.find(class_ = 'section nutrient-data').find(class_ = 'section-data')
+rows = add_attr.find_all(class_ = 'nutrition-name')
+row_data = add_attr.find_all(class_ = 'nutrition-value amt')
+key_val_nutr_d = {}
+for i in range(0, len(rows)):
+    key_val_nutr_d[rows[i].text.strip()] = row_data[i].text.strip()
+print(key_val_nutr_d)
+'''
+
+# Nutrient table data
+d_list = list()
+d_list.append('section nutrient-data')
+d_list.append('section-data')
+d = get_table_data(d_list, 'nutrition-name', 'nutrition-value amt', soup)
+print(d)
+
+# should be able to get the rest of table data with same method
