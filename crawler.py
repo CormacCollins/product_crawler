@@ -119,8 +119,13 @@ allergin_info = soup.find(class_ = 'nutrition-AllergenStatement-value').text
 print(allergin_info)
 
 #section serving-size
-serving_size = soup.find(class_ = 'section serving-size').text
-print(serving_size)
+serv_size = soup.find_all(class_ = 'section serving-size')
+serving_size_nutrient_data_1 = serv_size[0].text
+print(serving_size_nutrient_data_1)
+serving_size_nutrient_data_2 = serv_size[1].text
+print(serving_size_nutrient_data_2)
+
+
 
 # function to get these same data tables
 def get_table_data(class_heirarchy_list, row_class_class, row_data_class, soup):
@@ -136,22 +141,64 @@ def get_table_data(class_heirarchy_list, row_class_class, row_data_class, soup):
         key_val_nutr_d[rows[i].text.strip()] = row_data[i].text.strip()
     return key_val_nutr_d
 
-#section nutrient-data
-'''
-add_attr = soup.find(class_ = 'section nutrient-data').find(class_ = 'section-data')
-rows = add_attr.find_all(class_ = 'nutrition-name')
-row_data = add_attr.find_all(class_ = 'nutrition-value amt')
-key_val_nutr_d = {}
-for i in range(0, len(rows)):
-    key_val_nutr_d[rows[i].text.strip()] = row_data[i].text.strip()
-print(key_val_nutr_d)
-'''
 
-# Nutrient table data
+#section nutrient-data
+#there can be a special case where there are 2 nutrient datas - relative to 2 types of serving size
+nutrition_table_1 = {}
+nutrition_table_2 = {}
+
+#Get up to 2 times
+add_attr = soup.find_all(class_ = 'section nutrient-data')
+print("Number of nutrient sections: {}".format(len(add_attr)))
+if len(add_attr) > 2: 
+    # We do not expect this
+    print('Must recode data model for more than 2 nutrition tables')
+elif len(add_attr) == 2:
+
+    #nutrition data 1
+    section_data = add_attr[0].find(class_='section-data')
+    rows = section_data.find_all(class_ = 'nutrition-name')
+    row_data = section_data.find_all(class_ = 'nutrition-value amt')
+
+    for i in range(0, len(rows)):
+        nutrition_table_1[rows[i].text.strip()] = row_data[i].text.strip()
+
+    #nutrition data 2
+    section_data = add_attr[1].find(class_='section-data')
+    rows = section_data.find_all(class_ = 'nutrition-name')
+    row_data = section_data.find_all(class_ = 'nutrition-value amt')
+
+    for i in range(0, len(rows)):
+        nutrition_table_2[rows[i].text.strip()] = row_data[i].text.strip()
+
+else: #only 1
+    #nutrition data 1
+    section_data = add_attr[0].find(class_='section-data')
+    rows = section_data.find_all(class_ = 'nutrition-name')[0].text
+    row_data = section_data.find_all(class_ = 'nutrition-value amt')[0].text
+
+    for i in range(0, len(rows)):
+        nutrition_table_1[rows[i].text.strip()] = row_data[i].text.strip()
+
+print(nutrition_table_1)
+print(nutrition_table_2)
+
+
+# need to do 2 * possibility for vit min aswell
+
+
 d_list = list()
-d_list.append('section nutrient-data')
+d_list.append('section vitamin-data')
 d_list.append('section-data')
 d = get_table_data(d_list, 'nutrition-name', 'nutrition-value amt', soup)
 print(d)
 
-# should be able to get the rest of table data with same method
+
+
+d_list = list()
+d_list.append('section minerals-data')
+d_list.append('section-data')
+d = get_table_data(d_list, 'nutrition-name', 'nutrition-value amt', soup)
+print(d)
+
+
