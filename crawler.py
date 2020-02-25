@@ -141,6 +141,39 @@ def get_table_data(class_heirarchy_list, row_class_class, row_data_class, soup):
         key_val_nutr_d[rows[i].text.strip()] = row_data[i].text.strip()
     return key_val_nutr_d
 
+def get_prod_table_data(class_title_list, dict_1, dict_2, soup):
+    if len(class_title_list) > 2: 
+    # We do not expect this
+    print('Must recode data model for more than 2 nutrition tables')
+elif len(class_title_list) == 2:
+
+    #nutrition data 1
+    section_data = class_title_list[0].find(class_='section-data')
+    rows = section_data.find_all(class_ = 'nutrition-name')
+    row_data = section_data.find_all(class_ = 'nutrition-value amt')
+
+    for i in range(0, len(rows)):
+        dict_1[rows[i].text.strip()] = row_data[i].text.strip()
+
+    #nutrition data 2
+    section_data = class_title_list[1].find(class_='section-data')
+    rows = section_data.find_all(class_ = 'nutrition-name')
+    row_data = section_data.find_all(class_ = 'nutrition-value amt')
+
+    for i in range(0, len(rows)):
+        dict_2[rows[i].text.strip()] = row_data[i].text.strip()
+
+else: #only 1
+    #nutrition data 1
+    section_data = class_title_list[0].find(class_='section-data')
+    rows = section_data.find_all(class_ = 'nutrition-name')[0].text
+    row_data = section_data.find_all(class_ = 'nutrition-value amt')[0].text
+
+    for i in range(0, len(rows)):
+        dict_1[rows[i].text.strip()] = row_data[i].text.strip()
+
+    return dict_1, dict_2
+
 
 #section nutrient-data
 #there can be a special case where there are 2 nutrient datas - relative to 2 types of serving size
@@ -150,6 +183,10 @@ nutrition_table_2 = {}
 #Get up to 2 times
 add_attr = soup.find_all(class_ = 'section nutrient-data')
 print("Number of nutrient sections: {}".format(len(add_attr)))
+nutrient_dicts = get_prod_table_data(add_attr, soup):
+print(nutrient_dicts[0])
+print(nutrient_dicts[1])
+'''
 if len(add_attr) > 2: 
     # We do not expect this
     print('Must recode data model for more than 2 nutrition tables')
@@ -179,26 +216,39 @@ else: #only 1
 
     for i in range(0, len(rows)):
         nutrition_table_1[rows[i].text.strip()] = row_data[i].text.strip()
+'''
 
-print(nutrition_table_1)
-print(nutrition_table_2)
+#Get up to 2 times
+add_attr = soup.find_all(class_ = 'section vitamin-data')
+print("Number of vitamin sections: {}".format(len(add_attr)))
+vitamin_dicts = get_prod_table_data(add_attr, soup):
+print(vitamin_dicts[0])
+print(vitamin_dicts[1])
 
 
-# need to do 2 * possibility for vit min aswell
-
+'''
 
 d_list = list()
 d_list.append('section vitamin-data')
 d_list.append('section-data')
 d = get_table_data(d_list, 'nutrition-name', 'nutrition-value amt', soup)
 print(d)
+'''
+
+#Get up to 2 times
+add_attr = soup.find_all(class_ = 'section minerals-data')
+print("Number of minerals sections: {}".format(len(add_attr)))
+minerals_dicts = get_prod_table_data(add_attr, soup):
+print(minerals_dicts[0])
+print(minerals_dicts[1])
 
 
+'''
 
 d_list = list()
 d_list.append('section minerals-data')
 d_list.append('section-data')
 d = get_table_data(d_list, 'nutrition-name', 'nutrition-value amt', soup)
 print(d)
-
+'''
 
