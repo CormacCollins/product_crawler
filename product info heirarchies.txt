@@ -1,0 +1,10 @@
+Nutr Facts:
+class: 'data item content'
+ --> ingredients: 
+ --> Allergen Statement:
+ --> Serving Size
+*I have not seen different layout at this point
+
+Nutr tables:
+class: 'data item content'
+ -->
