@@ -3,7 +3,8 @@ import requests
 import re
 import csv
 import string
-
+from selenium import webdriver
+from selenium.webdriver.support.ui import Select
 
 
 # get links for all the products displayed on that page
@@ -108,7 +109,7 @@ def get_product_links(RE_QUERY_PRODUCT_LINKS = False):
             get_products_from_product_page(link, product_links)
             #just for first product list
             #TODO: remove for getting full range!
-            break
+            
 
         print("Prod num {}".format(len(product_links)))
         print(product_links[1:10])
@@ -132,16 +133,46 @@ def get_product_links(RE_QUERY_PRODUCT_LINKS = False):
 #get information on 1 link
 def get_product_info(prod_url):
     
-    PRODUCT_INFORMATION = {}
-
-    PRODUCT_INFORMATION['url'] = prod_url
     print(prod_url)
+
+    PRODUCT_INFORMATION = {'url':'', 'name':'', 'price':'', ...}
+    PRODUCT_INFORMATION['url'] = prod_url
+    
+    
     page = requests.get(prod_url)
-    soup = BeautifulSoup(page.content, 'html.parser')
+    soup = BeautifulSoup(page.content, 'html.parser') 
+
+    # get product name
+    name = soup.find(class_ = 'base')
+    nm = name.find_all(text=True)
+    nm = ''.join(nm)
+    PRODUCT_INFORMATION['name'] = nm
+
+    price = soup.find(class_ = 'price')
+    p = price.text
+    PRODUCT_INFORMATION['price'] = p
+
+    size_weight = soup.find(class_ = 'size-or-weight')
+    sw = size_weight.text.lstrip()
+    PRODUCT_INFORMATION['size_or_weight'] = sw
+
+    # get availability info
+    availability = soup.find(class_ = 'stock available')
+    a = availability.find_all(text=True)
+    a = ''.join(a).strip('\n')
+    PRODUCT_INFORMATION['availability'] = a
+
+    item_attr = soup.find(class_ = 'product attribute sku')
+    it_type = item_attr.find(class_="type")
+    it = it_type.text
+    type_num = item_attr.find(class_= "value").text
+    PRODUCT_INFORMATION['item_type'] = it + "#:" + type_num
+
+
     prod_descr = soup.find(class_ = 'product attribute description')
     descr = prod_descr.find_all(text=True)
     info = ''.join(descr)
-    PRODUCT_INFORMATION['description'] = info
+    PRODUCT_INFORMATION['description'] = info.lstrip()
 
     # data table additional-attributes
     add_attr = soup.find(class_ = 'data table additional-attributes').find('tbody')
@@ -152,16 +183,16 @@ def get_product_info(prod_url):
 
     # nutrition-ingredient-value
     ingredients = soup.find(class_ = 'nutrition-ingredient-value').text
-    PRODUCT_INFORMATION['ingredients'] = ingredients
+    PRODUCT_INFORMATION['ingredients'] = ingredients.lstrip()
 
     allergin_info = soup.find(class_ = 'nutrition-AllergenStatement-value').text
-    PRODUCT_INFORMATION['allergin_info'] = allergin_info
+    PRODUCT_INFORMATION['allergin_info'] = allergin_info.lstrip()
 
     #section serving-size
     serv_size = soup.find_all(class_ = 'section serving-size')
     for i in range(0, len(serv_size)):
         ss = serv_size[i].text
-        PRODUCT_INFORMATION['serving_size_' + str(i+1)] = ss
+        PRODUCT_INFORMATION['serving_size_' + str(i+1)] = ss.lstrip()
 
     footnotes = soup.find_all(class_ = 'nutrition-footnote')
     f = ''
@@ -192,6 +223,9 @@ def get_product_info(prod_url):
     minerals_dicts = get_prod_table_data(add_attr, soup)
     for i in range(0, len(minerals_dicts)-1):
         PRODUCT_INFORMATION['mineral_table_' + str(i+1)] = minerals_dicts[i]
+
+    #for k,v in PRODUCT_INFORMATION.items():
+    #    print('{}:{}'.format(k,v))
 
     return PRODUCT_INFORMATION
 
