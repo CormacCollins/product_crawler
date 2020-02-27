@@ -107,8 +107,6 @@ def get_product_links(RE_QUERY_PRODUCT_LINKS = False):
             
             print(link)
             get_products_from_product_page(link, product_links)
-            #just for first product list
-            #TODO: remove for getting full range!
             
 
         print("Prod num {}".format(len(product_links)))
@@ -135,7 +133,12 @@ def get_product_info(prod_url):
     
     print(prod_url)
 
-    PRODUCT_INFORMATION = {'url':'', 'name':'', 'price':'', ...}
+    PRODUCT_INFORMATION = {'url':'', 'name':'', 'price':'', 'size_or_weight':'','availability':'',	
+                            'item_type':'',	'description':'', 'ingredients':'',	'allergin_info':'',	'serving_size_1':'', 
+                            'serving_size_2':'', 'footnotes':'', 'nutrient_table_1': '', 'vitamin_table_1':'',	
+                            'mineral_table_1':'', 'nutrient_table_2': '', 'vitamin_table_2':'',	
+                            'mineral_table_2':'', 'more_info_1':'', 'more_info_2':'', 'more_info_3':''}
+
     PRODUCT_INFORMATION['url'] = prod_url
     
     
@@ -143,62 +146,93 @@ def get_product_info(prod_url):
     soup = BeautifulSoup(page.content, 'html.parser') 
 
     # get product name
-    name = soup.find(class_ = 'base')
-    nm = name.find_all(text=True)
-    nm = ''.join(nm)
-    PRODUCT_INFORMATION['name'] = nm
+    try:
+        name = soup.find(class_ = 'base')
+        nm = name.find_all(text=True)
+        nm = ''.join(nm)
+        PRODUCT_INFORMATION['name'] = nm
+    except:
+        print("Could not add name category")
+    try:    
+        price = soup.find(class_ = 'price')
+        p = price.text
+        PRODUCT_INFORMATION['price'] = p
+    except:
+        print("Could not add price category")
 
-    price = soup.find(class_ = 'price')
-    p = price.text
-    PRODUCT_INFORMATION['price'] = p
-
-    size_weight = soup.find(class_ = 'size-or-weight')
-    sw = size_weight.text.lstrip()
-    PRODUCT_INFORMATION['size_or_weight'] = sw
+    try:
+        size_weight = soup.find(class_ = 'size-or-weight')
+        sw = size_weight.text.lstrip()
+        PRODUCT_INFORMATION['size_or_weight'] = sw
+    except:
+        print("Could not add size_or_weight category")
 
     # get availability info
-    availability = soup.find(class_ = 'stock available')
-    a = availability.find_all(text=True)
-    a = ''.join(a).strip('\n')
-    PRODUCT_INFORMATION['availability'] = a
+    try:
+        availability = soup.find(title = 'Availability')
+        a = availability.find_all(text=True)
+        a = ''.join(a).strip('\n')
+        PRODUCT_INFORMATION['availability'] = a
+    except:
+        print("Could not add availability category")
 
-    item_attr = soup.find(class_ = 'product attribute sku')
-    it_type = item_attr.find(class_="type")
-    it = it_type.text
-    type_num = item_attr.find(class_= "value").text
-    PRODUCT_INFORMATION['item_type'] = it + "#:" + type_num
+    try:
+        item_attr = soup.find(class_ = 'product attribute sku')
+        it_type = item_attr.find(class_="type")
+        it = it_type.text
+        type_num = item_attr.find(class_= "value").text
+        PRODUCT_INFORMATION['item_type'] = it + "#:" + type_num
+    except:
+        print("Could not add item_type category")
 
-
-    prod_descr = soup.find(class_ = 'product attribute description')
-    descr = prod_descr.find_all(text=True)
-    info = ''.join(descr)
-    PRODUCT_INFORMATION['description'] = info.lstrip()
+    try:
+        prod_descr = soup.find(class_ = 'product attribute description')
+        descr = prod_descr.find_all(text=True)
+        info = ''.join(descr)
+        PRODUCT_INFORMATION['description'] = info.lstrip()
+    except:
+        print("Could not add name description")
 
     # data table additional-attributes
-    add_attr = soup.find(class_ = 'data table additional-attributes').find('tbody')
-    rows = add_attr.find_all('th')
-    row_data = add_attr.find_all('td')
-    for i in range(0, len(rows)):
-        PRODUCT_INFORMATION[rows[i].text.strip()] = row_data[i].text.strip()
+    try:
+        add_attr = soup.find(class_ = 'data table additional-attributes').find('tbody')
+        rows = add_attr.find_all('th')
+        row_data = add_attr.find_all('td')
+        for i in range(0, len(rows)):
+            PRODUCT_INFORMATION['more_info_' + str(i+1)] = row_data[i].text.strip()
+    except:
+        print("Could not add additional attributes categories")
 
     # nutrition-ingredient-value
-    ingredients = soup.find(class_ = 'nutrition-ingredient-value').text
-    PRODUCT_INFORMATION['ingredients'] = ingredients.lstrip()
+    try:
+        ingredients = soup.find(class_ = 'nutrition-ingredient-value')
+        PRODUCT_INFORMATION['ingredients'] = ingredients.text.lstrip()
+    except:
+        print("Could not add ingredients category")
 
-    allergin_info = soup.find(class_ = 'nutrition-AllergenStatement-value').text
-    PRODUCT_INFORMATION['allergin_info'] = allergin_info.lstrip()
+    try:
+        allergin_info = soup.find(class_ = 'nutrition-AllergenStatement-value')
+        PRODUCT_INFORMATION['allergin_info'] = allergin_info.text.lstrip()
+    except:
+        print("Could not add allergin_info category")
 
     #section serving-size
-    serv_size = soup.find_all(class_ = 'section serving-size')
-    for i in range(0, len(serv_size)):
-        ss = serv_size[i].text
-        PRODUCT_INFORMATION['serving_size_' + str(i+1)] = ss.lstrip()
+    try:
+        serv_size = soup.find_all(class_ = 'section serving-size')
+        for i in range(0, len(serv_size)):
+            ss = serv_size[i].text
+            PRODUCT_INFORMATION['serving_size_' + str(i+1)] = ss.lstrip()
+    except:
+        print("Could not add serving size category")
 
-    footnotes = soup.find_all(class_ = 'nutrition-footnote')
-    f = ''
-    for i in footnotes:
-        f = f + " " + i.find(class_='footnote').text + '\n'
-    PRODUCT_INFORMATION['footnotes'] = f
+    try:
+        footnotes = soup.find_all(class_ = 'nutrition-footnote')
+        f = ''
+        for i in footnotes:
+            f = f + " " + i.find(class_='footnote').text + '\n'
+        PRODUCT_INFORMATION['footnotes'] = f
+    except:
+        print("Could not add footnote categories")
 
 
 
@@ -207,23 +241,29 @@ def get_product_info(prod_url):
 
 
     #Get up to 2 times nutrient table data
-    add_attr = soup.find_all(class_ = 'section nutrient-data')
-    nutrient_dicts = get_prod_table_data(add_attr, soup)
-    for i in range(0, len(nutrient_dicts)-1):
-        PRODUCT_INFORMATION['nutrient_table_' + str(i+1)] = nutrient_dicts[i]
-
+    try:
+        add_attr = soup.find_all(class_ = 'section nutrient-data')
+        nutrient_dicts = get_prod_table_data(add_attr, soup)
+        for i in range(0, len(nutrient_dicts)-1):
+            PRODUCT_INFORMATION['nutrient_table_' + str(i+1)] = nutrient_dicts[i]
+    except:
+        print("Could not add nutrient_tables categories")
     #Get up to 2 times vitamin table data
-    add_attr = soup.find_all(class_ = 'section vitamin-data')
-    vitamin_dicts = get_prod_table_data(add_attr, soup)
-    for i in range(0, len(vitamin_dicts)-1):
-        PRODUCT_INFORMATION['vitamin_table_' + str(i+1)] = vitamin_dicts[i]
-
+    try:
+        add_attr = soup.find_all(class_ = 'section vitamin-data')
+        vitamin_dicts = get_prod_table_data(add_attr, soup)
+        for i in range(0, len(vitamin_dicts)-1):
+            PRODUCT_INFORMATION['vitamin_table_' + str(i+1)] = vitamin_dicts[i]
+    except:
+        print("Could not add vitamin_table categories")
     #Get up to 2 times minerals table data
-    add_attr = soup.find_all(class_ = 'section minerals-data')
-    minerals_dicts = get_prod_table_data(add_attr, soup)
-    for i in range(0, len(minerals_dicts)-1):
-        PRODUCT_INFORMATION['mineral_table_' + str(i+1)] = minerals_dicts[i]
-
+    try:
+        add_attr = soup.find_all(class_ = 'section minerals-data')
+        minerals_dicts = get_prod_table_data(add_attr, soup)
+        for i in range(0, len(minerals_dicts)-1):
+            PRODUCT_INFORMATION['mineral_table_' + str(i+1)] = minerals_dicts[i]
+    except:
+        print("Could not add mineral_table categories")
     #for k,v in PRODUCT_INFORMATION.items():
     #    print('{}:{}'.format(k,v))
 

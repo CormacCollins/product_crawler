@@ -23,5 +23,5 @@ def create_sheet(data_dict):
 def write(data_dict):
     create_sheet(data_dict)
     df = pd.DataFrame([data_dict])
-    print(df.url)
+    #print(df.url)
     df.to_csv('data.csv', mode='a', header=False)
