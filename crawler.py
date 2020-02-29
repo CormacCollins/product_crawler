@@ -5,6 +5,7 @@ import csv
 import string
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
+from time import sleep
 
 
 # get links for all the products displayed on that page
@@ -37,8 +38,22 @@ def get_products_from_product_page(prod_page_link, product_links):
 # Gets upto 2 of the requested table - either vitamin, minerals, nutrients
 # needs to be tested as there may be unseen products with more than 2 tables
 def get_prod_table_data(class_title_list, soup):
-    dict_1 = {}
-    dict_2 = {}
+    dict_list = list()
+
+    for tbl in class_title_list:
+        new_dict = {}
+        #nutrition data 1
+        section_data = tbl.find(class_='section-data')
+        rows = section_data.find_all(class_ = 'nutrition-name')
+        row_data = section_data.find_all(class_ = 'nutrition-value amt')
+
+        for i in range(0, len(rows)):
+            new_dict[rows[i].text.strip()] = row_data[i].text.strip()
+
+        dict_list.append(new_dict)
+
+    return dict_list
+    '''
     if len(class_title_list) > 2: 
     # We do not expect this
         print('Must recode data model for more than 2 nutrition tables')
@@ -70,7 +85,7 @@ def get_prod_table_data(class_title_list, soup):
             dict_1[rows[i].text.strip()] = row_data[i].text.strip()
 
     return dict_1, dict_2
-
+    '''
 
 ### RE_QUERY_PRODUCT_LINKS if all urls needed to be refreshed
 ### else will use csv file
@@ -80,7 +95,23 @@ def get_product_links(RE_QUERY_PRODUCT_LINKS = False):
     if RE_QUERY_PRODUCT_LINKS:
 
         site = "https://abbottstore.com/"
-        page = requests.get(site)
+
+        # if query fails due to a connection error then sleep for 5 sec and retry again
+        # up to 5 retries
+
+        retry_requests = 5
+        while retry_requests > 0:
+            try:
+                page = requests.get(site)
+                retry_requests = 0
+            except requests.exceptions.ConnectionError:
+                retry_requests = retry_requests - 1
+                if retry_requests == 0:
+                    print("Could not connect after 5 attempts to:\n{}".format(site))
+                print("Connection error - 5 second delay before re-request")                
+                sleep(5)
+
+
         soup = BeautifulSoup(page.content, 'html.parser')
 
         #get menu with links
@@ -135,9 +166,12 @@ def get_product_info(prod_url):
 
     PRODUCT_INFORMATION = {'url':'', 'name':'', 'price':'', 'size_or_weight':'','availability':'',	
                             'item_type':'',	'description':'', 'ingredients':'',	'allergin_info':'',	'serving_size_1':'', 
-                            'serving_size_2':'', 'footnotes':'', 'nutrient_table_1': '', 'vitamin_table_1':'',	
-                            'mineral_table_1':'', 'nutrient_table_2': '', 'vitamin_table_2':'',	
-                            'mineral_table_2':'', 'more_info_1':'', 'more_info_2':'', 'more_info_3':''}
+                            'serving_size_2':'', 'serving_size_3':'', 'serving_size_4':'', 'serving_size_5':'', 
+                            'footnotes':'', 'nutrient_table_1': '', 'nutrient_table_2': '', 'nutrient_table_3': '', 
+                            'nutrient_table_4': '', 'nutrient_table_5': '', 
+                            'vitamin_table_1':'', 'vitamin_table_2':'', 'vitamin_table_3':'', 'vitamin_table_4':'', 'vitamin_table_5':'',	
+                            'mineral_table_1':'', 'mineral_table_2':'', 'mineral_table_3':'', 'mineral_table_4':'', 'mineral_table_5':'', 
+                            'more_info_1':'', 'more_info_2':'', 'more_info_3':'', 'more_info_4':''}
 
     PRODUCT_INFORMATION['url'] = prod_url
     
@@ -243,25 +277,33 @@ def get_product_info(prod_url):
     #Get up to 2 times nutrient table data
     try:
         add_attr = soup.find_all(class_ = 'section nutrient-data')
-        nutrient_dicts = get_prod_table_data(add_attr, soup)
-        for i in range(0, len(nutrient_dicts)-1):
-            PRODUCT_INFORMATION['nutrient_table_' + str(i+1)] = nutrient_dicts[i]
+        #gets list of nutrient table data dictionaries and adds them
+        count = 1
+        for nutrient_dict in get_prod_table_data(add_attr, soup):
+            if count > 5:
+                print("Nutrient table number {} could not be added".format(count))
+            #print('nutrient_table_' + str(count))
+            PRODUCT_INFORMATION['nutrient_table_' + str(count)] = nutrient_dict
+            count = count + 1
+                            
     except:
         print("Could not add nutrient_tables categories")
     #Get up to 2 times vitamin table data
     try:
         add_attr = soup.find_all(class_ = 'section vitamin-data')
-        vitamin_dicts = get_prod_table_data(add_attr, soup)
-        for i in range(0, len(vitamin_dicts)-1):
-            PRODUCT_INFORMATION['vitamin_table_' + str(i+1)] = vitamin_dicts[i]
+        count = 1
+        for vitamin_dict in get_prod_table_data(add_attr, soup):
+            PRODUCT_INFORMATION['vitamin_table_' + str(count)] = vitamin_dict
+            count = count + 1
     except:
         print("Could not add vitamin_table categories")
     #Get up to 2 times minerals table data
     try:
         add_attr = soup.find_all(class_ = 'section minerals-data')
-        minerals_dicts = get_prod_table_data(add_attr, soup)
-        for i in range(0, len(minerals_dicts)-1):
-            PRODUCT_INFORMATION['mineral_table_' + str(i+1)] = minerals_dicts[i]
+        count = 1
+        for minerals_dicts in get_prod_table_data(add_attr, soup):
+            PRODUCT_INFORMATION['mineral_table_' + str(count)] = minerals_dicts
+            count = count + 1
     except:
         print("Could not add mineral_table categories")
     #for k,v in PRODUCT_INFORMATION.items():
