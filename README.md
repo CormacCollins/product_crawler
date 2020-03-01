@@ -59,6 +59,8 @@ https://www.flavourcreations.com.au/products/
 
 
 
+## Final Product
+
 A SQL database will be created in the end which can either become:
 
 - A data product
