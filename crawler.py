@@ -3,8 +3,6 @@ import requests
 import re
 import csv
 import string
-from selenium import webdriver
-from selenium.webdriver.support.ui import Select
 from time import sleep
 
 
@@ -145,7 +143,7 @@ def get_product_links(RE_QUERY_PRODUCT_LINKS = False):
 
         #write to csv for easier work during development:
         #just sotring the product links
-        with open('product_links.csv', 'a', newline='') as csvfileWrite:
+        with open('product_links.csv', 'w', newline='') as csvfileWrite:
             writer = csv.writer(csvfileWrite, delimiter=',')
             for l in product_links:
                 writer.writerow([l])
@@ -171,7 +169,7 @@ def get_product_info(prod_url):
                             'nutrient_table_4': '', 'nutrient_table_5': '', 
                             'vitamin_table_1':'', 'vitamin_table_2':'', 'vitamin_table_3':'', 'vitamin_table_4':'', 'vitamin_table_5':'',	
                             'mineral_table_1':'', 'mineral_table_2':'', 'mineral_table_3':'', 'mineral_table_4':'', 'mineral_table_5':'', 
-                            'more_info_1':'', 'more_info_2':'', 'more_info_3':'', 'more_info_4':''}
+                            'Sizes':'', 'Form':'', 'Flavours':'', }
 
     PRODUCT_INFORMATION['url'] = prod_url
     
@@ -233,9 +231,27 @@ def get_product_info(prod_url):
         rows = add_attr.find_all('th')
         row_data = add_attr.find_all('td')
         for i in range(0, len(rows)):
-            PRODUCT_INFORMATION['more_info_' + str(i+1)] = row_data[i].text.strip()
+            info_title = rows[i].text.strip()
+            # flavor will be a seperate dictionary of values added later
+            if info_title != 'Flavor':
+                PRODUCT_INFORMATION[info_title] = row_data[i].text.strip()
     except:
         print("Could not add additional attributes categories")
+
+
+    # flavour categories
+    try:
+        product_cart_form = soup.find(id = 'product_addtocart_form')
+        div_titles = product_cart_form.find_all(class_ = 'falvour-title')
+        select_values = product_cart_form.find_all('select')
+        flavours = [select_values[i].text.strip() for i in range(0, len(div_titles)-1) if div_titles[i].text == 'Flavors']
+        #add dict of flavours - using first select option
+        #print(flavours[0].strip('\n').lsplit().splitlines())
+        text_flavs = "".join(flavours[0])
+        flavs = text_flavs.split()
+        PRODUCT_INFORMATION['Flavours'] = flavs
+    except:
+        print("Could not add flavour categories")
 
     # nutrition-ingredient-value
     try:
@@ -255,7 +271,7 @@ def get_product_info(prod_url):
         serv_size = soup.find_all(class_ = 'section serving-size')
         for i in range(0, len(serv_size)):
             ss = serv_size[i].text
-            PRODUCT_INFORMATION['serving_size_' + str(i+1)] = ss.lstrip()
+            PRODUCT_INFORMATION['serving_size_' + str(i+1)] = ss.lstrip().strip('Serving Size:').lstrip()
     except:
         print("Could not add serving size category")
 
