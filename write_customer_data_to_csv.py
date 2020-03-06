@@ -7,7 +7,7 @@ import csv
 
 # Df is adding a zero in first column, for now I have just made it a new column
 
-file_name = 'data.csv' #'test.csv'
+file_name = 'data2.csv' #'test.csv'
 
 def create_sheet(data_dict):
     if not path.exists(file_name):
