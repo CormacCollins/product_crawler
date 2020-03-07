@@ -33,7 +33,7 @@ Abbot_products.drop_duplicates(keep='first', inplace=True)
 #Ryan - Fair enough, was just taking out the ugly default index number
 
 #Abbot_products.set_index(['name'], inplace=True)
-Abbot_products.to_csv("Abbot_products.csv")
+Abbot_products.to_csv("Data/Abbot_products.csv")
 
 # -----------
 
@@ -57,7 +57,7 @@ Abbot_main_ingredients.sort_values('name', inplace=True, ascending=True)
 # We can make name the index here if wanted because the ingredients are the same for each varient
 Abbot_main_ingredients.set_index(['name'], inplace=True)
 Abbot_main_ingredients.drop_duplicates(keep='first', inplace=True)
-Abbot_main_ingredients.to_csv("Abott_products_ingredients.csv")
+Abbot_main_ingredients.to_csv("Data/Abott_products_ingredients.csv")
 
 # -----------
 
@@ -91,4 +91,4 @@ Abbot_product_flavours['Flavours'] = Abbot_product_flavours['Flavours'].str.repl
 Abbot_product_flavours['Flavours'] = Abbot_product_flavours['Flavours'].str.replace("Homemade", "Homemade Vanilla", regex=False)
 Abbot_product_flavours['Flavours'] = Abbot_product_flavours['Flavours'].str.replace("Vanilla", "", regex=False)
 Abbot_product_flavours = Abbot_product_flavours[(Abbot_product_flavours['Flavours'] != '')]
-Abbot_product_flavours.to_csv("Abott_products_flavours.csv")
+Abbot_product_flavours.to_csv("Data/Abott_products_flavours.csv")
