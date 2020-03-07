@@ -3,7 +3,7 @@ import numpy as np
 
 # Extract more features and create an individual table
 
-Abbot_products = pd.read_csv("data2.csv") #This could be replaced with output from other parser
+Abbot_products = pd.read_csv("Data/data2.csv") #This could be replaced with output from other parser
 
 #TODO/PRODUCT INFO RETHINK: 
 # The more info columns that are being turned into number_in_case, product_weight_numeric etc. are not just these, they can be variable, such as categories like {'Ready-to-feed', 'Concentrated liquid', 'Powder', 'Shake', 'Snack bar'} or flavour categories (Flavor categories can be scrapped seperately from another spot on the url)
@@ -39,7 +39,7 @@ Abbot_products.to_csv("Abbot_products.csv")
 
 # Set up table which shows all the ingredients for products vertically for analytics
 
-Abbot_products_ingredients_name = pd.read_csv("data2.csv") #This could be replaced with output from other parser
+Abbot_products_ingredients_name = pd.read_csv("Data/data2.csv") #This could be replaced with output from other parser
 
 Abbot_products_ingredients_name = Abbot_products_ingredients_name[pd.notnull(Abbot_products_ingredients_name['ID'])]
 Abbot_products_ingredients = Abbot_products_ingredients_name[['ID','ingredients']]
@@ -63,7 +63,7 @@ Abbot_main_ingredients.to_csv("Abott_products_ingredients.csv")
 
 # Set up table which shows all the flavours for products vertically for analytics
 
-Abbot_product_flavours_name = pd.read_csv("data2.csv") #This could be replaced with output from other parser
+Abbot_product_flavours_name = pd.read_csv("Data/data2.csv") #This could be replaced with output from other parser
 Abbot_product_flavours_name = Abbot_product_flavours_name[pd.notnull(Abbot_product_flavours_name['ID'])]
 Abbot_products_name = Abbot_product_flavours_name[['ID', 'name']]
 Abbot_product_flavours = Abbot_product_flavours_name[['ID','Flavours']]

@@ -7,9 +7,7 @@ import csv
 
 # Df is adding a zero in first column, for now I have just made it a new column
 
-file_name = 'data2.csv' #'test.csv'
-
-def create_sheet(data_dict):
+def __create_sheet(data_dict, file_name):
     if not path.exists(file_name):
         print('{} does not exist - making file'.format(file_name))
         with open(file_name, 'w') as csvfile:
@@ -19,11 +17,11 @@ def create_sheet(data_dict):
             l.extend(list(data_dict))
             filewriter.writerow(l)
     
-   #else file exists
+#else file exists
 
 
-def write(data_dict):
-    create_sheet(data_dict)
+def write(data_dict, file_name):
+    __create_sheet(data_dict, file_name)
     df = pd.DataFrame([data_dict])
     #print(df.url)
     df.to_csv(file_name, mode='a', header=False)
