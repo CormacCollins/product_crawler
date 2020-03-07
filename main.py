@@ -15,7 +15,7 @@ def main():
         print("Getting product from url {}".format(l))
         info = crawler.get_product_info(l)
         writer.write(info, data_relative_path + 'data2.csv')
-        break
+        
     
 
 
