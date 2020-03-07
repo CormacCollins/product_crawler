@@ -3,7 +3,7 @@ import numpy as np
 
 # Extract more features and create an individual table
 
-Abbot_products = pd.read_csv("data.csv") #This could be replaced with output from other parser
+Abbot_products = pd.read_csv("data2.csv") #This could be replaced with output from other parser
 
 #TODO/PRODUCT INFO RETHINK: 
 # The more info columns that are being turned into number_in_case, product_weight_numeric etc. are not just these, they can be variable, such as categories like {'Ready-to-feed', 'Concentrated liquid', 'Powder', 'Shake', 'Snack bar'} or flavour categories (Flavor categories can be scrapped seperately from another spot on the url)
@@ -23,12 +23,14 @@ Abbot_products = Abbot_products[['name',
                 'product_format',
                 'number_in_case',
                 'product_weight_numeric',
-               'product_weight_metric']]
+               'product_weight_metric',
+                                'Form']]
 
 Abbot_products.drop_duplicates(keep='first', inplace=True)
 
 # Can't make name index
 # we lose the product variants (i.e. can, case of variant numbers, container - because they are all tied to the name key)
+#Ryan - Fair enough, was just taking out the ugly default index number
 
 #Abbot_products.set_index(['name'], inplace=True)
 Abbot_products.to_csv("Abbot_products.csv")
@@ -37,7 +39,7 @@ Abbot_products.to_csv("Abbot_products.csv")
 
 # Set up table which shows all the ingredients for products vertically for analytics
 
-Abbot_products_ingredients_name = pd.read_csv("data.csv") #This could be replaced with output from other parser
+Abbot_products_ingredients_name = pd.read_csv("data2.csv") #This could be replaced with output from other parser
 
 Abbot_products_ingredients_name = Abbot_products_ingredients_name[pd.notnull(Abbot_products_ingredients_name['ID'])]
 Abbot_products_ingredients = Abbot_products_ingredients_name[['ID','ingredients']]
@@ -57,3 +59,36 @@ Abbot_main_ingredients.set_index(['name'], inplace=True)
 Abbot_main_ingredients.drop_duplicates(keep='first', inplace=True)
 Abbot_main_ingredients.to_csv("Abott_products_ingredients.csv")
 
+# -----------
+
+# Set up table which shows all the flavours for products vertically for analytics
+
+Abbot_product_flavours_name = pd.read_csv("data2.csv") #This could be replaced with output from other parser
+Abbot_product_flavours_name = Abbot_product_flavours_name[pd.notnull(Abbot_product_flavours_name['ID'])]
+Abbot_products_name = Abbot_product_flavours_name[['ID', 'name']]
+Abbot_product_flavours = Abbot_product_flavours_name[['ID','Flavours']]
+Abbot_product_flavours = pd.concat([Abbot_products_name,
+                                    Abbot_product_flavours['Flavours'].str.split(', ', expand=True)], axis=1)
+
+Abbot_product_flavours = pd.melt(Abbot_product_flavours, id_vars = ["name"])
+Abbot_product_flavours.dropna(inplace=True)
+Abbot_product_flavours = Abbot_product_flavours[(Abbot_product_flavours['value'] != 0)]
+Abbot_product_flavours.rename(columns={'value' : 'Flavours'},inplace=True)
+Abbot_product_flavours.head()
+Abbot_product_flavours = Abbot_product_flavours[['name', 'Flavours']]
+Abbot_product_flavours.sort_values('name', inplace=True, ascending=True)
+Abbot_product_flavours.drop_duplicates(keep='first', inplace=True)
+# We may need to add more conditions below this:
+Abbot_product_flavours['Flavours'] = Abbot_product_flavours['Flavours'].str.replace("'", "", regex=False)
+Abbot_product_flavours['Flavours'] = Abbot_product_flavours['Flavours'].str.replace("[", "", regex=False)
+Abbot_product_flavours['Flavours'] = Abbot_product_flavours['Flavours'].str.replace("]", "", regex=False)
+Abbot_product_flavours['Flavours'] = Abbot_product_flavours['Flavours'].str.replace(" Chocolate", "Rich Chocolate", regex=False)
+Abbot_product_flavours['Flavours'] = Abbot_product_flavours['Flavours'].str.replace("Rich", "", regex=False)
+Abbot_product_flavours['Flavours'] = Abbot_product_flavours['Flavours'].str.replace("&", "", regex=False)
+Abbot_product_flavours['Flavours'] = Abbot_product_flavours['Flavours'].str.replace("-", "", regex=False)
+Abbot_product_flavours['Flavours'] = Abbot_product_flavours['Flavours'].str.replace("Peanut", "Peanut Butter", regex=False)
+Abbot_product_flavours['Flavours'] = Abbot_product_flavours['Flavours'].str.replace("Butter", "", regex=False)
+Abbot_product_flavours['Flavours'] = Abbot_product_flavours['Flavours'].str.replace("Homemade", "Homemade Vanilla", regex=False)
+Abbot_product_flavours['Flavours'] = Abbot_product_flavours['Flavours'].str.replace("Vanilla", "", regex=False)
+Abbot_product_flavours = Abbot_product_flavours[(Abbot_product_flavours['Flavours'] != '')]
+Abbot_product_flavours.to_csv("Abott_products_flavours.csv")
