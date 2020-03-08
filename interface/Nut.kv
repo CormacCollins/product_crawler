@@ -1,0 +1,21 @@
+SampFloatLayout:
+
+<SampFloatLayout>:
+    orientation: "vertical"
+    padding: 10
+    spacing: 10
+
+    FloatLayout:
+        Label: 
+            text: "Check"
+
+    FloatLayout:
+        Spinner:
+            size_hint: .9, .2
+            pos_hint: {'center': (.5, .9)}
+            text: "Category"
+            values: ["First", "Second", "Third"]
+            id: spinner_id
+            on_text: root.spinner_clicked(spinner_id.text)
+
+
