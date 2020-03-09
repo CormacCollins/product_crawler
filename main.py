@@ -6,6 +6,7 @@ data_relative_path = 'Data/'
 
 def main():
     #Get links - pass true if you want to requery the product urls
+    
     l_loader = Link_loader( data_relative_path + 'abbot_product_links.csv')
     links = l_loader.get_product_links_abbotstore('https://abbottstore.com/', False)
     crawler = AbbotStore_crawler()
