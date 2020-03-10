@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 from time import sleep
 import csv
 
-class Link_loader:
+class Link_loader_abbotts:
     def __init__(self, abbots_file_name_csv):
         """ Gets links for crawler, either by initial crawl from website, or by getting 
             pre-stored links in csv file
