@@ -10,7 +10,7 @@ from pathlib import Path
 
 def deleteData():
     try:
-        sqliteConnection = sqlite3.connect('..\Data\TestDB.db')
+        sqliteConnection = sqlite3.connect('..\Data\Abbott\TestDB.db')
         cursor = sqliteConnection.cursor()
 
         sql_delete_query = """DELETE from Abbot_product_flavours"""

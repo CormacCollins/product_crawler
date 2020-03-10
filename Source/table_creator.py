@@ -3,7 +3,7 @@ import numpy as np
 
 # Extract more features and create an individual table
 
-Abbot_products = pd.read_csv("../Data/data2.csv") #This could be replaced with output from other parser
+Abbot_products = pd.read_csv("../Data/Abbott/Abbott_scrape_data.csv") #This could be replaced with output from other parser
 
 Abbot_products = Abbot_products[pd.notnull(Abbot_products['ID'])]
 Abbot_products[['size_or_weight','number_in_case']] = (Abbot_products['size_or_weight'].str.split('/', expand=True))
@@ -28,13 +28,13 @@ Abbot_products.drop_duplicates(keep='first', inplace=True)
 #Ryan - Fair enough, was just taking out the ugly default index number
 
 #Abbot_products.set_index(['name'], inplace=True)
-Abbot_products.to_csv("../Data/Abbot_products.csv")
+Abbot_products.to_csv("../Data/Abbott/Abbot_products.csv")
 
 # -----------
 
 # Set up table which shows all the ingredients for products vertically for analytics
 
-Abbot_products_ingredients_name = pd.read_csv("../Data/data2.csv") #This could be replaced with output from other parser
+Abbot_products_ingredients_name = pd.read_csv("../Data/Abbott/Abbott_scrape_data.csv") #This could be replaced with output from other parser
 
 Abbot_products_ingredients_name = Abbot_products_ingredients_name[pd.notnull(Abbot_products_ingredients_name['ID'])]
 Abbot_products_ingredients = Abbot_products_ingredients_name[['ID','ingredients']]
@@ -52,13 +52,13 @@ Abbot_main_ingredients.sort_values('name', inplace=True, ascending=True)
 # We can make name the index here if wanted because the ingredients are the same for each varient
 Abbot_main_ingredients.set_index(['name'], inplace=True)
 Abbot_main_ingredients.drop_duplicates(keep='first', inplace=True)
-Abbot_main_ingredients.to_csv("../Data/Abott_products_ingredients.csv")
+Abbot_main_ingredients.to_csv("../Data/Abbott/Abott_products_ingredients.csv")
 
 # -----------
 
 # Set up table which shows all the flavours for products vertically for analytics
 
-Abbot_product_flavours_name = pd.read_csv("../Data/data2.csv") #This could be replaced with output from other parser
+Abbot_product_flavours_name = pd.read_csv("../Data/Abbott/Abbott_scrape_data.csv") #This could be replaced with output from other parser
 Abbot_product_flavours_name = Abbot_product_flavours_name[pd.notnull(Abbot_product_flavours_name['ID'])]
 Abbot_products_name = Abbot_product_flavours_name[['ID', 'name']]
 Abbot_product_flavours = Abbot_product_flavours_name[['ID','Flavours']]
@@ -86,4 +86,4 @@ Abbot_product_flavours['Flavours'] = Abbot_product_flavours['Flavours'].str.repl
 Abbot_product_flavours['Flavours'] = Abbot_product_flavours['Flavours'].str.replace("Homemade", "Homemade Vanilla", regex=False)
 Abbot_product_flavours['Flavours'] = Abbot_product_flavours['Flavours'].str.replace("Vanilla", "", regex=False)
 Abbot_product_flavours = Abbot_product_flavours[(Abbot_product_flavours['Flavours'] != '')]
-Abbot_product_flavours.to_csv("../Data/Abott_products_flavours.csv")
+Abbot_product_flavours.to_csv("../Data/Abbott/Abott_products_flavours.csv")

@@ -2,13 +2,13 @@ from bs4 import BeautifulSoup
 import requests
 import re
 import string
+from Source.crawler_interface import crawler_interface
 
-
-
-class AbbotStore_crawler:
+class AbbotStore_crawler(crawler_interface):
 
     def __init__(self):
-        """ Create instance of crawler loaded with list of links (link_list)
+        """ Implements crawler_interface
+            Create instance of crawler loaded with list of links (link_list)
             Settings to be added as future change around potentially adding a small list of urls that need updating
         """
         pass
