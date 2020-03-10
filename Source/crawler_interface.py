@@ -8,7 +8,7 @@ class crawler_interface(ABC):
     @abstractmethod
     def get_product_info(self, prod_url):
         """
-        Takes product link ant returns dictionary of values
+        Takes product link and returns dictionary of values
         """
         pass
 

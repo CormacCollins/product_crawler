@@ -3,8 +3,9 @@ import requests
 import re
 import string
 from Source.crawler_interface import crawler_interface
+import sys
 
-class AbbotStore_crawler(crawler_interface):
+class AbbottStore_crawler(crawler_interface):
 
     def __init__(self):
         """ Implements crawler_interface
@@ -51,8 +52,13 @@ class AbbotStore_crawler(crawler_interface):
 
         PRODUCT_INFORMATION['url'] = prod_url
         
-        
-        page = requests.get(prod_url)
+        try:
+            page = requests.get(prod_url)
+        except requests.exceptions.RequestException as e:
+            #TODO: Better handling of error msgs
+            print('failed to connect - please check url or connection')
+
+
         soup = BeautifulSoup(page.content, 'html.parser') 
 
         # get product name

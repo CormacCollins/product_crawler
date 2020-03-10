@@ -1,8 +1,8 @@
-from Source.crawler import AbbotStore_crawler
+from Source.abbott_crawler import AbbottStore_crawler
 from Source.link_loader import Link_loader
 import Source.write_customer_data_to_csv as writer
 import sys
-from pathlib import Path
+from pathlib import Path    
 
 def main():
 
@@ -26,7 +26,7 @@ def main():
     #create sub folder for data files if it doesn't exist
     Path('Data/' + store).mkdir(parents=True, exist_ok=True)
 
-    crawler = AbbotStore_crawler()
+    crawler = AbbottStore_crawler()
 
     #for reading saved links list
     file_path = 'Data/' + store + '/'
