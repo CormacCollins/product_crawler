@@ -1,3 +1,18 @@
+### General usage of crawler
+ Call function  main.py by passing 2 arguments: 
+ * A store name: eg. Abbott  
+ * A query type currently: 
+   - scrape_stored 
+   - full_scrape 
+   - single_url\url
+   
+ Examples of call types:
+ ```
+ main.py Abbott scrape_stored 
+ main.py Abbott single_url\https://abbottstore.com/similac-advance-infant-formula-powder-1-45-lb-container-53359e.html
+ ```
+
+
 # product_crawler
 
 The objective of the project is to create a total product catalogue across 4 competitors in the Nutritional Health Care space.
