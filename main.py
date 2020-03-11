@@ -10,7 +10,7 @@ from pathlib import Path
 
 
 
-def main_ncare(stores_list, command_types):
+def main_ncare(stores_list, command_types, crawler):
 
     store = 'Ncare'
 
@@ -29,11 +29,11 @@ def main_ncare(stores_list, command_types):
     #get each ind prod info and write to db        
     for l in links:
         print("Getting product from url {}".format(l))
-        info = Ncare_crawler.get_product_info(l)
+        info = crawler.get_product_info(l)
         writer.write(info, file_path + store + '_scrape_data.csv')
 
 
-def main_abbott(stores_list, command_types):
+def main_abbott(stores_list, command_types, crawler):
 
     if len(sys.argv) <= 2:
         give_instructions(command_types, stores_list)
@@ -49,8 +49,6 @@ def main_abbott(stores_list, command_types):
 
     #create sub folder for data files if it doesn't exist
     Path('Data/' + store).mkdir(parents=True, exist_ok=True)
-
-    crawler = AbbottStore_crawler()
 
     #for reading saved links list
     file_path = 'Data/' + store + '/'
@@ -107,7 +105,7 @@ if __name__ == "__main__":
     #TODO: Could be read from a xml file with all the currently operational stores
     stores_list = {'Abbott':'https://abbottstore.com/', 'Ncare':'https://www.ncare.net.au/nutrition-products'}
 
-    main_ncare(stores_list, command_types)
+    main_ncare(stores_list, command_types, Ncare_crawler())
 
-    #main_abbott()
+    #main_abbott(stores_list, command_types, AbbottStore_crawler())
 

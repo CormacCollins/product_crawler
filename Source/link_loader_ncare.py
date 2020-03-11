@@ -52,14 +52,11 @@ class Link_loader_ncare:
                 n = link.text
                 print('Searching brand range {}'.format(n))                
                 print(link['href'])
-                #self.__get_products_from_product_page(link, product_links)
+                l = list()
+                l = self.__get_products_from_product_page(link['href'], l)
+                product_links.extend(l)
+                #[print(i) for i in product_links]
                 
-
-
-            return 
-            ##print("Prod num {}".format(len(product_links)))
-            print(product_links[1:10])
-
             #write to csv for easier work during development:
             #just sotring the product links
             with open(self.ncare_file_name, 'w', newline='') as csvfileWrite:
@@ -77,30 +74,16 @@ class Link_loader_ncare:
         return product_links
 
         
-    # get links for all the products displayed on that page
-    # recursive function that keeps getting moving to next page
-    # TODO: need safety mech for max recursive depth and memory
-
+    # Non-recursive
+    # Passes argument to view all products in list on webpage
+    # returns with duplicats
     def __get_products_from_product_page(self, prod_page_link, product_links):
-        page = requests.get(prod_page_link)
+        payload = {'limit':'all'}
+        page = requests.get(prod_page_link, params=payload)
         soup = BeautifulSoup(page.content, 'html.parser')
-        #print(soup.prettify())
-        menu_list = soup.find_all('a', class_='product photo product-item-photo')
-        for l in menu_list:
-            product_links.append(l['href'])
-
-        # then need to go to next link (i.e. press the arrow button at bottom of list to get next bunch of items)
-        #returning 2 of same link at the moment
-        #TODO: more accurate
-        new_link = soup.find_all(class_ = "item pages-item-next")
-        #Will be better way to do this, also could just append to the oriignal search string with ?p=2
-        try:
-            lk = re.search("(?P<url>https?://[^\s]+)", str(new_link[0])).group("url")
-            #if another page of products keep scrapping, else end 
-            if lk:
-                print("Searching next page")
-                print(lk)
-                __get_products_from_product_page(lk, product_links)
+        m = soup.find(class_= 'products-grid')
+        ls = m.find_all('a')
+        for i in ls:
+            product_links.append(i['href'])
         
-        except:
-            print("End of product item range")
+        return set(product_links)

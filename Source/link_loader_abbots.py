@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 from time import sleep
 import csv
+import requests
 
 class Link_loader_abbotts:
     def __init__(self, abbots_file_name_csv):
