@@ -23,13 +23,13 @@ def main_ncare(stores_list, command_types, crawler):
 
     #Get links - pass true if you want to requery the product urls
     l_loader = Link_loader_ncare(file_uri)
-    links = l_loader.get_product_links_abbotstore(stores_list[store], True)
+    links = l_loader.get_product_links_abbotstore(stores_list[store], False)
     
-    return
     #get each ind prod info and write to db        
     for l in links:
         print("Getting product from url {}".format(l))
         info = crawler.get_product_info(l)
+        return
         writer.write(info, file_path + store + '_scrape_data.csv')
 
 
