@@ -29,7 +29,6 @@ def main_ncare(stores_list, command_types, crawler):
     for l in links:
         print("Getting product from url {}".format(l))
         info = crawler.get_product_info(l)
-        return
         writer.write(info, file_path + store + '_scrape_data.csv')
 
 

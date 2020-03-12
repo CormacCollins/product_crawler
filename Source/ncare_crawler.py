@@ -114,23 +114,72 @@ class Ncare_crawler(crawler_interface):
         # get nutri_info
         try:
             nutri_info = soup.find(id = 'nutritional-information')
-            trs = nutri_info.find('tbody').find_all('tr')
-            row_list = list()
-            for i in range(0, len(trs)):
-                print(trs[i].text)
-                
+            body = nutri_info.find('tbody')
 
-            print(row_list)
-            return
-            ni = ingredients.find_all('tr')
-            print(ni)
-            return
-            PRODUCT_INFORMATION['nutrient_table_1'] = ''.join(ni)
-        except:
-            print("Could not add nutrient_table_1 category")
-
-
-
-        print(PRODUCT_INFORMATION)
+            tds = body.find_all('td')
+            #tds.pop(0) # remove name row
             
-        return    
+            heads = body.find_all('th')
+            heads.pop(0) # remove name row
+            serving_size = heads[0].text
+            
+            column_names = list()
+            for i in heads:
+                column_names.append(i.text.lstrip())
+            column_names.pop(len(column_names)-1) #remove empty space
+
+            #print(column_names)
+            cols = list()
+            for i in range(0, len(column_names)):
+                l = list()
+                l.append(column_names[i])
+                cols.append(l)
+                
+            while tds:
+                for i in range(0, len(column_names)):
+                    d = None
+                    if tds:
+                        d = tds.pop(0)
+                    else:
+                        break
+
+                    s = d.text.encode('ascii',errors='ignore').decode('utf-8').lstrip().rstrip()
+                    cols[i].append(s)
+
+
+            PRODUCT_INFORMATION['serving_size'] = serving_size
+            PRODUCT_INFORMATION['nutrient_table_1'] = cols
+        except:
+            print("Could not add nutrient table and serving size")
+
+
+
+        clinical_indications = None
+        benefits = None
+        features_table = list()
+        try: 
+            clin_ind = soup.find(id = 'clinical-indications')
+            body = clin_ind.find('tbody') # get first child table
+            #print(body)
+            children_tbody = body.findAll("table", recursive=True)
+
+            for tb in children_tbody:
+                #print(tb.find('th').text)
+                
+                if tb.find('th').text == 'BENEFITS':    
+                    benefits = [i.text.strip() for i in tb.find_all('td')]
+                elif tb.find('th').text == 'CLINICAL INDICATIONS':                
+                    clinical_indications = [i.text.strip() for i in tb.find_all('td')]
+                elif tb.find('th').text == 'FEATURES': 
+                    for row in tb.find_all('tr'):
+                        features_table.append([i.text.strip() for i in row.find_all('td')])
+                        
+
+            PRODUCT_INFORMATION['feature_table_rows'] = features_table
+            PRODUCT_INFORMATION['benefits'] = benefits
+            PRODUCT_INFORMATION['clinical_indications'] = clinical_indications
+        except:
+            missing = ''.join([i for i in [clinical_indications, benefits, features_table] if i ])
+            print("Could not fetch one of {}".format(missing))
+
+        return PRODUCT_INFORMATION    
