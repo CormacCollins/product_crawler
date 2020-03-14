@@ -96,15 +96,39 @@ def give_instructions(command_types, stores_list):
     print("\nE.g. main.py Abbott scrape_stored")
 
 
+def ryan_main(stores_list, command_types, crawler):
+
+    '''
+    store = #'Nutricia'
+
+    #create sub folder for data files if it doesn't exist
+    Path('Data/' + store).mkdir(parents=True, exist_ok=True)
+
+    #for reading saved links list
+    file_path = 'Data/' + store + '/'
+    file_uri = file_path + store + '_product_links.csv'
+    
+    #Get links - pass true if you want to requery the product urls
+    l_loader = #Link_loader_ncare(file_uri)
+    links = #l_loader.get_product_links_abbotstore(stores_list[store], False)
+    
+    #get each ind prod info and write to db        
+    for l in links:
+        print("Getting product from url {}".format(l))
+        info = #crawler.get_product_info(l)
+        writer.write(info, file_path + store + '_scrape_data.csv')
+        '''
+
 
 if __name__ == "__main__":
 
     command_types = ['scrape_stored', 'full_scrape', 'single_url\\url']    
 
     #TODO: Could be read from a xml file with all the currently operational stores
-    stores_list = {'Abbott':'https://abbottstore.com/', 'Ncare':'https://www.ncare.net.au/nutrition-products'}
-
-    main_ncare(stores_list, command_types, Ncare_crawler())
+    stores_list = {'Abbott':'https://abbottstore.com/', 'Ncare':'https://www.ncare.net.au/nutrition-products', 'Nutricia':'https://www.nutriciahcp.com/adult/products/'}
+    ryan_main(stores_list, command_types, Ncare_crawler())
+    
+    #main_ncare(stores_list, command_types, Ncare_crawler())
 
     #main_abbott(stores_list, command_types, AbbottStore_crawler())
 
