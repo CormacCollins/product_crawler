@@ -36,9 +36,9 @@ deleteData()
 
 #------ADD--------
 
-Abbot_product_flavours = pd.read_csv(r"..\Data\Abott_products_flavours.csv")
-Abbot_product_flavours = Abbot_product_flavours[["name", "Flavours"]] 
-Abbot_products = pd.read_csv(r"..\Data\Abbot_products.csv")
+Abbot_product_flavours = pd.read_csv(r"..\Data\Abbott\Abott_products_flavours.csv")
+Abbot_product_flavours = Abbot_product_flavours[["item_type", "Flavours"]] 
+Abbot_products = pd.read_csv(r"..\Data\Abbott\Abbot_products.csv")
 Abbot_products = Abbot_products[['name',
                 'price',
                 'availability',
@@ -49,10 +49,10 @@ Abbot_products = Abbot_products[['name',
                 'product_weight_numeric',
                'product_weight_metric',
                                 'Form']]
-Abbot_main_ingredients = pd.read_csv(r"..\Data\Abott_products_ingredients.csv")
-Abbot_main_ingredients = Abbot_main_ingredients[["name", "ingredient"]]
+Abbot_main_ingredients = pd.read_csv(r"..\Data\Abbott\Abott_products_ingredients.csv")
+Abbot_main_ingredients = Abbot_main_ingredients[["item_type", "ingredient"]]
 
-conn = sqlite3.connect('..\Data\TestDB.db')
+conn = sqlite3.connect('..\Data\Abbott\TestDB.db')
 
 c = conn.cursor()
 c.execute("CREATE TABLE IF NOT EXISTS Abbot_product_flavours ({})".format(' ,'.join(Abbot_product_flavours.columns)))
