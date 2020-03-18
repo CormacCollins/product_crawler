@@ -38,7 +38,7 @@ def main_abbott(stores_list, command_types, crawler, command, store, file_path, 
 
     if command == 'scrape_stored':  
 
-        M_THREADING = False
+        M_THREADING = True
         
         start = time.time()
 
@@ -54,6 +54,7 @@ def main_abbott(stores_list, command_types, crawler, command, store, file_path, 
             while links:
                 task_threader.thread_tasks(links, info_list, AbbottStore_crawler(), count)
                 count += 1  
+                break
         else:
             for l in links:
                 print("Getting product from url {}".format(l))
@@ -66,9 +67,6 @@ def main_abbott(stores_list, command_types, crawler, command, store, file_path, 
         for info in info_list:
             writer.write(info, file_path + store + '_scrape_data.csv')
 
-
-
-            
 
         #write to csv seperately to avoid multiplae thread access    
         #for info in info_list:
