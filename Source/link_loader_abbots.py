@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 from time import sleep
 import csv
 import requests
+import re
 
 class Link_loader_abbotts:
     def __init__(self, abbots_file_name_csv):
@@ -24,6 +25,7 @@ class Link_loader_abbotts:
             # if query fails due to a connection error then sleep for 5 sec and retry again
             # up to 5 retries
 
+            page = None
             retry_requests = 5
             while retry_requests > 0:
                 try:
@@ -36,6 +38,9 @@ class Link_loader_abbotts:
                     print("Connection error - 5 second delay before re-request")                
                     sleep(5)
 
+            if not page:
+                print("Could now reach: {}".format(site))
+                return {}
 
             soup = BeautifulSoup(page.content, 'html.parser')
 
@@ -66,7 +71,7 @@ class Link_loader_abbotts:
                 
 
             print("Prod num {}".format(len(product_links)))
-            print(product_links[1:10])
+            #print(product_links[1:10])
 
             #write to csv for easier work during development:
             #just sotring the product links
@@ -94,21 +99,25 @@ class Link_loader_abbotts:
         soup = BeautifulSoup(page.content, 'html.parser')
         #print(soup.prettify())
         menu_list = soup.find_all('a', class_='product photo product-item-photo')
+        count = 0
         for l in menu_list:
+            count += 1
             product_links.append(l['href'])
 
+        print("{} urls added".format(count))
         # then need to go to next link (i.e. press the arrow button at bottom of list to get next bunch of items)
         #returning 2 of same link at the moment
         #TODO: more accurate
         new_link = soup.find_all(class_ = "item pages-item-next")
         #Will be better way to do this, also could just append to the oriignal search string with ?p=2
-        try:
+
+
+        if new_link:
             lk = re.search("(?P<url>https?://[^\s]+)", str(new_link[0])).group("url")
             #if another page of products keep scrapping, else end 
             if lk:
                 print("Searching next page")
                 print(lk)
-                __get_products_from_product_page(lk, product_links)
-        
-        except:
+                self.__get_products_from_product_page(lk, product_links)
+        else:
             print("End of product item range")

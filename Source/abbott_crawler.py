@@ -27,9 +27,15 @@ class AbbottStore_crawler(crawler_interface):
             section_data = tbl.find(class_='section-data')
             rows = section_data.find_all(class_ = 'nutrition-name')
             row_data = section_data.find_all(class_ = 'nutrition-value amt')
+            #sometimes the normal value is not there so at least we also get the daily % value
+            row_data_2 = section_data.find_all(class_ = 'nutrition-value dv')
+
+            #print(section_data.text)
+            #print([r.text for r in row_data])
 
             for i in range(0, len(rows)):
                 new_dict[rows[i].text.strip()] = row_data[i].text.strip()
+                new_dict[rows[i].text.strip() + '(DV)'] = row_data_2[i].text.strip() + '%'
 
             dict_list.append(new_dict)
 
@@ -170,7 +176,7 @@ class AbbottStore_crawler(crawler_interface):
             f = ''
             for i in footnotes:
                 f = f + " " + i.find(class_='footnote').text + '\n'
-            PRODUCT_INFORMATION['footnotes'] = f
+            PRODUCT_INFORMATION['footnotes'] = f.strip('*').lstrip()
         except:
             print("Could not add footnote categories")
 
@@ -197,12 +203,15 @@ class AbbottStore_crawler(crawler_interface):
         #Get up to 2 times vitamin table data
         try:
             add_attr = soup.find_all(class_ = 'section vitamin-data')
+            #print(add_attr)
             count = 1
             for vitamin_dict in self.__get_prod_table_data(add_attr, soup):
                 PRODUCT_INFORMATION['vitamin_table_' + str(count)] = vitamin_dict
                 count = count + 1
+
         except:
             print("Could not add vitamin_table categories")
+        
         #Get up to 2 times minerals table data
         try:
             add_attr = soup.find_all(class_ = 'section minerals-data')

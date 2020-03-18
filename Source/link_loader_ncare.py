@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 from time import sleep
 import csv
 import requests
+import re
 
 class Link_loader_ncare:
     def __init__(self, ncare_file_name_csv):

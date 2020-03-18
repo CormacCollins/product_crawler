@@ -421,8 +421,6 @@ Abbot_products.product_format = Abbot_products.product_format.str.strip()
 Abbot_products.number_in_case = Abbot_products.number_in_case.str.strip()
 Abbot_products.Form = Abbot_products.Form.str.strip()
 
-
-
 # Send to CSV
 Abbot_products.to_csv("../Data/Abbott/Abbot_products.csv")
 
