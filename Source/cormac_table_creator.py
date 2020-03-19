@@ -1,4 +1,3 @@
-
 import pandas as pd
 import numpy as np
 
@@ -362,13 +361,12 @@ construct = {'name': ["Carrying Case for FreeStyle InsuLinx System",
 # Create a dataframe from constructed table above
 lookup = pd.DataFrame(data=construct)
 # Create an array from lookup table to help filter later on
-print(lookup.columns)
 lookup_filter = lookup["item_type"].array
 lookup.drop(["name"], axis=1, inplace=True)
 lookup = lookup.set_index("item_type")
-print(lookup.columns)
 
 
+# In[177]:
 
 
 
@@ -376,16 +374,30 @@ print(lookup.columns)
 
 # Create the Abbott product table
 
-Abbot_products = pd.read_csv("../Data/Abbott/Abbott_scrape_data.csv") #This could be replaced with output from other parser
+Abbot_products_original = pd.read_csv("../Data/Abbott/Abbott_scrape_data.csv", error_bad_lines=False) #This could be replaced with output from other parser
+Abbot_products = Abbot_products_original
 
+
+
+# --------------------------------
 #I'm unsure of this for now
 #Abbot_products = pd.concat([Abbot_products, lookup], sort=True)
+# --------------------------------
 
-Abbot_products.set_index('item_type', inplace=True)
+#Abbot_products.set_index('item_type', inplace=True)
 Abbot_products.drop(['Unnamed: 0'], axis=1, inplace=True)
-#print(Abbot_products.head())
-print(list(Abbot_products.index.values))
-print(Abbot_products.columns)
+Abbot_products[:3]
+#print(list(Abbot_products.index.values))
+#print(Abbot_products.columns)
+
+
+# In[ ]:
+
+
+
+
+
+# In[178]:
 
 
 
@@ -396,21 +408,41 @@ Abbot_products['product_weight_metric'] = Abbot_products.size_or_weight.str.spli
 Abbot_products = Abbot_products[['name',
                 'price',
                 'availability',
-                'item_type',
+                'item_type', 
                 'description',
                 'product_format',
                 'number_in_case',
                 'product_weight_numeric',
                'product_weight_metric',
-                                'Form']]
+                                'Form',
+                        'Cans Type X',
+                        'Cans Type Y',
+                        'entry_date', 
+                                 'url'
+]]
 
 Abbot_products.drop_duplicates(keep='first', inplace=True)
+Abbot_products[:5]
+
+
+# In[179]:
+
+
+Abbot_products[pd.isnull(Abbot_products['product_format'])]
+Abbot_products.iloc[236].url
+
+
+# In[180]:
+
 
 # Turn series into string so it can be used in joins below
 Abbot_products['item_type'] = Abbot_products['item_type'].astype(str)
 
 # Take out the SKUs with missing values
 get_subset = Abbot_products[Abbot_products['item_type'].isin(lookup_filter)]
+
+get_subset
+
 
 # Delete the columns, because they will be replaced with the lookup table above
 get_subset = get_subset.drop(["product_format", "number_in_case", "product_weight_numeric", "product_weight_metric"],
@@ -438,27 +470,38 @@ Abbot_products.to_csv("../Data/Abbott/Abbot_products.csv")
 
 # -----------
 
+
+# In[204]:
+
+
+
+
 # Set up table which shows all the ingredients for products vertically for analytics
 
-Abbot_products_ingredients_item_type = pd.read_csv("../Data/Abbott/Abbott_scrape_data.csv") #This could be replaced with output from other parser
+Abbot_products_ingredients_item_type = Abbot_products_original
+
+
 
 # Changed from Name to SKU ID "item_type"
 
-Abbot_products_ingredients_item_type = Abbot_products_ingredients_item_type[pd.notnull(Abbot_products_ingredients_item_type['ID'])]
-Abbot_products_ingredients = Abbot_products_ingredients_item_type[['ID','ingredients']]
-Abbot_products_name = Abbot_products_ingredients_item_type[['ID', 'item_type']]
+Abbot_products_ingredients_item_type = Abbot_products_ingredients_item_type[pd.notnull(Abbot_products_ingredients_item_type['item_type'])]
+Abbot_products_ingredients = Abbot_products_ingredients_item_type[['item_type','ingredients']]
+Abbot_products_name = Abbot_products_ingredients_item_type['item_type']
 Abbot_main_ingredients = pd.concat([Abbot_products_name,
                                     Abbot_products_ingredients['ingredients'].str.split(', ', expand=True)], axis=1)
-
 Abbot_main_ingredients = pd.melt(Abbot_main_ingredients, id_vars = ["item_type"])
 Abbot_main_ingredients.dropna(inplace=True)
 Abbot_main_ingredients = Abbot_main_ingredients[(Abbot_main_ingredients['value'] != 0)]
+
+
 Abbot_main_ingredients.rename(columns={'value' : 'ingredient'},inplace=True)
+del Abbot_main_ingredients['variable']
 Abbot_main_ingredients.head()
-Abbot_main_ingredients = Abbot_main_ingredients[['item_type', 'ingredient']]
 Abbot_main_ingredients.sort_values('item_type', inplace=True, ascending=True)
 Abbot_main_ingredients.drop_duplicates(keep='first', inplace=True)
 Abbot_main_ingredients
+
+
 
 # Remove white space and "AND" 
 Abbot_main_ingredients.ingredient = Abbot_main_ingredients.ingredient.str.strip()
@@ -468,12 +511,18 @@ Abbot_main_ingredients['ingredient'] = Abbot_main_ingredients['ingredient'].str.
 # Send to CSV
 Abbot_main_ingredients.to_csv("../Data/Abbott/Abott_products_ingredients.csv")
 
+
+# In[206]:
+
+
+
+
 # -----------
 
 # Set up table which shows all the flavours for products vertically for analytics
 # Changed name to SKU "item_type"
 
-Abbot_product_flavours_item_type = pd.read_csv("../Data/Abbott/Abbott_scrape_data.csv")
+Abbot_product_flavours_item_type = Abbot_products_original
  #This could be replaced with output from other parser
 Abbot_product_flavours_item_type = Abbot_product_flavours_item_type[pd.notnull(Abbot_product_flavours_item_type['ID'])]
 Abbot_products_name = Abbot_product_flavours_item_type[['ID', 'item_type']]
@@ -507,3 +556,12 @@ Abbot_product_flavours = Abbot_product_flavours[(Abbot_product_flavours['Flavour
 Abbot_product_flavours.Flavours = Abbot_product_flavours.Flavours.str.strip() 
 
 Abbot_product_flavours.to_csv("../Data/Abbott/Abott_products_flavours.csv")
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
