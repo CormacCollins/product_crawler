@@ -1,598 +1,888 @@
 ,item_type,Flavours
-5798,SKU#:00240,Coconut Burst
-1197,SKU#:00240,Grape
-2849,SKU#:00240,Unflavored
-6781,SKU#:00240,Bubble Gum
-3832,SKU#:00240,Strawberry
-4146,SKU#:00240,Mixed Fruit
-2875,SKU#:00240e,Strawberry
-6466,SKU#:00240e,Bubble Gum
-5483,SKU#:00240e,Coconut Burst
-3517,SKU#:00240e,Unflavored
-4841,SKU#:00240e,Mixed Fruit
-1223,SKU#:00240e,Grape
-1864,SKU#:00336,Unflavored
-5796,SKU#:00336,Coconut Burst
-4144,SKU#:00336,Mixed Fruit
-3161,SKU#:00336,Grape
-6110,SKU#:00336,Bubble Gum
-2178,SKU#:00336,Strawberry
-6468,SKU#:00336e,Bubble Gum
-2877,SKU#:00336e,Mixed Fruit
-1894,SKU#:00336e,Unflavored
-5826,SKU#:00336e,Grape
-3191,SKU#:00336e,Coconut Burst
-4502,SKU#:00336e,Strawberry
-4465,SKU#:00365,Grape
-2171,SKU#:00365,Unflavored
-6772,SKU#:00365,Bubble Gum
-1516,SKU#:00365,Mixed Fruit
-3482,SKU#:00365,Strawberry
-5448,SKU#:00365,Coconut Burst
-2537,SKU#:00365e,Coconut Burst
-6810,SKU#:00365e,Bubble Gum
-4503,SKU#:00365e,Strawberry
-3861,SKU#:00365e,Unflavored
-1895,SKU#:00365e,Mixed Fruit
-5158,SKU#:00365e,Grape
-2514,SKU#:51752,Strawberry
-3169,SKU#:51752,Grape
-6118,SKU#:51752,Coconut Burst
-5463,SKU#:51752,Unflavored
-1872,SKU#:51752,Bubble Gum
-4480,SKU#:51752,Mixed Fruit
-4840,SKU#:51752e,Unflavored
-6137,SKU#:51752e,Coconut Burst
-2205,SKU#:51752e,Grape
-5482,SKU#:51752e,Mixed Fruit
-3857,SKU#:51752e,Strawberry
-1891,SKU#:51752e,Bubble Gum
-2502,SKU#:53983,Unflavored
-6434,SKU#:53983,Bubble Gum
-1519,SKU#:53983,Strawberry
-3157,SKU#:53983,Grape
-5792,SKU#:53983,Coconut Burst
-4809,SKU#:53983,Mixed Fruit
-4501,SKU#:53983e,Coconut Burst
-1552,SKU#:53983e,Strawberry
-3190,SKU#:53983e,Mixed Fruit
-6808,SKU#:53983e,Bubble Gum
-5825,SKU#:53983e,Grape
-2207,SKU#:53983e,Unflavored
-9738,SKU#:56090,Strawberry Lemonade
-1533,SKU#:56090,Variety  Strawberry
-8755,SKU#:56090,Variety  Cherry
-5806,SKU#:56090,Grape
-2188,SKU#:56090,Fruit Punch
-7103,SKU#:56090,Strawberry Lemonade
-10052,SKU#:56090,Orange  Grape
-3499,SKU#:56090,Grape  Apple
-4823,SKU#:56090,Cherry
-6448,SKU#:56090,Orange
-1208,SKU#:56090p8,Variety  Strawberry
-6792,SKU#:56090p8,Orange
-2860,SKU#:56090p8,Fruit Punch
-3502,SKU#:56090p8,Grape  Apple
-7106,SKU#:56090p8,Strawberry Lemonade
-4157,SKU#:56090p8,Grape
-5468,SKU#:56090p8,Cherry
-12777,SKU#:62836,Chocolate Caramel Cluster
-8504,SKU#:62836,Fudge Graham
-2606,SKU#:62836,Chocolate Chip Cookie Dough
-5896,SKU#:62836,Cinnamon Roll
-7193,SKU#:62836,Double Dark Chocolate
-1295,SKU#:62836,Chocolate Almond Raisin
-9487,SKU#:62836,Oatmeal Chocolate Chunk
-6210,SKU#:62836,Dark Chocolate Almond
-3261,SKU#:62836,Chocolate Mint
-13091,SKU#:62836,Sweet  Salty Cashew Pretzel
-11794,SKU#:62836,Strawberry Yogurt
-10142,SKU#:62836,Salted Caramel Brownie
-4244,SKU#:62836,Chocolate Peanut
-10127,SKU#:62836p12,Salted Caramel Brownie
-3915,SKU#:62836p12,Chocolate Mint
-12762,SKU#:62836p12,Chocolate Caramel Cluster
-8489,SKU#:62836p12,Fudge Graham
-1608,SKU#:62836p12,Chocolate Almond Raisin
-11110,SKU#:62836p12,Strawberry Yogurt
-2263,SKU#:62836p12,Chocolate Chip Cookie Dough
-4557,SKU#:62836p12,Chocolate Peanut
-6195,SKU#:62836p12,Dark Chocolate Almond
-7847,SKU#:62836p12,Double Dark Chocolate
-13404,SKU#:62836p12,Sweet  Salty Cashew Pretzel
-5540,SKU#:62836p12,Cinnamon Roll
-9813,SKU#:62836p12,Oatmeal Chocolate Chunk
-3870,SKU#:62882,Creamy Strawberry
-1904,SKU#:62882,Homemade
-2218,SKU#:62882,Chocolate
-1236,SKU#:62885,Chocolate
-3871,SKU#:62885,Creamy Strawberry
-2888,SKU#:62885,Homemade
-4464,SKU#:63057,Tropical Fruit
-1187,SKU#:63057,Cherry Punch
-3153,SKU#:63057,Strawberry Lemonade
-2839,SKU#:63057,Blue Raspberry
-3854,SKU#:63057e,Strawberry Lemonade
-4496,SKU#:63057e,Tropical Fruit
-2871,SKU#:63057e,Blue Raspberry
-1219,SKU#:63057e,Cherry Punch
-4804,SKU#:63059,Tropical Fruit
-1514,SKU#:63059,Blue Raspberry
-2169,SKU#:63059,Cherry Punch
-3480,SKU#:63059,Strawberry Lemonade
-4169,SKU#:63059e,Cherry Punch
-2531,SKU#:63059e,Strawberry Lemonade
-1220,SKU#:63059e,Blue Raspberry
-3514,SKU#:63059e,Tropical Fruit
-11452,SKU#:63161,Strawberry Yogurt
-3588,SKU#:63161,Chocolate Mint
-6878,SKU#:63161,Dark Chocolate Almond
-2605,SKU#:63161,Chocolate Chip Cookie Dough
-9486,SKU#:63161,Oatmeal Chocolate Chunk
-13759,SKU#:63161,Sweet  Salty Cashew Pretzel
-5226,SKU#:63161,Cinnamon Roll
-1963,SKU#:63161,Chocolate Almond Raisin
-12107,SKU#:63161,Chocolate Caramel Cluster
-7192,SKU#:63161,Double Dark Chocolate
-4912,SKU#:63161,Chocolate Peanut
-10469,SKU#:63161,Salted Caramel Brownie
-8175,SKU#:63161,Fudge Graham
-13403,SKU#:63161p12,Sweet  Salty Cashew Pretzel
-4897,SKU#:63161p12,Chocolate Peanut
-12761,SKU#:63161p12,Chocolate Caramel Cluster
-6522,SKU#:63161p12,Dark Chocolate Almond
-5539,SKU#:63161p12,Cinnamon Roll
-1279,SKU#:63161p12,Chocolate Almond Raisin
-3914,SKU#:63161p12,Chocolate Mint
-2931,SKU#:63161p12,Chocolate Chip Cookie Dough
-7505,SKU#:63161p12,Double Dark Chocolate
-11437,SKU#:63161p12,Strawberry Yogurt
-9812,SKU#:63161p12,Oatmeal Chocolate Chunk
-8829,SKU#:63161p12,Fudge Graham
-10795,SKU#:63161p12,Salted Caramel Brownie
-8167,SKU#:63214,Fudge Graham
-12427,SKU#:63214,Chocolate Caramel Cluster
-11116,SKU#:63214,Strawberry Yogurt
-2269,SKU#:63214,Chocolate Chip Cookie Dough
-13410,SKU#:63214,Sweet  Salty Cashew Pretzel
-1614,SKU#:63214,Chocolate Almond Raisin
-10461,SKU#:63214,Salted Caramel Brownie
-4904,SKU#:63214,Chocolate Peanut
-7853,SKU#:63214,Double Dark Chocolate
-3580,SKU#:63214,Chocolate Mint
-6201,SKU#:63214,Dark Chocolate Almond
-5887,SKU#:63214,Cinnamon Roll
-9150,SKU#:63214,Oatmeal Chocolate Chunk
-10117,SKU#:63214p12,Salted Caramel Brownie
-2581,SKU#:63214p12,Chocolate Chip Cookie Dough
-8479,SKU#:63214p12,Fudge Graham
-13066,SKU#:63214p12,Sweet  Salty Cashew Pretzel
-4547,SKU#:63214p12,Chocolate Peanut
-12752,SKU#:63214p12,Chocolate Caramel Cluster
-11769,SKU#:63214p12,Strawberry Yogurt
-7168,SKU#:63214p12,Double Dark Chocolate
-5871,SKU#:63214p12,Cinnamon Roll
-1270,SKU#:63214p12,Chocolate Almond Raisin
-9462,SKU#:63214p12,Oatmeal Chocolate Chunk
-6854,SKU#:63214p12,Dark Chocolate Almond
-3905,SKU#:63214p12,Chocolate Mint
-4910,SKU#:63225,Chocolate Peanut
-13088,SKU#:63225,Sweet  Salty Cashew Pretzel
-12774,SKU#:63225,Chocolate Caramel Cluster
-10139,SKU#:63225,Salted Caramel Brownie
-11791,SKU#:63225,Strawberry Yogurt
-9156,SKU#:63225,Oatmeal Chocolate Chunk
-5893,SKU#:63225,Cinnamon Roll
-3258,SKU#:63225,Chocolate Mint
-1961,SKU#:63225,Chocolate Almond Raisin
-8501,SKU#:63225,Fudge Graham
-7859,SKU#:63225,Double Dark Chocolate
-6535,SKU#:63225,Dark Chocolate Almond
-2603,SKU#:63225,Chocolate Chip Cookie Dough
-11413,SKU#:63225p12,Strawberry Yogurt
-13379,SKU#:63225p12,Sweet  Salty Cashew Pretzel
-9119,SKU#:63225p12,Oatmeal Chocolate Chunk
-7481,SKU#:63225p12,Double Dark Chocolate
-12068,SKU#:63225p12,Chocolate Caramel Cluster
-1583,SKU#:63225p12,Chocolate Almond Raisin
-5515,SKU#:63225p12,Cinnamon Roll
-4204,SKU#:63225p12,Chocolate Peanut
-6839,SKU#:63225p12,Dark Chocolate Almond
-2566,SKU#:63225p12,Chocolate Chip Cookie Dough
-8464,SKU#:63225p12,Fudge Graham
-3549,SKU#:63225p12,Chocolate Mint
-10102,SKU#:63225p12,Salted Caramel Brownie
-13415,SKU#:63259,Sweet  Salty Cashew Pretzel
-11790,SKU#:63259,Strawberry Yogurt
-5223,SKU#:63259,Cinnamon Roll
-10466,SKU#:63259,Salted Caramel Brownie
-4568,SKU#:63259,Chocolate Peanut
-9483,SKU#:63259,Oatmeal Chocolate Chunk
-1960,SKU#:63259,Chocolate Almond Raisin
-3585,SKU#:63259,Chocolate Mint
-2602,SKU#:63259,Chocolate Chip Cookie Dough
-12104,SKU#:63259,Chocolate Caramel Cluster
-8500,SKU#:63259,Fudge Graham
-7189,SKU#:63259,Double Dark Chocolate
-6534,SKU#:63259,Dark Chocolate Almond
-1594,SKU#:63259p12,Chocolate Almond Raisin
-13390,SKU#:63259p12,Sweet  Salty Cashew Pretzel
-7833,SKU#:63259p12,Double Dark Chocolate
-2249,SKU#:63259p12,Chocolate Chip Cookie Dough
-4884,SKU#:63259p12,Chocolate Peanut
-10113,SKU#:63259p12,Salted Caramel Brownie
-5867,SKU#:63259p12,Cinnamon Roll
-12748,SKU#:63259p12,Chocolate Caramel Cluster
-6509,SKU#:63259p12,Dark Chocolate Almond
-9458,SKU#:63259p12,Oatmeal Chocolate Chunk
-3901,SKU#:63259p12,Chocolate Mint
-8147,SKU#:63259p12,Fudge Graham
-11096,SKU#:63259p12,Strawberry Yogurt
-11786,SKU#:63282,Strawberry Yogurt
-13083,SKU#:63282,Sweet  Salty Cashew Pretzel
-8168,SKU#:63282,Fudge Graham
-4564,SKU#:63282,Chocolate Peanut
-6202,SKU#:63282,Dark Chocolate Almond
-2939,SKU#:63282,Chocolate Chip Cookie Dough
-7513,SKU#:63282,Double Dark Chocolate
-9479,SKU#:63282,Oatmeal Chocolate Chunk
-12428,SKU#:63282,Chocolate Caramel Cluster
-10803,SKU#:63282,Salted Caramel Brownie
-5219,SKU#:63282,Cinnamon Roll
-1615,SKU#:63282,Chocolate Almond Raisin
-3922,SKU#:63282,Chocolate Mint
-3900,SKU#:63282p12,Chocolate Mint
-1593,SKU#:63282p12,Chocolate Almond Raisin
-11423,SKU#:63282p12,Strawberry Yogurt
-2576,SKU#:63282p12,Chocolate Chip Cookie Dough
-7832,SKU#:63282p12,Double Dark Chocolate
-6508,SKU#:63282p12,Dark Chocolate Almond
-12406,SKU#:63282p12,Chocolate Caramel Cluster
-4214,SKU#:63282p12,Chocolate Peanut
-13730,SKU#:63282p12,Sweet  Salty Cashew Pretzel
-9457,SKU#:63282p12,Oatmeal Chocolate Chunk
-5866,SKU#:63282p12,Cinnamon Roll
-8474,SKU#:63282p12,Fudge Graham
-10440,SKU#:63282p12,Salted Caramel Brownie
-13092,SKU#:63299,Sweet  Salty Cashew Pretzel
-9488,SKU#:63299,Oatmeal Chocolate Chunk
-12778,SKU#:63299,Chocolate Caramel Cluster
-6880,SKU#:63299,Dark Chocolate Almond
-11795,SKU#:63299,Strawberry Yogurt
-5228,SKU#:63299,Cinnamon Roll
-8846,SKU#:63299,Fudge Graham
-4914,SKU#:63299,Chocolate Peanut
-10812,SKU#:63299,Salted Caramel Brownie
-7522,SKU#:63299,Double Dark Chocolate
-3262,SKU#:63299,Chocolate Mint
-1624,SKU#:63299,Chocolate Almond Raisin
-2279,SKU#:63299,Chocolate Chip Cookie Dough
-1610,SKU#:63299p12,Chocolate Almond Raisin
-9146,SKU#:63299p12,Oatmeal Chocolate Chunk
-4231,SKU#:63299p12,Chocolate Peanut
-2265,SKU#:63299p12,Chocolate Chip Cookie Dough
-3576,SKU#:63299p12,Chocolate Mint
-6866,SKU#:63299p12,Dark Chocolate Almond
-13078,SKU#:63299p12,Sweet  Salty Cashew Pretzel
-7180,SKU#:63299p12,Double Dark Chocolate
-12764,SKU#:63299p12,Chocolate Caramel Cluster
-11112,SKU#:63299p12,Strawberry Yogurt
-5883,SKU#:63299p12,Cinnamon Roll
-10798,SKU#:63299p12,Salted Caramel Brownie
-8832,SKU#:63299p12,Fudge Graham
-11441,SKU#:63304,Strawberry Yogurt
-4560,SKU#:63304,Chocolate Peanut
-3577,SKU#:63304,Chocolate Mint
-6526,SKU#:63304,Dark Chocolate Almond
-1283,SKU#:63304,Chocolate Almond Raisin
-12096,SKU#:63304,Chocolate Caramel Cluster
-8492,SKU#:63304,Fudge Graham
-9147,SKU#:63304,Oatmeal Chocolate Chunk
-2935,SKU#:63304,Chocolate Chip Cookie Dough
-10130,SKU#:63304,Salted Caramel Brownie
-7850,SKU#:63304,Double Dark Chocolate
-5543,SKU#:63304,Cinnamon Roll
-13748,SKU#:63304,Sweet  Salty Cashew Pretzel
-5536,SKU#:63304p12,Cinnamon Roll
-12417,SKU#:63304p12,Chocolate Caramel Cluster
-3570,SKU#:63304p12,Chocolate Mint
-10451,SKU#:63304p12,Salted Caramel Brownie
-7843,SKU#:63304p12,Double Dark Chocolate
-11434,SKU#:63304p12,Strawberry Yogurt
-1604,SKU#:63304p12,Chocolate Almond Raisin
-4894,SKU#:63304p12,Chocolate Peanut
-6191,SKU#:63304p12,Dark Chocolate Almond
-2928,SKU#:63304p12,Chocolate Chip Cookie Dough
-9140,SKU#:63304p12,Oatmeal Chocolate Chunk
-8485,SKU#:63304p12,Fudge Graham
-13400,SKU#:63304p12,Sweet  Salty Cashew Pretzel
-2604,SKU#:63309,Chocolate Chip Cookie Dough
-7191,SKU#:63309,Double Dark Chocolate
-13089,SKU#:63309,Sweet  Salty Cashew Pretzel
-5894,SKU#:63309,Cinnamon Roll
-4242,SKU#:63309,Chocolate Peanut
-1621,SKU#:63309,Chocolate Almond Raisin
-12775,SKU#:63309,Chocolate Caramel Cluster
-9485,SKU#:63309,Oatmeal Chocolate Chunk
-11451,SKU#:63309,Strawberry Yogurt
-3928,SKU#:63309,Chocolate Mint
-10809,SKU#:63309,Salted Caramel Brownie
-8174,SKU#:63309,Fudge Graham
-6208,SKU#:63309,Dark Chocolate Almond
-9473,SKU#:63309p12,Oatmeal Chocolate Chunk
-11111,SKU#:63309p12,Strawberry Yogurt
-12422,SKU#:63309p12,Chocolate Caramel Cluster
-5882,SKU#:63309p12,Cinnamon Roll
-4230,SKU#:63309p12,Chocolate Peanut
-1950,SKU#:63309p12,Chocolate Almond Raisin
-13405,SKU#:63309p12,Sweet  Salty Cashew Pretzel
-3916,SKU#:63309p12,Chocolate Mint
-8162,SKU#:63309p12,Fudge Graham
-10128,SKU#:63309p12,Salted Caramel Brownie
-7507,SKU#:63309p12,Double Dark Chocolate
-6865,SKU#:63309p12,Dark Chocolate Almond
-2933,SKU#:63309p12,Chocolate Chip Cookie Dough
-6199,SKU#:63505,Dark Chocolate Almond
-5216,SKU#:63505,Cinnamon Roll
-9817,SKU#:63505,Oatmeal Chocolate Chunk
-2936,SKU#:63505,Chocolate Chip Cookie Dough
-12425,SKU#:63505,Chocolate Caramel Cluster
-8493,SKU#:63505,Fudge Graham
-10459,SKU#:63505,Salted Caramel Brownie
-7510,SKU#:63505,Double Dark Chocolate
-13749,SKU#:63505,Sweet  Salty Cashew Pretzel
-3250,SKU#:63505,Chocolate Mint
-4561,SKU#:63505,Chocolate Peanut
-1284,SKU#:63505,Chocolate Almond Raisin
-11114,SKU#:63505,Strawberry Yogurt
-2260,SKU#:63505p12,Chocolate Chip Cookie Dough
-8827,SKU#:63505p12,Fudge Graham
-9469,SKU#:63505p12,Oatmeal Chocolate Chunk
-5537,SKU#:63505p12,Cinnamon Roll
-6861,SKU#:63505p12,Dark Chocolate Almond
-7175,SKU#:63505p12,Double Dark Chocolate
-1946,SKU#:63505p12,Chocolate Almond Raisin
-10124,SKU#:63505p12,Salted Caramel Brownie
-3243,SKU#:63505p12,Chocolate Mint
-13742,SKU#:63505p12,Sweet  Salty Cashew Pretzel
-11776,SKU#:63505p12,Strawberry Yogurt
-12759,SKU#:63505p12,Chocolate Caramel Cluster
-4226,SKU#:63505p12,Chocolate Peanut
-1201,SKU#:64172,Strawberry Lemonade
-3836,SKU#:64172,Grape
-8751,SKU#:64172,Variety  Cherry
-9734,SKU#:64172,Strawberry Lemonade
-6785,SKU#:64172,Fruit Punch
-5133,SKU#:64172,Variety  Strawberry
-4478,SKU#:64172,Orange
-7099,SKU#:64172,Grape  Apple
-2853,SKU#:64172,Cherry
-10717,SKU#:64172,Orange  Grape
-2520,SKU#:64172p6,Grape
-3844,SKU#:64172p6,Cherry
-7776,SKU#:64172p6,Grape  Apple
-1878,SKU#:64172p6,Strawberry Lemonade
-5141,SKU#:64172p6,Variety  Strawberry
-4827,SKU#:64172p6,Orange
-6793,SKU#:64172p6,Fruit Punch
-2854,SKU#:64177,Cherry
-9066,SKU#:64177,Strawberry Lemonade
-6445,SKU#:64177,Fruit Punch
-1530,SKU#:64177,Orange
-4820,SKU#:64177,Strawberry Lemonade
-8752,SKU#:64177,Variety  Cherry
-7428,SKU#:64177,Grape  Apple
-10718,SKU#:64177,Orange  Grape
-5134,SKU#:64177,Variety  Strawberry
-3168,SKU#:64177,Grape
-4161,SKU#:64177p6,Strawberry Lemonade
-7779,SKU#:64177p6,Grape  Apple
-2523,SKU#:64177p6,Cherry
-1212,SKU#:64177p6,Orange
-6455,SKU#:64177p6,Fruit Punch
-3847,SKU#:64177p6,Grape
-5144,SKU#:64177p6,Variety  Strawberry
-2495,SKU#:64301,Tropical Fruit
-1184,SKU#:64301,Strawberry Lemonade
-3150,SKU#:64301,Blue Raspberry
-4461,SKU#:64301,Cherry Punch
-2201,SKU#:64301e,Tropical Fruit
-3512,SKU#:64301e,Blue Raspberry
-1218,SKU#:64301e,Strawberry Lemonade
-4495,SKU#:64301e,Cherry Punch
-4462,SKU#:64307,Cherry Punch
-2168,SKU#:64307,Strawberry Lemonade
-3151,SKU#:64307,Blue Raspberry
-1513,SKU#:64307,Tropical Fruit
-2858,SKU#:64307e,Strawberry Lemonade
-1534,SKU#:64307e,Tropical Fruit
-4824,SKU#:64307e,Cherry Punch
-3500,SKU#:64307e,Blue Raspberry
-2515,SKU#:64595,Grape
-9737,SKU#:64595,Strawberry Lemonade
-3170,SKU#:64595,Orange
-4153,SKU#:64595,Strawberry Lemonade
-8085,SKU#:64595,Variety  Cherry
-7102,SKU#:64595,Grape  Apple
-5805,SKU#:64595,Variety  Strawberry
-1873,SKU#:64595,Cherry
-10720,SKU#:64595,Orange  Grape
-6447,SKU#:64595,Fruit Punch
-1211,SKU#:64595p6,Cherry
-2194,SKU#:64595p6,Orange
-7109,SKU#:64595p6,Grape  Apple
-6795,SKU#:64595p6,Fruit Punch
-4160,SKU#:64595p6,Strawberry Lemonade
-5471,SKU#:64595p6,Variety  Strawberry
-3846,SKU#:64595p6,Grape
-7416,SKU#:64598,Grape  Apple
-1190,SKU#:64598,Grape
-10706,SKU#:64598,Orange  Grape
-3156,SKU#:64598,Orange
-5450,SKU#:64598,Variety  Strawberry
-8071,SKU#:64598,Variety  Cherry
-4139,SKU#:64598,Strawberry Lemonade
-9382,SKU#:64598,Strawberry Lemonade
-2501,SKU#:64598,Cherry
-6433,SKU#:64598,Fruit Punch
-1538,SKU#:64598p6,Grape
-2521,SKU#:64598p6,Cherry
-3845,SKU#:64598p6,Orange
-5811,SKU#:64598p6,Variety  Strawberry
-7108,SKU#:64598p6,Grape  Apple
-4159,SKU#:64598p6,Strawberry Lemonade
-6125,SKU#:64598p6,Fruit Punch
-10801,SKU#:66040,Salted Caramel Brownie
-9149,SKU#:66040,Oatmeal Chocolate Chunk
-12426,SKU#:66040,Chocolate Caramel Cluster
-13750,SKU#:66040,Sweet  Salty Cashew Pretzel
-11784,SKU#:66040,Strawberry Yogurt
-8494,SKU#:66040,Fudge Graham
-1613,SKU#:66040,Chocolate Almond Raisin
-7852,SKU#:66040,Double Dark Chocolate
-2268,SKU#:66040,Chocolate Chip Cookie Dough
-4562,SKU#:66040,Chocolate Peanut
-3920,SKU#:66040,Chocolate Mint
-5886,SKU#:66040,Cinnamon Roll
-6528,SKU#:66040,Dark Chocolate Almond
-9811,SKU#:66040p12,Oatmeal Chocolate Chunk
-8487,SKU#:66040p12,Fudge Graham
-11777,SKU#:66040p12,Strawberry Yogurt
-2261,SKU#:66040p12,Chocolate Chip Cookie Dough
-5210,SKU#:66040p12,Cinnamon Roll
-12419,SKU#:66040p12,Chocolate Caramel Cluster
-6862,SKU#:66040p12,Dark Chocolate Almond
-13402,SKU#:66040p12,Sweet  Salty Cashew Pretzel
-1947,SKU#:66040p12,Chocolate Almond Raisin
-4555,SKU#:66040p12,Chocolate Peanut
-3572,SKU#:66040p12,Chocolate Mint
-10125,SKU#:66040p12,Salted Caramel Brownie
-7504,SKU#:66040p12,Double Dark Chocolate
-3147,SKU#:66641,Iced Grape
-2492,SKU#:66641,Kiwi Berry Mist
-5441,SKU#:66641,Orange Breeze
-4458,SKU#:66641,Chilled Cherry Pomegranate
-1181,SKU#:66641,Berry Frost
-4834,SKU#:66641e,Iced Grape
-1216,SKU#:66641e,Berry Frost
-2527,SKU#:66641e,Orange Breeze
-3851,SKU#:66641e,Kiwi Berry Mist
-5148,SKU#:66641e,Chilled Cherry Pomegranate
-3159,SKU#:66643,Iced Grape
-2504,SKU#:66643,Berry Frost
-4142,SKU#:66643,Chilled Cherry Pomegranate
-5125,SKU#:66643,Orange Breeze
-1521,SKU#:66643,Kiwi Berry Mist
-3181,SKU#:66643e,Berry Frost
-5475,SKU#:66643e,Chilled Cherry Pomegranate
-4833,SKU#:66643e,Iced Grape
-1884,SKU#:66643e,Kiwi Berry Mist
-2867,SKU#:66643e,Orange Breeze
-2832,SKU#:66645,Iced Grape
-4457,SKU#:66645,Kiwi Berry Mist
-3474,SKU#:66645,Berry Frost
-5440,SKU#:66645,Orange Breeze
-1849,SKU#:66645,Chilled Cherry Pomegranate
-3507,SKU#:66645e,Kiwi Berry Mist
-2524,SKU#:66645e,Iced Grape
-1541,SKU#:66645e,Chilled Cherry Pomegranate
-4490,SKU#:66645e,Orange Breeze
-5814,SKU#:66645e,Berry Frost
-2844,SKU#:66855,Chilled Cherry Pomegranate
-1192,SKU#:66855,Iced Grape
-3827,SKU#:66855,Kiwi Berry Mist
-5124,SKU#:66855,Orange Breeze
-4141,SKU#:66855,Berry Frost
-5146,SKU#:66855e,Chilled Cherry Pomegranate
-2525,SKU#:66855e,Kiwi Berry Mist
-4491,SKU#:66855e,Berry Frost
-3508,SKU#:66855e,Orange Breeze
-1542,SKU#:66855e,Iced Grape
-3108,SKU#:66959,Chocolate
-2453,SKU#:66959,Strawberry
-2450,SKU#:66959e,Strawberry
-3433,SKU#:66959e,Chocolate
-1815,SKU#:66960,Chocolate
-2798,SKU#:66960,Strawberry
-1145,SKU#:66960e,Chocolate
-2128,SKU#:66960e,Strawberry
-2796,SKU#:66961,Chocolate
-1144,SKU#:66961,Strawberry
-2126,SKU#:66961e,Chocolate
-1812,SKU#:66961e,Strawberry
-1868,SKU#:66969,Berry Frost
-3493,SKU#:66969,Orange Breeze
-4817,SKU#:66969,Variety  Berry Frost  Strawberry Freeze
-2851,SKU#:66969,Strawberry Freeze
-3477,SKU#:66969p6,Strawberry Freeze
-2835,SKU#:66969p6,Orange Breeze
-4132,SKU#:66969p6,Variety  Berry Frost  Strawberry Freeze
-1511,SKU#:66969p6,Berry Frost
-1869,SKU#:66972,Strawberry Freeze
-2852,SKU#:66972,Berry Frost
-4149,SKU#:66972,Variety  Berry Frost  Strawberry Freeze
-3835,SKU#:66972,Orange Breeze
-4498,SKU#:66972p6,Variety  Berry Frost  Strawberry Freeze
-3515,SKU#:66972p6,Orange Breeze
-1890,SKU#:66972p6,Strawberry Freeze
-2204,SKU#:66972p6,Berry Frost
-1243,SKU#:67067,Homemade
-2226,SKU#:67067,Chocolate
-1244,SKU#:67070,Chocolate
-2555,SKU#:67070,Homemade
-1558,SKU#:67220,Cherry
-2882,SKU#:67220,Grape
-2211,SKU#:67220p6,Grape
-1897,SKU#:67220p6,Cherry
-1229,SKU#:67225,Grape
-2540,SKU#:67225,Cherry
-2883,SKU#:67225p6,Cherry
-1900,SKU#:67225p6,Grape
-3164,SKU#:67426,Strawberry Freeze
-2181,SKU#:67426,Berry Frost
-1526,SKU#:67426,Orange Breeze
-4816,SKU#:67426,Variety  Berry Frost  Strawberry Freeze
-3476,SKU#:67426p6,Strawberry Freeze
-2165,SKU#:67426p6,Berry Frost
-1510,SKU#:67426p6,Orange Breeze
-4131,SKU#:67426p6,Variety  Berry Frost  Strawberry Freeze
-4128,SKU#:67434,Iced Grape
-2162,SKU#:67434,Berry Frost
-3145,SKU#:67434,Kiwi Berry Mist
-5780,SKU#:67434,Chilled Cherry Pomegranate
-1507,SKU#:67434,Orange Breeze
-4166,SKU#:67434e,Iced Grape
-2200,SKU#:67434e,Berry Frost
-1217,SKU#:67434e,Orange Breeze
-3852,SKU#:67434e,Kiwi Berry Mist
-5477,SKU#:67434e,Chilled Cherry Pomegranate
-4466,SKU#:67461,Strawberry
-1858,SKU#:67461,Coconut Burst
-2841,SKU#:67461,Mixed Fruit
-3483,SKU#:67461,Unflavored
-5790,SKU#:67461,Grape
-6432,SKU#:67461,Bubble Gum
-3862,SKU#:67461e,Unflavored
-4504,SKU#:67461e,Strawberry
-2538,SKU#:67461e,Mixed Fruit
-5828,SKU#:67461e,Grape
-6470,SKU#:67461e,Bubble Gum
-1896,SKU#:67461e,Coconut Burst
-2257,SKU#:67495,Birthday Cake
-1943,SKU#:67495,White Chocolate Peanut
-3909,SKU#:67495,Fruity Cereal
-2601,SKU#:67495p12,Birthday Cake
-3584,SKU#:67495p12,Fruity Cereal
-1618,SKU#:67495p12,White Chocolate Peanut
-2243,SKU#:67500,White Chocolate Peanut
-1588,SKU#:67500,Birthday Cake
-3226,SKU#:67500,Fruity Cereal
-1957,SKU#:67500p12,Birthday Cake
-2271,SKU#:67500p12,White Chocolate Peanut
-3582,SKU#:67500p12,Fruity Cereal
-3910,SKU#:67510,Birthday Cake
-1275,SKU#:67510,Fruity Cereal
-2586,SKU#:67510,White Chocolate Peanut
-1289,SKU#:67510p12,Fruity Cereal
-3924,SKU#:67510p12,Birthday Cake
-2272,SKU#:67510p12,White Chocolate Peanut
+3475,SKU#:00079,nan
+973,SKU#:00079p50,nan
+1613,SKU#:00094,nan
+2521,SKU#:00180,nan
+1755,SKU#:00240,Bubble Gum
+3918,SKU#:00240,None
+210,SKU#:00240,Grape
+828,SKU#:00240,Strawberry
+1137,SKU#:00240,Mixed Fruit
+1446,SKU#:00240,Coconut Burst
+519,SKU#:00240,Unflavored
+2091,SKU#:00240e,None
+546,SKU#:00240e,Strawberry
+1473,SKU#:00240e,Coconut Burst
+855,SKU#:00240e,Unflavored
+237,SKU#:00240e,Grape
+1164,SKU#:00240e,Mixed Fruit
+1782,SKU#:00240e,Bubble Gum
+208,SKU#:00336,Unflavored
+3607,SKU#:00336,None
+1135,SKU#:00336,Mixed Fruit
+826,SKU#:00336,Grape
+1444,SKU#:00336,Coconut Burst
+517,SKU#:00336,Strawberry
+1753,SKU#:00336,Bubble Gum
+545,SKU#:00336e,Mixed Fruit
+1781,SKU#:00336e,Bubble Gum
+854,SKU#:00336e,Coconut Burst
+1472,SKU#:00336e,Grape
+3944,SKU#:00336e,None
+236,SKU#:00336e,Unflavored
+1163,SKU#:00336e,Strawberry
+2055,SKU#:00365,None
+510,SKU#:00365,Unflavored
+1746,SKU#:00365,Bubble Gum
+819,SKU#:00365,Strawberry
+201,SKU#:00365,Mixed Fruit
+1437,SKU#:00365,Coconut Burst
+1128,SKU#:00365,Grape
+3328,SKU#:00365e,None
+238,SKU#:00365e,Mixed Fruit
+1165,SKU#:00365e,Strawberry
+1783,SKU#:00365e,Bubble Gum
+1474,SKU#:00365e,Grape
+856,SKU#:00365e,Unflavored
+547,SKU#:00365e,Coconut Burst
+1341,SKU#:00750,None
+105,SKU#:00750,Vanilla
+1380,SKU#:00750e,None
+144,SKU#:00750e,Vanilla
+1000,SKU#:00850,nan
+2210,SKU#:00850e,nan
+3890,SKU#:1300170,nan
+1107,SKU#:1400204,nan
+2971,SKU#:21372,nan
+3273,SKU#:213732,nan
+2658,SKU#:22309p100,nan
+2958,SKU#:22309p6,nan
+2965,SKU#:25189,nan
+689,SKU#:50512,nan
+3154,SKU#:5081776,nan
+3746,SKU#:5081776e,nan
+53,SKU#:5081978,nan
+3440,SKU#:5081978e,nan
+2569,SKU#:5082178,nan
+1287,SKU#:5082178e,nan
+390,SKU#:5095976,nan
+35,SKU#:51002,nan
+408,SKU#:51004,nan
+3614,SKU#:51752,None
+1451,SKU#:51752,Unflavored
+833,SKU#:51752,Grape
+1760,SKU#:51752,Coconut Burst
+524,SKU#:51752,Strawberry
+215,SKU#:51752,Bubble Gum
+1142,SKU#:51752,Mixed Fruit
+3941,SKU#:51752e,None
+1160,SKU#:51752e,Unflavored
+851,SKU#:51752e,Strawberry
+542,SKU#:51752e,Grape
+1778,SKU#:51752e,Coconut Burst
+1469,SKU#:51752e,Mixed Fruit
+233,SKU#:51752e,Bubble Gum
+702,SKU#:51950,nan
+2568,SKU#:53359,nan
+6,SKU#:53359e,nan
+2265,SKU#:53363,nan
+1617,SKU#:53557,nan
+1001,SKU#:53560,nan
+3794,SKU#:53568,nan
+1633,SKU#:53572,nan
+2223,SKU#:5367678,nan
+1316,SKU#:5372976,nan
+1588,SKU#:5372976e,nan
+726,SKU#:53806,nan
+738,SKU#:53809,nan
+2311,SKU#:53818,nan
+1293,SKU#:53894,nan
+3756,SKU#:53894p50,nan
+1750,SKU#:53983,Bubble Gum
+3913,SKU#:53983,None
+205,SKU#:53983,Strawberry
+514,SKU#:53983,Unflavored
+823,SKU#:53983,Grape
+1132,SKU#:53983,Mixed Fruit
+1441,SKU#:53983,Coconut Burst
+1471,SKU#:53983e,Grape
+3325,SKU#:53983e,None
+1162,SKU#:53983e,Coconut Burst
+853,SKU#:53983e,Mixed Fruit
+1780,SKU#:53983e,Bubble Gum
+235,SKU#:53983e,Strawberry
+544,SKU#:53983e,Unflavored
+1941,SKU#:54080,nan
+1004,SKU#:54598,nan
+1904,SKU#:54598p50,nan
+2614,SKU#:54844,nan
+1685,SKU#:54846,nan
+1636,SKU#:5595776,nan
+3144,SKU#:5596378,nan
+3308,SKU#:56090,None
+2381,SKU#:56090,Variety - Cherry
+1454,SKU#:56090,Grape
+2072,SKU#:56090,Strawberry Lemonade
+1145,SKU#:56090,Cherry
+527,SKU#:56090,Fruit Punch
+836,SKU#:56090,Grape & Apple
+2999,SKU#:56090,Orange & Grape
+1763,SKU#:56090,Orange
+218,SKU#:56090,Variety - Strawberry
+3002,SKU#:56090p8,None
+530,SKU#:56090p8,Fruit Punch
+2075,SKU#:56090p8,Strawberry Lemonade
+1766,SKU#:56090p8,Orange
+1457,SKU#:56090p8,Cherry
+839,SKU#:56090p8,Grape & Apple
+221,SKU#:56090p8,Variety - Strawberry
+1148,SKU#:56090p8,Grape
+3409,SKU#:56308,nan
+2013,SKU#:56368,nan
+1365,SKU#:56500,nan
+1865,SKU#:56525,nan
+2261,SKU#:5697378,nan
+985,SKU#:5697578,nan
+3191,SKU#:57231,nan
+3505,SKU#:57234,nan
+1654,SKU#:57237,nan
+1348,SKU#:57240,nan
+2263,SKU#:57243,nan
+1358,SKU#:57263,nan
+1046,SKU#:57266,nan
+2593,SKU#:57269,nan
+1669,SKU#:57272,nan
+2859,SKU#:5743076,nan
+3752,SKU#:5743076e,nan
+1311,SKU#:5745578,nan
+90,SKU#:57508,nan
+3481,SKU#:57512,nan
+63,SKU#:5753378,nan
+3775,SKU#:5753578,nan
+2846,SKU#:5753978,nan
+2721,SKU#:57801,nan
+3653,SKU#:57804,nan
+869,SKU#:57807,nan
+1488,SKU#:57810,nan
+2000,SKU#:58049,nan
+3559,SKU#:58052,nan
+2310,SKU#:58055,nan
+2931,SKU#:58058,nan
+3251,SKU#:58061,nan
+2257,SKU#:58585,nan
+312,SKU#:58585e,nan
+2567,SKU#:5860578,nan
+2477,SKU#:59738,nan
+3657,SKU#:59856,nan
+1802,SKU#:59859,nan
+2984,SKU#:59892,nan
+1455,SKU#:59892p4,nan
+3105,SKU#:62139,nan
+1673,SKU#:62479,nan
+3027,SKU#:62585,nan
+3764,SKU#:62595,nan
+2215,SKU#:62599,nan
+207,SKU#:62605,nan
+3088,SKU#:62836,Salted Caramel Brownie
+1543,SKU#:62836,Cinnamon Roll
+1234,SKU#:62836,Chocolate Peanut Butter
+2779,SKU#:62836,Oatmeal Chocolate Chunk
+1852,SKU#:62836,Dark Chocolate Almond
+616,SKU#:62836,Chocolate Chip Cookie Dough
+307,SKU#:62836,Chocolate Almond Raisin
+4015,SKU#:62836,Sweet & Salty Cashew Pretzel
+925,SKU#:62836,Chocolate Mint
+3706,SKU#:62836,Chocolate Caramel Cluster
+2161,SKU#:62836,Double Dark Chocolate
+3397,SKU#:62836,Strawberry Yogurt
+2470,SKU#:62836,Fudge Graham
+2454,SKU#:62836p12,Fudge Graham
+2763,SKU#:62836p12,Oatmeal Chocolate Chunk
+2145,SKU#:62836p12,Double Dark Chocolate
+1218,SKU#:62836p12,Chocolate Peanut Butter
+600,SKU#:62836p12,Chocolate Chip Cookie Dough
+291,SKU#:62836p12,Chocolate Almond Raisin
+3999,SKU#:62836p12,Sweet & Salty Cashew Pretzel
+3690,SKU#:62836p12,Chocolate Caramel Cluster
+909,SKU#:62836p12,Chocolate Mint
+3072,SKU#:62836p12,Salted Caramel Brownie
+3381,SKU#:62836p12,Strawberry Yogurt
+1527,SKU#:62836p12,Cinnamon Roll
+1836,SKU#:62836p12,Dark Chocolate Almond
+250,SKU#:62882,Homemade Vanilla
+2104,SKU#:62882,None
+559,SKU#:62882,Rich Chocolate
+868,SKU#:62882,Creamy Strawberry
+2101,SKU#:62885,None
+556,SKU#:62885,Homemade Vanilla
+247,SKU#:62885,Rich Chocolate
+865,SKU#:62885,Creamy Strawberry
+1611,SKU#:62951,nan
+1275,SKU#:62951e,nan
+988,SKU#:63013,nan
+2197,SKU#:63013e,nan
+1126,SKU#:63057,Tropical Fruit
+3598,SKU#:63057,None
+508,SKU#:63057,Blue Raspberry
+199,SKU#:63057,Cherry Punch
+817,SKU#:63057,Strawberry Lemonade
+1158,SKU#:63057e,Tropical Fruit
+3630,SKU#:63057e,None
+540,SKU#:63057e,Blue Raspberry
+231,SKU#:63057e,Cherry Punch
+849,SKU#:63057e,Strawberry Lemonade
+198,SKU#:63059,Blue Raspberry
+3906,SKU#:63059,None
+1125,SKU#:63059,Tropical Fruit
+816,SKU#:63059,Strawberry Lemonade
+507,SKU#:63059,Cherry Punch
+543,SKU#:63059e,Strawberry Lemonade
+3942,SKU#:63059e,None
+852,SKU#:63059e,Tropical Fruit
+1161,SKU#:63059e,Cherry Punch
+234,SKU#:63059e,Blue Raspberry
+3087,SKU#:63161,Salted Caramel Brownie
+924,SKU#:63161,Chocolate Mint
+1851,SKU#:63161,Dark Chocolate Almond
+615,SKU#:63161,Chocolate Chip Cookie Dough
+1233,SKU#:63161,Chocolate Peanut Butter
+306,SKU#:63161,Chocolate Almond Raisin
+2469,SKU#:63161,Fudge Graham
+1542,SKU#:63161,Cinnamon Roll
+3705,SKU#:63161,Chocolate Caramel Cluster
+3396,SKU#:63161,Strawberry Yogurt
+2778,SKU#:63161,Oatmeal Chocolate Chunk
+2160,SKU#:63161,Double Dark Chocolate
+4014,SKU#:63161,Sweet & Salty Cashew Pretzel
+1220,SKU#:63161p12,Chocolate Peanut Butter
+2456,SKU#:63161p12,Fudge Graham
+3692,SKU#:63161p12,Chocolate Caramel Cluster
+293,SKU#:63161p12,Chocolate Almond Raisin
+911,SKU#:63161p12,Chocolate Mint
+3074,SKU#:63161p12,Salted Caramel Brownie
+1529,SKU#:63161p12,Cinnamon Roll
+602,SKU#:63161p12,Chocolate Chip Cookie Dough
+2765,SKU#:63161p12,Oatmeal Chocolate Chunk
+4001,SKU#:63161p12,Sweet & Salty Cashew Pretzel
+2147,SKU#:63161p12,Double Dark Chocolate
+1838,SKU#:63161p12,Dark Chocolate Almond
+3383,SKU#:63161p12,Strawberry Yogurt
+1840,SKU#:63214,Dark Chocolate Almond
+2767,SKU#:63214,Oatmeal Chocolate Chunk
+2149,SKU#:63214,Double Dark Chocolate
+4003,SKU#:63214,Sweet & Salty Cashew Pretzel
+3385,SKU#:63214,Strawberry Yogurt
+604,SKU#:63214,Chocolate Chip Cookie Dough
+3694,SKU#:63214,Chocolate Caramel Cluster
+1222,SKU#:63214,Chocolate Peanut Butter
+1531,SKU#:63214,Cinnamon Roll
+2458,SKU#:63214,Fudge Graham
+3076,SKU#:63214,Salted Caramel Brownie
+295,SKU#:63214,Chocolate Almond Raisin
+913,SKU#:63214,Chocolate Mint
+1825,SKU#:63214p12,Dark Chocolate Almond
+3988,SKU#:63214p12,Sweet & Salty Cashew Pretzel
+1516,SKU#:63214p12,Cinnamon Roll
+1207,SKU#:63214p12,Chocolate Peanut Butter
+3370,SKU#:63214p12,Strawberry Yogurt
+2752,SKU#:63214p12,Oatmeal Chocolate Chunk
+589,SKU#:63214p12,Chocolate Chip Cookie Dough
+2443,SKU#:63214p12,Fudge Graham
+898,SKU#:63214p12,Chocolate Mint
+3679,SKU#:63214p12,Chocolate Caramel Cluster
+3061,SKU#:63214p12,Salted Caramel Brownie
+2134,SKU#:63214p12,Double Dark Chocolate
+280,SKU#:63214p12,Chocolate Almond Raisin
+923,SKU#:63225,Chocolate Mint
+2468,SKU#:63225,Fudge Graham
+305,SKU#:63225,Chocolate Almond Raisin
+1850,SKU#:63225,Dark Chocolate Almond
+3395,SKU#:63225,Strawberry Yogurt
+1541,SKU#:63225,Cinnamon Roll
+2159,SKU#:63225,Double Dark Chocolate
+1232,SKU#:63225,Chocolate Peanut Butter
+3704,SKU#:63225,Chocolate Caramel Cluster
+2777,SKU#:63225,Oatmeal Chocolate Chunk
+4013,SKU#:63225,Sweet & Salty Cashew Pretzel
+614,SKU#:63225,Chocolate Chip Cookie Dough
+3086,SKU#:63225,Salted Caramel Brownie
+2124,SKU#:63225p12,Double Dark Chocolate
+888,SKU#:63225p12,Chocolate Mint
+3051,SKU#:63225p12,Salted Caramel Brownie
+1815,SKU#:63225p12,Dark Chocolate Almond
+2742,SKU#:63225p12,Oatmeal Chocolate Chunk
+270,SKU#:63225p12,Chocolate Almond Raisin
+2433,SKU#:63225p12,Fudge Graham
+3978,SKU#:63225p12,Sweet & Salty Cashew Pretzel
+1197,SKU#:63225p12,Chocolate Peanut Butter
+3669,SKU#:63225p12,Chocolate Caramel Cluster
+1506,SKU#:63225p12,Cinnamon Roll
+579,SKU#:63225p12,Chocolate Chip Cookie Dough
+3360,SKU#:63225p12,Strawberry Yogurt
+4012,SKU#:63259,Sweet & Salty Cashew Pretzel
+2158,SKU#:63259,Double Dark Chocolate
+3394,SKU#:63259,Strawberry Yogurt
+922,SKU#:63259,Chocolate Mint
+1540,SKU#:63259,Cinnamon Roll
+304,SKU#:63259,Chocolate Almond Raisin
+2467,SKU#:63259,Fudge Graham
+613,SKU#:63259,Chocolate Chip Cookie Dough
+3703,SKU#:63259,Chocolate Caramel Cluster
+1849,SKU#:63259,Dark Chocolate Almond
+1231,SKU#:63259,Chocolate Peanut Butter
+2776,SKU#:63259,Oatmeal Chocolate Chunk
+3085,SKU#:63259,Salted Caramel Brownie
+1820,SKU#:63259p12,Dark Chocolate Almond
+893,SKU#:63259p12,Chocolate Mint
+275,SKU#:63259p12,Chocolate Almond Raisin
+584,SKU#:63259p12,Chocolate Chip Cookie Dough
+1511,SKU#:63259p12,Cinnamon Roll
+1202,SKU#:63259p12,Chocolate Peanut Butter
+3674,SKU#:63259p12,Chocolate Caramel Cluster
+3056,SKU#:63259p12,Salted Caramel Brownie
+3365,SKU#:63259p12,Strawberry Yogurt
+2747,SKU#:63259p12,Oatmeal Chocolate Chunk
+2438,SKU#:63259p12,Fudge Graham
+3983,SKU#:63259p12,Sweet & Salty Cashew Pretzel
+2129,SKU#:63259p12,Double Dark Chocolate
+2757,SKU#:63269,nan
+1536,SKU#:63282,Cinnamon Roll
+918,SKU#:63282,Chocolate Mint
+300,SKU#:63282,Chocolate Almond Raisin
+1227,SKU#:63282,Chocolate Peanut Butter
+609,SKU#:63282,Chocolate Chip Cookie Dough
+2154,SKU#:63282,Double Dark Chocolate
+4008,SKU#:63282,Sweet & Salty Cashew Pretzel
+3390,SKU#:63282,Strawberry Yogurt
+2463,SKU#:63282,Fudge Graham
+1845,SKU#:63282,Dark Chocolate Almond
+3699,SKU#:63282,Chocolate Caramel Cluster
+3081,SKU#:63282,Salted Caramel Brownie
+2772,SKU#:63282,Oatmeal Chocolate Chunk
+278,SKU#:63282p12,Chocolate Almond Raisin
+2132,SKU#:63282p12,Double Dark Chocolate
+1514,SKU#:63282p12,Cinnamon Roll
+896,SKU#:63282p12,Chocolate Mint
+3986,SKU#:63282p12,Sweet & Salty Cashew Pretzel
+1205,SKU#:63282p12,Chocolate Peanut Butter
+3677,SKU#:63282p12,Chocolate Caramel Cluster
+3059,SKU#:63282p12,Salted Caramel Brownie
+2441,SKU#:63282p12,Fudge Graham
+3368,SKU#:63282p12,Strawberry Yogurt
+1823,SKU#:63282p12,Dark Chocolate Almond
+2750,SKU#:63282p12,Oatmeal Chocolate Chunk
+587,SKU#:63282p12,Chocolate Chip Cookie Dough
+2780,SKU#:63299,Oatmeal Chocolate Chunk
+1853,SKU#:63299,Dark Chocolate Almond
+2162,SKU#:63299,Double Dark Chocolate
+2471,SKU#:63299,Fudge Graham
+4016,SKU#:63299,Sweet & Salty Cashew Pretzel
+308,SKU#:63299,Chocolate Almond Raisin
+1235,SKU#:63299,Chocolate Peanut Butter
+1544,SKU#:63299,Cinnamon Roll
+3707,SKU#:63299,Chocolate Caramel Cluster
+3398,SKU#:63299,Strawberry Yogurt
+3089,SKU#:63299,Salted Caramel Brownie
+617,SKU#:63299,Chocolate Chip Cookie Dough
+926,SKU#:63299,Chocolate Mint
+2146,SKU#:63299p12,Double Dark Chocolate
+3073,SKU#:63299p12,Salted Caramel Brownie
+1528,SKU#:63299p12,Cinnamon Roll
+2455,SKU#:63299p12,Fudge Graham
+292,SKU#:63299p12,Chocolate Almond Raisin
+4000,SKU#:63299p12,Sweet & Salty Cashew Pretzel
+3382,SKU#:63299p12,Strawberry Yogurt
+1219,SKU#:63299p12,Chocolate Peanut Butter
+1837,SKU#:63299p12,Dark Chocolate Almond
+910,SKU#:63299p12,Chocolate Mint
+601,SKU#:63299p12,Chocolate Chip Cookie Dough
+2764,SKU#:63299p12,Oatmeal Chocolate Chunk
+3691,SKU#:63299p12,Chocolate Caramel Cluster
+1842,SKU#:63304,Dark Chocolate Almond
+297,SKU#:63304,Chocolate Almond Raisin
+4005,SKU#:63304,Sweet & Salty Cashew Pretzel
+915,SKU#:63304,Chocolate Mint
+2769,SKU#:63304,Oatmeal Chocolate Chunk
+1533,SKU#:63304,Cinnamon Roll
+3387,SKU#:63304,Strawberry Yogurt
+3078,SKU#:63304,Salted Caramel Brownie
+1224,SKU#:63304,Chocolate Peanut Butter
+2151,SKU#:63304,Double Dark Chocolate
+2460,SKU#:63304,Fudge Graham
+3696,SKU#:63304,Chocolate Caramel Cluster
+606,SKU#:63304,Chocolate Chip Cookie Dough
+598,SKU#:63304p12,Chocolate Chip Cookie Dough
+3379,SKU#:63304p12,Strawberry Yogurt
+1216,SKU#:63304p12,Chocolate Peanut Butter
+907,SKU#:63304p12,Chocolate Mint
+3070,SKU#:63304p12,Salted Caramel Brownie
+2452,SKU#:63304p12,Fudge Graham
+3688,SKU#:63304p12,Chocolate Caramel Cluster
+2143,SKU#:63304p12,Double Dark Chocolate
+1834,SKU#:63304p12,Dark Chocolate Almond
+1525,SKU#:63304p12,Cinnamon Roll
+289,SKU#:63304p12,Chocolate Almond Raisin
+3997,SKU#:63304p12,Sweet & Salty Cashew Pretzel
+2761,SKU#:63304p12,Oatmeal Chocolate Chunk
+1831,SKU#:63305,nan
+1230,SKU#:63309,Chocolate Peanut Butter
+303,SKU#:63309,Chocolate Almond Raisin
+2157,SKU#:63309,Double Dark Chocolate
+3702,SKU#:63309,Chocolate Caramel Cluster
+3393,SKU#:63309,Strawberry Yogurt
+612,SKU#:63309,Chocolate Chip Cookie Dough
+921,SKU#:63309,Chocolate Mint
+3084,SKU#:63309,Salted Caramel Brownie
+1539,SKU#:63309,Cinnamon Roll
+2775,SKU#:63309,Oatmeal Chocolate Chunk
+4011,SKU#:63309,Sweet & Salty Cashew Pretzel
+2466,SKU#:63309,Fudge Graham
+1848,SKU#:63309,Dark Chocolate Almond
+2766,SKU#:63309p12,Oatmeal Chocolate Chunk
+1839,SKU#:63309p12,Dark Chocolate Almond
+912,SKU#:63309p12,Chocolate Mint
+3693,SKU#:63309p12,Chocolate Caramel Cluster
+4002,SKU#:63309p12,Sweet & Salty Cashew Pretzel
+1530,SKU#:63309p12,Cinnamon Roll
+294,SKU#:63309p12,Chocolate Almond Raisin
+3384,SKU#:63309p12,Strawberry Yogurt
+2457,SKU#:63309p12,Fudge Graham
+603,SKU#:63309p12,Chocolate Chip Cookie Dough
+3075,SKU#:63309p12,Salted Caramel Brownie
+2148,SKU#:63309p12,Double Dark Chocolate
+1221,SKU#:63309p12,Chocolate Peanut Butter
+4006,SKU#:63505,Sweet & Salty Cashew Pretzel
+1843,SKU#:63505,Dark Chocolate Almond
+298,SKU#:63505,Chocolate Almond Raisin
+607,SKU#:63505,Chocolate Chip Cookie Dough
+2461,SKU#:63505,Fudge Graham
+2152,SKU#:63505,Double Dark Chocolate
+916,SKU#:63505,Chocolate Mint
+3079,SKU#:63505,Salted Caramel Brownie
+1225,SKU#:63505,Chocolate Peanut Butter
+3388,SKU#:63505,Strawberry Yogurt
+2770,SKU#:63505,Oatmeal Chocolate Chunk
+1534,SKU#:63505,Cinnamon Roll
+3697,SKU#:63505,Chocolate Caramel Cluster
+3998,SKU#:63505p12,Sweet & Salty Cashew Pretzel
+3380,SKU#:63505p12,Strawberry Yogurt
+1835,SKU#:63505p12,Dark Chocolate Almond
+1217,SKU#:63505p12,Chocolate Peanut Butter
+908,SKU#:63505p12,Chocolate Mint
+599,SKU#:63505p12,Chocolate Chip Cookie Dough
+2453,SKU#:63505p12,Fudge Graham
+2144,SKU#:63505p12,Double Dark Chocolate
+3071,SKU#:63505p12,Salted Caramel Brownie
+3689,SKU#:63505p12,Chocolate Caramel Cluster
+290,SKU#:63505p12,Chocolate Almond Raisin
+2762,SKU#:63505p12,Oatmeal Chocolate Chunk
+1526,SKU#:63505p12,Cinnamon Roll
+3208,SKU#:64115,nan
+1660,SKU#:64117,nan
+1359,SKU#:64121,nan
+3524,SKU#:64123,nan
+3173,SKU#:64125,nan
+1141,SKU#:64172,Orange
+3304,SKU#:64172,None
+2377,SKU#:64172,Variety - Cherry
+2068,SKU#:64172,Grape & Apple
+1450,SKU#:64172,Variety - Strawberry
+1759,SKU#:64172,Fruit Punch
+2995,SKU#:64172,Orange & Grape
+523,SKU#:64172,Cherry
+832,SKU#:64172,Grape
+214,SKU#:64172,Strawberry Lemonade
+531,SKU#:64172p6,Grape
+3312,SKU#:64172p6,None
+840,SKU#:64172p6,Cherry
+2076,SKU#:64172p6,Grape & Apple
+1458,SKU#:64172p6,Variety - Strawberry
+1149,SKU#:64172p6,Orange
+1767,SKU#:64172p6,Fruit Punch
+222,SKU#:64172p6,Strawberry Lemonade
+3920,SKU#:64177,None
+2375,SKU#:64177,Variety - Cherry
+830,SKU#:64177,Grape
+1757,SKU#:64177,Fruit Punch
+521,SKU#:64177,Cherry
+2066,SKU#:64177,Grape & Apple
+2684,SKU#:64177,Strawberry Lemonade
+212,SKU#:64177,Orange
+1448,SKU#:64177,Variety - Strawberry
+2993,SKU#:64177,Orange & Grape
+3932,SKU#:64177p6,None
+224,SKU#:64177p6,Orange
+1460,SKU#:64177p6,Variety - Strawberry
+842,SKU#:64177p6,Grape
+2078,SKU#:64177p6,Grape & Apple
+1151,SKU#:64177p6,Strawberry Lemonade
+533,SKU#:64177p6,Cherry
+1769,SKU#:64177p6,Fruit Punch
+2565,SKU#:64242,nan
+2517,SKU#:64242e,nan
+989,SKU#:64246,nan
+1564,SKU#:64246e,nan
+677,SKU#:64248,nan
+982,SKU#:64253,nan
+3529,SKU#:64291,nan
+3525,SKU#:64293,nan
+3217,SKU#:64296,nan
+2050,SKU#:64301,None
+1123,SKU#:64301,Cherry Punch
+505,SKU#:64301,Tropical Fruit
+814,SKU#:64301,Blue Raspberry
+196,SKU#:64301,Strawberry Lemonade
+3627,SKU#:64301e,None
+537,SKU#:64301e,Tropical Fruit
+846,SKU#:64301e,Blue Raspberry
+1155,SKU#:64301e,Cherry Punch
+228,SKU#:64301e,Strawberry Lemonade
+2976,SKU#:64307,None
+195,SKU#:64307,Tropical Fruit
+504,SKU#:64307,Strawberry Lemonade
+1122,SKU#:64307,Cherry Punch
+813,SKU#:64307,Blue Raspberry
+2380,SKU#:64307e,None
+217,SKU#:64307e,Tropical Fruit
+835,SKU#:64307e,Blue Raspberry
+526,SKU#:64307e,Strawberry Lemonade
+1144,SKU#:64307e,Cherry Punch
+3226,SKU#:64356,nan
+2301,SKU#:64362,nan
+3175,SKU#:64381,nan
+1143,SKU#:64595,Strawberry Lemonade
+2070,SKU#:64595,Grape & Apple
+525,SKU#:64595,Grape
+216,SKU#:64595,Cherry
+2379,SKU#:64595,Variety - Cherry
+1761,SKU#:64595,Fruit Punch
+3924,SKU#:64595,None
+834,SKU#:64595,Orange
+1452,SKU#:64595,Variety - Strawberry
+2997,SKU#:64595,Orange & Grape
+532,SKU#:64595p6,Orange
+1768,SKU#:64595p6,Fruit Punch
+1459,SKU#:64595p6,Variety - Strawberry
+2386,SKU#:64595p6,None
+1150,SKU#:64595p6,Strawberry Lemonade
+2077,SKU#:64595p6,Grape & Apple
+223,SKU#:64595p6,Cherry
+841,SKU#:64595p6,Grape
+511,SKU#:64598,Cherry
+820,SKU#:64598,Orange
+3910,SKU#:64598,None
+2674,SKU#:64598,Strawberry Lemonade
+1747,SKU#:64598,Fruit Punch
+1438,SKU#:64598,Variety - Strawberry
+2365,SKU#:64598,Variety - Cherry
+2983,SKU#:64598,Orange & Grape
+2056,SKU#:64598,Grape & Apple
+202,SKU#:64598,Grape
+2692,SKU#:64598p6,None
+529,SKU#:64598p6,Cherry
+220,SKU#:64598p6,Grape
+838,SKU#:64598p6,Orange
+1765,SKU#:64598p6,Fruit Punch
+2074,SKU#:64598p6,Grape & Apple
+1456,SKU#:64598p6,Variety - Strawberry
+1147,SKU#:64598p6,Strawberry Lemonade
+3797,SKU#:64715,nan
+969,SKU#:64715e,nan
+3800,SKU#:64719,nan
+941,SKU#:64719e,nan
+2242,SKU#:64790,nan
+1276,SKU#:64790e,nan
+863,SKU#:64796,nan
+1788,SKU#:64798,nan
+2583,SKU#:64900,nan
+2894,SKU#:64903,nan
+3040,SKU#:64913,nan
+2116,SKU#:64918,nan
+1188,SKU#:64920,nan
+3221,SKU#:65044,nan
+133,SKU#:65047,nan
+2768,SKU#:66040,Oatmeal Chocolate Chunk
+1841,SKU#:66040,Dark Chocolate Almond
+1223,SKU#:66040,Chocolate Peanut Butter
+914,SKU#:66040,Chocolate Mint
+2150,SKU#:66040,Double Dark Chocolate
+1532,SKU#:66040,Cinnamon Roll
+4004,SKU#:66040,Sweet & Salty Cashew Pretzel
+2459,SKU#:66040,Fudge Graham
+605,SKU#:66040,Chocolate Chip Cookie Dough
+3386,SKU#:66040,Strawberry Yogurt
+296,SKU#:66040,Chocolate Almond Raisin
+3695,SKU#:66040,Chocolate Caramel Cluster
+3077,SKU#:66040,Salted Caramel Brownie
+2760,SKU#:66040p12,Oatmeal Chocolate Chunk
+3069,SKU#:66040p12,Salted Caramel Brownie
+2142,SKU#:66040p12,Double Dark Chocolate
+2451,SKU#:66040p12,Fudge Graham
+1833,SKU#:66040p12,Dark Chocolate Almond
+597,SKU#:66040p12,Chocolate Chip Cookie Dough
+3687,SKU#:66040p12,Chocolate Caramel Cluster
+1524,SKU#:66040p12,Cinnamon Roll
+288,SKU#:66040p12,Chocolate Almond Raisin
+3996,SKU#:66040p12,Sweet & Salty Cashew Pretzel
+3378,SKU#:66040p12,Strawberry Yogurt
+906,SKU#:66040p12,Chocolate Mint
+1215,SKU#:66040p12,Chocolate Peanut Butter
+1924,SKU#:66081,nan
+3436,SKU#:66081e,nan
+2541,SKU#:66084,nan
+1870,SKU#:66084e,nan
+3222,SKU#:66436,nan
+3533,SKU#:66437p4,nan
+1253,SKU#:66439,nan
+1,SKU#:66439e,nan
+3708,SKU#:66441,nan
+2803,SKU#:66441e,nan
+248,SKU#:66534,nan
+3207,SKU#:66546,nan
+1081,SKU#:66639,nan
+500,SKU#:66641,Kiwi Berry Mist
+3899,SKU#:66641,None
+191,SKU#:66641,Berry Frost
+809,SKU#:66641,Iced Grape
+1118,SKU#:66641,Chilled Cherry Pomegranate
+1427,SKU#:66641,Orange Breeze
+2393,SKU#:66641e,None
+230,SKU#:66641e,Berry Frost
+539,SKU#:66641e,Orange Breeze
+848,SKU#:66641e,Kiwi Berry Mist
+1157,SKU#:66641e,Iced Grape
+1466,SKU#:66641e,Chilled Cherry Pomegranate
+2985,SKU#:66643,None
+513,SKU#:66643,Berry Frost
+1440,SKU#:66643,Orange Breeze
+822,SKU#:66643,Iced Grape
+204,SKU#:66643,Kiwi Berry Mist
+1131,SKU#:66643,Chilled Cherry Pomegranate
+3628,SKU#:66643e,None
+538,SKU#:66643e,Orange Breeze
+229,SKU#:66643e,Kiwi Berry Mist
+1156,SKU#:66643e,Iced Grape
+1465,SKU#:66643e,Chilled Cherry Pomegranate
+847,SKU#:66643e,Berry Frost
+1739,SKU#:66645,None
+1121,SKU#:66645,Kiwi Berry Mist
+194,SKU#:66645,Chilled Cherry Pomegranate
+812,SKU#:66645,Berry Frost
+503,SKU#:66645,Iced Grape
+1430,SKU#:66645,Orange Breeze
+3624,SKU#:66645e,None
+1461,SKU#:66645e,Berry Frost
+1152,SKU#:66645e,Orange Breeze
+843,SKU#:66645e,Kiwi Berry Mist
+225,SKU#:66645e,Chilled Cherry Pomegranate
+534,SKU#:66645e,Iced Grape
+785,SKU#:66670,nan
+2199,SKU#:66781,nan
+3652,SKU#:66794,nan
+1248,SKU#:66838,nan
+2060,SKU#:66855,None
+1133,SKU#:66855,Berry Frost
+206,SKU#:66855,Iced Grape
+1442,SKU#:66855,Orange Breeze
+824,SKU#:66855,Kiwi Berry Mist
+515,SKU#:66855,Chilled Cherry Pomegranate
+3007,SKU#:66855e,None
+535,SKU#:66855e,Kiwi Berry Mist
+1462,SKU#:66855e,Chilled Cherry Pomegranate
+1153,SKU#:66855e,Berry Frost
+844,SKU#:66855e,Orange Breeze
+226,SKU#:66855e,Iced Grape
+3355,SKU#:66884,nan
+573,SKU#:66887,nan
+1340,SKU#:66893,nan
+3811,SKU#:66899,nan
+3971,SKU#:66903,nan
+3665,SKU#:66905,nan
+3968,SKU#:66906,nan
+732,SKU#:66910,nan
+149,SKU#:66912,nan
+1388,SKU#:66916,nan
+3252,SKU#:66918,nan
+2502,SKU#:66923,nan
+934,SKU#:66923e,nan
+29,SKU#:66937,nan
+3412,SKU#:66937e,nan
+1269,SKU#:66939,nan
+2181,SKU#:66939e,nan
+771,SKU#:66959,Chocolate
+2007,SKU#:66959,None
+462,SKU#:66959,Strawberry
+153,SKU#:66959,Vanilla
+151,SKU#:66959e,Vanilla
+1078,SKU#:66959e,None
+769,SKU#:66959e,Chocolate
+460,SKU#:66959e,Strawberry
+2321,SKU#:66960,None
+158,SKU#:66960,Chocolate
+467,SKU#:66960,Strawberry
+776,SKU#:66960,Vanilla
+2628,SKU#:66960e,None
+774,SKU#:66960e,Vanilla
+465,SKU#:66960e,Strawberry
+156,SKU#:66960e,Chocolate
+1702,SKU#:66961,None
+775,SKU#:66961,Vanilla
+466,SKU#:66961,Chocolate
+157,SKU#:66961,Strawberry
+1700,SKU#:66961e,None
+155,SKU#:66961e,Strawberry
+464,SKU#:66961e,Chocolate
+773,SKU#:66961e,Vanilla
+213,SKU#:66969,Berry Frost
+522,SKU#:66969,Strawberry Freeze
+2067,SKU#:66969,None
+831,SKU#:66969,Orange Breeze
+1140,SKU#:66969,Variety - Berry Frost & Strawberry Freeze
+197,SKU#:66969p6,Berry Frost
+2978,SKU#:66969p6,None
+1124,SKU#:66969p6,Variety - Berry Frost & Strawberry Freeze
+815,SKU#:66969p6,Strawberry Freeze
+506,SKU#:66969p6,Orange Breeze
+211,SKU#:66972,Strawberry Freeze
+2374,SKU#:66972,None
+1138,SKU#:66972,Variety - Berry Frost & Strawberry Freeze
+520,SKU#:66972,Berry Frost
+829,SKU#:66972,Orange Breeze
+3940,SKU#:66972p6,None
+1159,SKU#:66972p6,Variety - Berry Frost & Strawberry Freeze
+232,SKU#:66972p6,Strawberry Freeze
+541,SKU#:66972p6,Berry Frost
+850,SKU#:66972p6,Orange Breeze
+642,SKU#:67010,nan
+953,SKU#:67010e,nan
+32,SKU#:67012,nan
+3346,SKU#:67067,None
+256,SKU#:67067,Homemade Vanilla
+565,SKU#:67067,Rich Chocolate
+3036,SKU#:67070,None
+564,SKU#:67070,Homemade Vanilla
+255,SKU#:67070,Rich Chocolate
+3121,SKU#:67148,nan
+330,SKU#:67151,nan
+3731,SKU#:67151e,nan
+419,SKU#:67165,nan
+1688,SKU#:67214,nan
+454,SKU#:67217,nan
+858,SKU#:67220,None
+549,SKU#:67220,Grape
+240,SKU#:67220,Cherry
+1169,SKU#:67220p6,None
+242,SKU#:67220p6,Cherry
+551,SKU#:67220p6,Grape
+2095,SKU#:67225,None
+241,SKU#:67225,Grape
+550,SKU#:67225,Cherry
+862,SKU#:67225p6,None
+244,SKU#:67225p6,Grape
+553,SKU#:67225p6,Cherry
+3358,SKU#:67247,nan
+3058,SKU#:67249,nan
+581,SKU#:67254,nan
+3048,SKU#:67257,nan
+1518,SKU#:67260,nan
+3678,SKU#:67263,nan
+3668,SKU#:67272,nan
+3672,SKU#:67276,nan
+2444,SKU#:67278,nan
+1343,SKU#:67281,nan
+3277,SKU#:67285p80,nan
+1734,SKU#:67287p80,nan
+580,SKU#:67298,nan
+2500,SKU#:67317,nan
+3110,SKU#:67317e,nan
+2806,SKU#:67319,nan
+27,SKU#:67319e,nan
+2279,SKU#:67330,nan
+786,SKU#:67374,nan
+2635,SKU#:67378,nan
+3872,SKU#:67401,nan
+2020,SKU#:67403,nan
+2950,SKU#:67407,nan
+482,SKU#:67411,nan
+2646,SKU#:67413,nan
+2328,SKU#:67417,nan
+2990,SKU#:67426,None
+209,SKU#:67426,Orange Breeze
+827,SKU#:67426,Strawberry Freeze
+518,SKU#:67426,Berry Frost
+1136,SKU#:67426,Variety - Berry Frost & Strawberry Freeze
+2356,SKU#:67426p6,None
+193,SKU#:67426p6,Orange Breeze
+811,SKU#:67426p6,Strawberry Freeze
+502,SKU#:67426p6,Berry Frost
+1120,SKU#:67426p6,Variety - Berry Frost & Strawberry Freeze
+1119,SKU#:67434,Iced Grape
+1737,SKU#:67434,None
+501,SKU#:67434,Berry Frost
+810,SKU#:67434,Kiwi Berry Mist
+192,SKU#:67434,Orange Breeze
+1428,SKU#:67434,Chilled Cherry Pomegranate
+536,SKU#:67434e,Berry Frost
+845,SKU#:67434e,Kiwi Berry Mist
+227,SKU#:67434e,Orange Breeze
+2390,SKU#:67434e,None
+1463,SKU#:67434e,Chilled Cherry Pomegranate
+1154,SKU#:67434e,Iced Grape
+2783,SKU#:67436,nan
+1549,SKU#:67438,nan
+2481,SKU#:67440,nan
+1553,SKU#:67442,nan
+755,SKU#:67450,nan
+135,SKU#:67453,nan
+3599,SKU#:67461,None
+1127,SKU#:67461,Strawberry
+1745,SKU#:67461,Bubble Gum
+1436,SKU#:67461,Grape
+818,SKU#:67461,Unflavored
+200,SKU#:67461,Coconut Burst
+509,SKU#:67461,Mixed Fruit
+3638,SKU#:67461e,None
+1166,SKU#:67461e,Strawberry
+1784,SKU#:67461e,Bubble Gum
+857,SKU#:67461e,Unflavored
+548,SKU#:67461e,Mixed Fruit
+239,SKU#:67461e,Coconut Burst
+1475,SKU#:67461e,Grape
+3064,SKU#:67463,nan
+3984,SKU#:67466,nan
+2920,SKU#:67472,nan
+3849,SKU#:67475,nan
+3374,SKU#:67495,None
+902,SKU#:67495,Fruity Cereal
+593,SKU#:67495,Birthday Cake
+284,SKU#:67495,White Chocolate Peanut Butter
+1846,SKU#:67495p12,None
+919,SKU#:67495p12,Fruity Cereal
+301,SKU#:67495p12,White Chocolate Peanut Butter
+610,SKU#:67495p12,Birthday Cake
+3673,SKU#:67500,None
+583,SKU#:67500,White Chocolate Peanut Butter
+892,SKU#:67500,Fruity Cereal
+274,SKU#:67500,Birthday Cake
+4007,SKU#:67500p12,None
+917,SKU#:67500p12,Fruity Cereal
+608,SKU#:67500p12,White Chocolate Peanut Butter
+299,SKU#:67500p12,Birthday Cake
+1523,SKU#:67510,None
+905,SKU#:67510,Birthday Cake
+287,SKU#:67510,Fruity Cereal
+596,SKU#:67510,White Chocolate Peanut Butter
+1847,SKU#:67510p12,None
+920,SKU#:67510p12,Birthday Cake
+302,SKU#:67510p12,Fruity Cereal
+611,SKU#:67510p12,White Chocolate Peanut Butter
+3569,SKU#:67612,nan
+3275,SKU#:7037301,nan
+1733,SKU#:7037401p5,nan
+3886,SKU#:7085102,nan
+3575,SKU#:7157775,nan
+3880,SKU#:7157975,nan
+3889,SKU#:7158201,nan
+484,SKU#:7161301,nan
+3578,SKU#:7517583,nan
+2952,SKU#:FSMTS50,nan
