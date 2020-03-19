@@ -54,7 +54,6 @@ def main_abbott(stores_list, command_types, crawler, command, store, file_path, 
             while links:
                 task_threader.thread_tasks(links, info_list, AbbottStore_crawler(), count)
                 count += 1  
-                break
         else:
             for l in links:
                 print("Getting product from url {}".format(l))

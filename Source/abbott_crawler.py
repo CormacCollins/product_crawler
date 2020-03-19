@@ -54,7 +54,8 @@ class AbbottStore_crawler(crawler_interface):
                                 'nutrient_table_4': '', 'nutrient_table_5': '', 
                                 'vitamin_table_1':'', 'vitamin_table_2':'', 'vitamin_table_3':'', 'vitamin_table_4':'', 'vitamin_table_5':'',	
                                 'mineral_table_1':'', 'mineral_table_2':'', 'mineral_table_3':'', 'mineral_table_4':'', 'mineral_table_5':'', 
-                                'Sizes':'', 'Form':'', 'Flavours':'', }
+                                'Sizes':'', 'Form':'', 'Flavours':'', 'Cans Type X': '',
+                                'Cans Type Y': '',	'entry_date':''}
 
         PRODUCT_INFORMATION['url'] = prod_url
         
@@ -115,7 +116,7 @@ class AbbottStore_crawler(crawler_interface):
         except:
             print("Could not add name description")
 
-        # data table additional-attributes
+        # data table additional-attributes ("More Information") section
         try:
             add_attr = soup.find(class_ = 'data table additional-attributes').find('tbody')
             rows = add_attr.find_all('th')
