@@ -9,59 +9,74 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.ui import WebDriverWait
 from time import sleep
 
-# TO DO - Create a proper object out of the code below
-
-
-
 
 
 class Link_loader_nutricia():
+    
 
     chromedriver = "../Drivers/chromedriver.exe"
 
     driver =  webdriver.Chrome(chromedriver)
 
-    driver.set_page_load_timeout(150)
+    driver.set_page_load_timeout(300)
 
 
-    url = ["https://www.nutriciahcp.com/adult/products/#",
-     "https://www.nutriciahcp.com/adult/products/paediatrics/#",
-     "https://www.nutriciahcp.com/adult/products/metabolics/#"]
+    def get_product_links_nutricia(self, url):
 
+        mylist = []
 
-        def get_product_links_nutricia(url)
-
-            mylist = []
-
-            for u in url:
-                # Initiate driver with url
-                driver.get(url)
-                # Wait until page loads
-                driver.implicitly_wait(30)
-                # Click "I am a HCP"
-                driver.find_element_by_xpath("//*[@id='HCPModal']/div/div/div/div/a[1]").click()
-                driver.implicitly_wait(5)
+        for u in url:
+            # Initiate driver with url
+            Link_loader_nutricia.driver.get(u)
+            # Wait until page loads
+            Link_loader_nutricia.driver.implicitly_wait(30)
+            # Click "I am a HCP"
+            try:
+                Link_loader_nutricia.driver.find_element_by_xpath("//*[@id='HCPModal']/div/div/div/div/a[1]").click()
+                Link_loader_nutricia.driver.implicitly_wait(5)
+            except:
+                pass
+            
+            try:
                 # Click "I am from Mainland UK" - to get the most amount of products
-                driver.find_element_by_xpath("//*[@id='ctl00_head_CountrySwitcher_notLoggedInUK']").click()
+                Link_loader_nutricia.driver.find_element_by_xpath("//*[@id='ctl00_head_CountrySwitcher_notLoggedInUK']").click()
                 # Add sleep to allow for slow internet connections
                 sleep(10)
                 # Click view all to get all the products on the one page
-                view_all = driver.find_element_by_xpath("//*[@id='ctl00_ContentPlaceHolder1_ViewAllButton']")
+            except:
+                pass
+            
+            try:
+                view_all = Link_loader_nutricia.driver.find_element_by_xpath("//*[@id='ctl00_ContentPlaceHolder1_ViewAllButton']")
                 view_all.click()
                 # Allow javascript on page to load "view all"
                 sleep(30)
-                # Now that the whole page is showing in the chromedriver, we can scrape the whole thing
-                soup = BeautifulSoup(driver.page_source, "html.parser")
-                # Get the products
-                soup_pro_list = soup.find(class_='products-list')
-                # Get all the a tags - links to products
-                    for link in soup_pro_list.find_all('a'):
-                        mylist.append("https://www.nutriciahcp.com"+link.get('href'))
+            except:
+                pass
+            # Now that the whole page is showing in the chromedriver, we can scrape the whole thing
+            soup = BeautifulSoup(Link_loader_nutricia.driver.page_source, "html.parser")
+            # Get the products
+            soup_pro_list = soup.find(class_='products-list')
+            # Get all the a tags - links to products
+            for link in soup_pro_list.find_all('a'):
+                mylist.append("https://www.nutriciahcp.com"+link.get('href'))
+            Link_loader_nutricia.driver.quit()
+            sleep(30)
 
 
-            df = pd.DataFrame(mylist)
+        df = pd.DataFrame(mylist)
 
-            df.to_csv('../Data/Nutricia/nutricia_links.csv')
+        df.to_csv('../Data/Nutricia/nutricia_links.csv')
+            
+
+
+links = Link_loader_nutricia()
+
+url = ["https://www.nutriciahcp.com/adult/products/#",
+     "https://www.nutriciahcp.com/adult/products/paediatrics",
+     "https://www.nutriciahcp.com/adult/products/metabolics"]
+
+links.get_product_links_nutricia(url)
 
 
 
