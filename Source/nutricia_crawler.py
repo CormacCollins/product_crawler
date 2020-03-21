@@ -13,12 +13,7 @@ from time import sleep
 
 class Link_loader_nutricia():
     
-
-    chromedriver = "../Drivers/chromedriver.exe"
-
-    driver =  webdriver.Chrome(chromedriver)
-
-    driver.set_page_load_timeout(300)
+    # Can't put driver as a global variable as websites block it
 
 
     def get_product_links_nutricia(self, url):
@@ -26,57 +21,75 @@ class Link_loader_nutricia():
         mylist = []
 
         for u in url:
+            
+            # Need to set the driver in the for loop, otherwise website blocks it
+            driver =  webdriver.Chrome("../Drivers/chromedriver.exe")
+            driver.set_page_load_timeout(500)
+            sleep(10)
+            
             # Initiate driver with url
-            Link_loader_nutricia.driver.get(u)
+            driver.get(u)
+            
             # Wait until page loads
-            Link_loader_nutricia.driver.implicitly_wait(30)
-            # Click "I am a HCP"
+            driver.implicitly_wait(30)
+            
+            
             try:
-                Link_loader_nutricia.driver.find_element_by_xpath("//*[@id='HCPModal']/div/div/div/div/a[1]").click()
-                Link_loader_nutricia.driver.implicitly_wait(5)
+                # Click "I am a HCP"
+                driver.find_element_by_xpath("//*[@id='HCPModal']/div/div/div/div/a[1]").click()
+                driver.implicitly_wait(10)
             except:
                 pass
             
             try:
                 # Click "I am from Mainland UK" - to get the most amount of products
-                Link_loader_nutricia.driver.find_element_by_xpath("//*[@id='ctl00_head_CountrySwitcher_notLoggedInUK']").click()
+                driver.find_element_by_xpath("//*[@id='ctl00_head_CountrySwitcher_notLoggedInUK']").click()
+                
                 # Add sleep to allow for slow internet connections
-                sleep(10)
-                # Click view all to get all the products on the one page
+                sleep(10)   
+                
             except:
                 pass
             
             try:
-                view_all = Link_loader_nutricia.driver.find_element_by_xpath("//*[@id='ctl00_ContentPlaceHolder1_ViewAllButton']")
+                # Click view all to get all the products on the one page
+                view_all = driver.find_element_by_xpath("//*[@id='ctl00_ContentPlaceHolder1_ViewAllButton']")
                 view_all.click()
+                
                 # Allow javascript on page to load "view all"
                 sleep(30)
+                
             except:
                 pass
+            
             # Now that the whole page is showing in the chromedriver, we can scrape the whole thing
-            soup = BeautifulSoup(Link_loader_nutricia.driver.page_source, "html.parser")
+            soup = BeautifulSoup(driver.page_source, "html.parser")
+            
             # Get the products
             soup_pro_list = soup.find(class_='products-list')
+            
             # Get all the a tags - links to products
             for link in soup_pro_list.find_all('a'):
                 mylist.append("https://www.nutriciahcp.com"+link.get('href'))
-            Link_loader_nutricia.driver.quit()
-            sleep(30)
+            
+            # Completely close everything to make website believe it's a new handshake
+            driver.close()    
+            driver.quit()
+            sleep(120)
 
 
         df = pd.DataFrame(mylist)
 
-        df.to_csv('../Data/Nutricia/nutricia_links.csv')
+        return df.to_csv('../Data/Nutricia/nutricia_links.csv')
+
             
 
 
 links = Link_loader_nutricia()
 
-url = ["https://www.nutriciahcp.com/adult/products/#",
-     "https://www.nutriciahcp.com/adult/products/paediatrics",
-     "https://www.nutriciahcp.com/adult/products/metabolics"]
-
-links.get_product_links_nutricia(url)
+urls = ["https://www.nutriciahcp.com/adult/products/#",
+       "https://www.nutriciahcp.com/adult/products/paediatrics",
+       "https://www.nutriciahcp.com/adult/products/metabolics"]
 
 
-
+links.get_product_links_nutricia(urls)
