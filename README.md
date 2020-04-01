@@ -12,7 +12,6 @@
  main.py Abbott single_url\https://abbottstore.com/similac-advance-infant-formula-powder-1-45-lb-container-53359e.html
  ```
 # program general structure
-
 ![Image description](https://github.com/CormacCollins/product_crawler/blob/master/Images/5.2%20structure%20chart%20(2).png)
 
 # product_crawler
