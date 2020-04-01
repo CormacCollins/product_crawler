@@ -13,7 +13,7 @@ class Link_loader_abbotts:
         self.abbots_file_name = abbots_file_name_csv
 
 
-    def get_product_links_abbotstore(self, site, RE_QUERY_PRODUCT_LINKS = False):
+    def get_product_links(self, site, RE_QUERY_PRODUCT_LINKS = False):
         """ Returns list of url links for each product 
             Set RE_QUERY_PRODUCT_LINKS = True to get all links again, False will
             read from csv file

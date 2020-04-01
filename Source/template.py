@@ -18,7 +18,7 @@ class crawler_template(crawler_interface):
     
     # Gets upto 2 of the requested table - either vitamin, minerals, nutrients
     # needs to be tested as there may be unseen products with more than 2 tables
-    def get_product_info(self, prod_url):
+    def get_product_info(self, prod_url, store_name, path):
         
          #print(prod_url)
 

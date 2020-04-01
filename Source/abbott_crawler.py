@@ -43,7 +43,7 @@ class AbbottStore_crawler(crawler_interface):
     
 
     #get information on 1 link
-    def get_product_info(self, prod_url):
+    def get_product_info(self, prod_url, store_name, path):
         
         #print(prod_url)
 

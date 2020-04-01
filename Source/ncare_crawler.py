@@ -4,6 +4,11 @@ import re
 import string
 from Source.crawler_interface import crawler_interface
 import sys
+import Source.helper_functions as helper_functions
+
+#pandas helper stuff
+from IPython.display import display_html
+import pandas as pd
 
 class Ncare_crawler(crawler_interface):
 
@@ -14,8 +19,17 @@ class Ncare_crawler(crawler_interface):
         """
         pass
 
+
+    def write_html_table_to_csv(self, html_table, csv_name):
+        """ Write a html table to csv for later analysis"""
+        dfs = pd.read_html(str(html_table))
+        df = dfs[0]
+        df.to_csv(csv_name)
+
+
     #get information on 1 link
-    def get_product_info(self, prod_url):
+    def get_product_info(self, prod_url, store_name, path):
+
 
         PRODUCT_INFORMATION = {'url':'', 'name':'', 'price':'', 'size_or_weight':'','availability':'',	
                                 'item_type':'',	'description':'', 'ingredients':'',	'allergin_info':'',	'serving_size_1':'', 
@@ -24,8 +38,8 @@ class Ncare_crawler(crawler_interface):
                                 'nutrient_table_4': '', 'nutrient_table_5': '', 
                                 'vitamin_table_1':'', 'vitamin_table_2':'', 'vitamin_table_3':'', 'vitamin_table_4':'', 'vitamin_table_5':'',	
                                 'mineral_table_1':'', 'mineral_table_2':'', 'mineral_table_3':'', 'mineral_table_4':'', 'mineral_table_5':'', 
-                                'Sizes':'', 'Form':'', 'Flavours':'', 'Usage':'', 'clinical indications': '', 'benefits':'' , 
-                                'clinical_indications':'' ,'feature_table_rows':''}
+                                'Sizes':'', 'Form':'', 'Flavours':'', 'clinical indications': '', 'benefits':'' , 
+                                'clinical_indications':'' ,'feature_table_rows':'', 'usage':'', 'entry_date':''}
 
         PRODUCT_INFORMATION['url'] = prod_url
         
@@ -38,10 +52,13 @@ class Ncare_crawler(crawler_interface):
         
         soup = BeautifulSoup(page.content, 'html.parser') 
 
-        # get product name
+        # get product name & save for later file naming
+        prod_name = ''
         try:
             name = soup.find(class_ = 'product-name')
-            PRODUCT_INFORMATION['name'] = name.text.strip('\n').lstrip()
+            prod_name = helper_functions.remove_utf_charactars_and_strip(name.text)
+            PRODUCT_INFORMATION['name'] = prod_name
+
         except:
             print("Could not add name category")
 
@@ -62,9 +79,11 @@ class Ncare_crawler(crawler_interface):
         except:
             print("Could not add description (Features) category")
 
-        # get product-info: Flavours, Unit of Measure, Product Code
-        
+
+
+        # get product-info: Flavours, Unit of Measure, Product Code        
         try:
+            
             info = soup.find(class_ = 'product-info')
 
             values = info.find_all('td')
@@ -109,58 +128,43 @@ class Ncare_crawler(crawler_interface):
         try:
             usage = soup.find(id = 'usage')
             usa = usage.find_all(text=True)
-            PRODUCT_INFORMATION['Usage'] = ''.join(usa).lstrip()
+            PRODUCT_INFORMATION['usage'] = ''.join(usa).lstrip()
         except:
             print("Could not add usage category")
 
         # get nutri_info
         try:
-            nutri_info = soup.find(id = 'nutritional-information')
-            body = nutri_info.find('tbody')
+            soup2 = BeautifulSoup(page.content,'lxml')
+            nutri_info = soup2.find(id = 'nutritional-information')
+            body = nutri_info.find('table')
+        
+            # Now writing tables straight to csv fr ease
+            file_name = str(prod_name) + "_nutrition_table.csv"
+            print(file_name)
+            self.write_html_table_to_csv(body, csv_name= '{}{}{}'.format(path, 
+            'Nutrition_tables/', file_name))
+        except:
+            print("Could not write nutrient table to csv file ")
 
-            tds = body.find_all('td')
-            #tds.pop(0) # remove name row
-            
+        #get serving size from table
+        try:
+            nutri_info = soup.find(id = 'nutritional-information')
+            body = nutri_info.find('table')
+            #get Serving size
             heads = body.find_all('th')
             heads.pop(0) # remove name row
             serving_size = heads[0].text
-            
-            column_names = list()
-            for i in heads:
-                column_names.append(i.text.lstrip())
-            column_names.pop(len(column_names)-1) #remove empty space
-
-            #print(column_names)
-            cols = list()
-            for i in range(0, len(column_names)):
-                l = list()
-                l.append(column_names[i])
-                cols.append(l)
-                
-            while tds:
-                for i in range(0, len(column_names)):
-                    d = None
-                    if tds:
-                        d = tds.pop(0)
-                    else:
-                        break
-
-                    s = d.text.encode('ascii',errors='ignore').decode('utf-8').lstrip().rstrip()
-                    cols[i].append(s)
-
-
             PRODUCT_INFORMATION['serving_size_1'] = serving_size
-            PRODUCT_INFORMATION['nutrient_table_1'] = cols
         except:
-            print("Could not add nutrient table and serving size")
+            print("could not get serving size")
 
-
-
+    
         clinical_indications = None
         benefits = None
         features_table = list()
         try: 
-            clin_ind = soup.find(id = 'clinical-indications')
+            #clin_ind = soup.find("div", id = 'clinical-indications')
+            clin_ind = soup.find(id="clinical-indications")
             body = clin_ind.find('tbody') # get first child table
             #print(body)
             children_tbody = body.findAll("table", recursive=True)
@@ -175,13 +179,21 @@ class Ncare_crawler(crawler_interface):
                 elif tb.find('th').text == 'FEATURES': 
                     for row in tb.find_all('tr'):
                         features_table.append([i.text.strip() for i in row.find_all('td')])
-                        
 
             PRODUCT_INFORMATION['feature_table_rows'] = features_table
             PRODUCT_INFORMATION['benefits'] = benefits
             PRODUCT_INFORMATION['clinical_indications'] = clinical_indications
-        except:
-            missing = ''.join([i for i in [clinical_indications, benefits, features_table] if i ])
-            print("Could not fetch one of {}".format(missing))
 
+        except:
+            missing_traits = ''
+            if not clinical_indications:
+                missing_traits = "Clinical indications "
+            if not benefits:
+                missing_traits += 'benefetis '
+            if not features_table:
+                missing_traits += 'features_table '
+
+            print("Could not fetch one of {}".format(''.join(missing_traits)))
+
+        #helper_functions.print_dictionary_in_rows(PRODUCT_INFORMATION)
         return PRODUCT_INFORMATION    

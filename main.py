@@ -19,32 +19,16 @@ def give_instructions(command_types, stores_list):
     print("\n".join(stores_list.keys()))
     print("\nE.g. main.py Abbott scrape_stored")
 
-def main_ncare(stores_list, command_types, crawler, command, store, file_path, file_uri):
-
-    #Get links - pass true if you want to requery the product urls
-    l_loader = Link_loader_ncare(file_uri)
-    links = l_loader.get_product_links_abbotstore(stores_list[store], False)
-    
-    #get each ind prod info and write to db        
-    for l in links:
-        print("Getting product from url {}".format(l))
-        info = crawler.get_product_info(l)
-        writer.write(info, file_path + store + '_scrape_data.csv')
-
-
-def main_abbott(stores_list, command_types, crawler, command, store, file_path, file_uri):
+        
+def run_scrapper(stores_list, command_types, link_loader, crawler, command, store, file_path, file_uri, M_THREADING):
 
     #TODO: Have writer create new abbotts_data csv file to write new info to (instead of having to delete it before a re-run)
 
-    if command == 'scrape_stored':  
-
-        M_THREADING = True
-        
+    if command == 'scrape_stored':          
         start = time.time()
 
         #Get links - pass true if you want to requery the product urls
-        l_loader = Link_loader_abbotts( file_uri)
-        links = l_loader.get_product_links_abbotstore(stores_list[store], False)
+        links = l_loader.get_product_links(stores_list[store], False)
 
         #get each ind prod info and write to db 
         info_list = list()  
@@ -52,12 +36,12 @@ def main_abbott(stores_list, command_types, crawler, command, store, file_path, 
 
         if M_THREADING:
             while links:
-                task_threader.thread_tasks(links, info_list, AbbottStore_crawler(), count)
+                task_threader.thread_tasks(links, info_list, crawler, count, store, file_path)
                 count += 1  
         else:
             for l in links:
                 print("Getting product from url {}".format(l))
-                info = crawler.get_product_info(l)
+                info = crawler.get_product_info(l, store_name=store, path=file_path)
                 info_list.append(info)
 
         end = time.time()
@@ -74,23 +58,22 @@ def main_abbott(stores_list, command_types, crawler, command, store, file_path, 
     elif command == 'full_scrape':
 
         #Get links - pass true if you want to requery the product urls
-        l_loader = Link_loader_abbotts(file_uri)
-        links = l_loader.get_product_links_abbotstore(stores_list[store], True)
+        links = l_loader.get_product_links(stores_list[store], True)
         
         #get each ind prod info and write to db        
         for l in links:
             print("Getting product from url {}".format(l))
-            info = crawler.get_product_info(l)
+            info = crawler.get_product_info(l, store_name=store, path=file_path)
             writer.write(info, file_path + store + '_scrape_data.csv')
 
     elif 'single_url' in command:
 
         l = command.split('\\')[1]       
         print("Getting product from url {}".format(l))
-        info = crawler.get_product_info(l)
+        info = crawler.get_product_info(l, store_name=store, path=file_path)
 
         
-        writer.write(info, file_path + store + '_scrape_data.csv', OVERWRITE=True)
+        writer.write(info, file_path + store + '_scrape_data.csv')
         
     else:
         give_instructions(command_types, stores_list)
@@ -146,20 +129,44 @@ if __name__ == "__main__":
         print("Store does not exist in list")
         sys.exit()
 
-    #create sub folder for data files if it doesn't exist
+    #create sub folders for data files if it doesn't exist
     Path('Data/' + store).mkdir(parents=True, exist_ok=True)
+    Path('Data/' + store + '/Nutrition_tables').mkdir(parents=True, exist_ok=True)
 
     #for reading saved links list
     file_path = 'Data/' + store + '/'
     file_uri = file_path + store + '_product_links.csv'
 
-    # -------------------- RUN CRAWLERS WITH ARGS -----------------------------------
+    # -------------------- RUN CHOSEN CRAWLER WITH ARGS -----------------------------------
 
-    #ryan_main(stores_list, command_types, Ncare_crawler())
-    #main_ncare(stores_list, command_types, Ncare_crawler())
+    if store == 'Abbott':
+    #main_abbott(stores_list, command_types, AbbottStore_crawler(), command, store, file_path, file_uri)
+        l_loader = Link_loader_abbotts( file_uri)
+        abbott_crawler = AbbottStore_crawler()
+        run_scrapper(stores_list, 
+                    command_types, 
+                    l_loader, 
+                    abbott_crawler, 
+                    command, 
+                    store, 
+                    file_path, 
+                    file_uri,
+                    M_THREADING=True)
 
-    main_abbott(stores_list, command_types, AbbottStore_crawler(), command, store, file_path, file_uri)
-
+    elif store == 'Ncare':
+        l_loader = Link_loader_ncare( file_uri)
+        ncare_crawler = Ncare_crawler()
+        #threading not suited to the small amount of links and most likely writing to csv files
+        run_scrapper(stores_list, 
+                    command_types, 
+                    l_loader, 
+                    ncare_crawler, 
+                    command, 
+                    store, 
+                    file_path, 
+                    file_uri,
+                    M_THREADING=False)
+    
 
 
 
