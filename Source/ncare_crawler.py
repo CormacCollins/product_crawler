@@ -162,34 +162,40 @@ class Ncare_crawler(crawler_interface):
         clinical_indications = None
         benefits = None
         features_table = list()
+        
         try: 
             #clin_ind = soup.find("div", id = 'clinical-indications')
             clin_ind = soup.find(id="clinical-indications")
-            body = clin_ind.find('tbody') # get first child table
+            #body = clin_ind.find('table') # get first child table
+
+            ## Need to get the parent table and extract all children tables from it, avoid getting weird tables in addition
+            
+
             #print(body)
-            children_tbody = body.findAll("table", recursive=True)
+            children_tbody = clin_ind.findAll("table", recursive=True)
+            
 
             for tb in children_tbody:
                 #print(tb.find('th').text)
-                
                 if tb.find('th').text == 'BENEFITS':    
                     benefits = [i.text.strip() for i in tb.find_all('td')]
                 elif tb.find('th').text == 'CLINICAL INDICATIONS':                
                     clinical_indications = [i.text.strip() for i in tb.find_all('td')]
                 elif tb.find('th').text == 'FEATURES': 
                     for row in tb.find_all('tr'):
+                        print([ i.text.strip().strip('\r\n') for i in row.find_all('td')])
                         features_table.append([i.text.strip() for i in row.find_all('td')])
 
-            PRODUCT_INFORMATION['feature_table_rows'] = features_table
-            PRODUCT_INFORMATION['benefits'] = benefits
-            PRODUCT_INFORMATION['clinical_indications'] = clinical_indications
+            PRODUCT_INFORMATION['feature_table_rows'] = helper_functions.remove_list_duplicates(features_table)
+            PRODUCT_INFORMATION['benefits'] = helper_functions.remove_list_duplicates(benefits)
+            PRODUCT_INFORMATION['clinical_indications'] = helper_functions.remove_list_duplicates(clinical_indications)
 
         except:
             missing_traits = ''
             if not clinical_indications:
                 missing_traits = "Clinical indications "
             if not benefits:
-                missing_traits += 'benefetis '
+                missing_traits += 'benefits '
             if not features_table:
                 missing_traits += 'features_table '
 
