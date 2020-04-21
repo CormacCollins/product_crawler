@@ -4,7 +4,7 @@ import re
 import string
 from Source.crawler_interface import crawler_interface
 import sys
-import Source.helper_functions as helper_functions
+import Source.product_info_JSON
 
 #pandas helper stuff
 from IPython.display import display_html
@@ -30,17 +30,9 @@ class Ncare_crawler(crawler_interface):
     #get information on 1 link
     def get_product_info(self, prod_url, store_name, path):
 
+        PRODUCT_INFORMATION = Source.product_info_JSON.PRODUCT_INFORMATION.copy()
 
-        PRODUCT_INFORMATION = {'url':'', 'name':'', 'price':'', 'size_or_weight':'','availability':'',	
-                                'item_type':'',	'description':'', 'ingredients':'',	'allergin_info':'',	'serving_size_1':'', 
-                                'serving_size_2':'', 'serving_size_3':'', 'serving_size_4':'', 'serving_size_5':'', 
-                                'footnotes':'', 'nutrient_table_1': '', 'nutrient_table_2': '', 'nutrient_table_3': '', 
-                                'nutrient_table_4': '', 'nutrient_table_5': '', 
-                                'vitamin_table_1':'', 'vitamin_table_2':'', 'vitamin_table_3':'', 'vitamin_table_4':'', 'vitamin_table_5':'',	
-                                'mineral_table_1':'', 'mineral_table_2':'', 'mineral_table_3':'', 'mineral_table_4':'', 'mineral_table_5':'', 
-                                'Sizes':'', 'Form':'', 'Flavours':'', 'clinical indications': '', 'benefits':'' , 
-                                'clinical_indications':'' ,'feature_table_rows':'', 'usage':'', 'entry_date':''}
-
+        PRODUCT_INFORMATION['store'] = store_name
         PRODUCT_INFORMATION['url'] = prod_url
         
         try:

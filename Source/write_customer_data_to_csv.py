@@ -15,7 +15,6 @@ def __write_new(data_dict, file_name):
     
 
 def write(data_dict, file_name):
- 
     #add the time/date of scrape for this info
     now = datetime.now()
     d_time = now.strftime("%d/%m/%Y %H:%M:%S")
@@ -26,5 +25,4 @@ def write(data_dict, file_name):
         __write_new(data_dict, file_name)
     else:
         df = pd.DataFrame([data_dict])
-        #print(df.head())
         df.to_csv(file_name, mode='a', header=False)    

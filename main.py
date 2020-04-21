@@ -28,7 +28,8 @@ def run_scrapper(stores_list, command_types, link_loader, crawler, command, stor
 
     if command == 'scrape_stored':  
         #remove old scrape data
-        os.remove(file_path + store + '_scrape_data.csv')
+        #if os.path.exists(file_path + store + '_scrape_data.csv'):
+        #    os.remove(file_path + store + '_scrape_data.csv')
 
         start = time.time()
         #Get links - pass true if you want to requery the product urls
@@ -37,11 +38,11 @@ def run_scrapper(stores_list, command_types, link_loader, crawler, command, stor
         #get each ind prod info and write to db 
         info_list = list()  
         count = 0
-
+        
         if M_THREADING:
             while links:
                 task_threader.thread_tasks(links, info_list, crawler, count, store, file_path)
-                count += 1  
+                count += 1
         else:
             for l in links:
                 print("Getting product from url {}".format(l))
@@ -52,6 +53,7 @@ def run_scrapper(stores_list, command_types, link_loader, crawler, command, stor
 
         print('Crawl time: {}'.format(end - start))  
         for info in info_list:
+            print(info['name'])
             writer.write(info, file_path + store + '_scrape_data.csv')
 
 
@@ -61,7 +63,8 @@ def run_scrapper(stores_list, command_types, link_loader, crawler, command, stor
 
     elif command == 'full_scrape':
         #remove old scrape data
-        os.remove(file_path + store + '_scrape_data.csv')
+        #if os.path.exists(file_path + store + '_scrape_data.csv'):
+        #    os.remove(file_path + store + '_scrape_data.csv')
 
         #Get links - pass true if you want to requery the product urls
         links = l_loader.get_product_links(stores_list[store], True)

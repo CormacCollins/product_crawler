@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from Source.Abbott_lookup import ab_lookup 
+from Abbott_lookup import ab_lookup 
 
 # Create a Lookup Table to manually replace missing values in Abbot Product Table
 # This can be mannually updated with research projects
@@ -20,26 +20,13 @@ Abbot_products = Abbot_products_original #to be used by future analysis
 
 # --------------------------------
 #I'm unsure of this for now
-#Abbot_products = pd.concat([Abbot_products, lookup], sort=True)
+Abbot_products = pd.concat([Abbot_products, lookup], sort=True)
 # --------------------------------
 
-#Abbot_products.set_index('item_type', inplace=True)
+
+
+# ------------- Setup dataframe and columns -----------------
 Abbot_products.drop(['Unnamed: 0'], axis=1, inplace=True)
-Abbot_products[:3]
-#print(list(Abbot_products.index.values))
-#print(Abbot_products.columns)
-
-
-# In[ ]:
-
-
-
-
-
-# In[178]:
-
-
-
 Abbot_products[['size_or_weight','number_in_case']] = (Abbot_products['size_or_weight'].str.split('/', expand=True))
 Abbot_products['product_weight_numeric'] = Abbot_products.size_or_weight.str.extract(r'([^ ]*)')
 Abbot_products['product_format'] = Abbot_products.size_or_weight.str.split().str[-1]
@@ -61,35 +48,17 @@ Abbot_products = Abbot_products[['name',
 ]]
 
 Abbot_products.drop_duplicates(keep='first', inplace=True)
-Abbot_products[:5]
-
-
-# In[179]:
-
-
 Abbot_products[pd.isnull(Abbot_products['product_format'])]
-Abbot_products.iloc[236].url
-
-
-# In[208]:
-
 
 # Turn series into string so it can be used in joins below
 Abbot_products['item_type'] = Abbot_products['item_type'].astype(str)
-
 # Take out the SKUs with missing values
 get_subset = Abbot_products[Abbot_products['item_type'].isin(lookup_filter)]
-
-get_subset
-
-
 # Delete the columns, because they will be replaced with the lookup table above
 get_subset = get_subset.drop(["product_format", "number_in_case", "product_weight_numeric", "product_weight_metric"],
                             axis=1)
 
-
 get_subset = get_subset.join(lookup, on="item_type")
-
 # The ~ means it is NOT in - we are removing the SKUs with missing values first
 Abbot_products = Abbot_products[~Abbot_products['item_type'].isin(lookup_filter)]
 
@@ -107,21 +76,12 @@ Abbot_products.Form = Abbot_products.Form.str.strip()
 # Send to CSV
 Abbot_products.to_csv("../Data/Abbott/Abbot_products.csv")
 
-# -----------
-
-
-# In[209]:
-
-
-
+# -------------------------------------------
 
 # Set up table which shows all the ingredients for products vertically for analytics
 Abbot_products_ingredients_item_type = Abbot_products_original
 
-
-
 # Changed from Name to SKU ID "item_type"
-
 Abbot_products_ingredients_item_type = Abbot_products_ingredients_item_type[pd.notnull(Abbot_products_ingredients_item_type['item_type'])]
 Abbot_products_ingredients = Abbot_products_ingredients_item_type[['item_type','ingredients']]
 Abbot_products_name = Abbot_products_ingredients_item_type['item_type']
@@ -131,14 +91,12 @@ Abbot_main_ingredients = pd.melt(Abbot_main_ingredients, id_vars = ["item_type"]
 Abbot_main_ingredients.dropna(inplace=True)
 Abbot_main_ingredients = Abbot_main_ingredients[(Abbot_main_ingredients['value'] != 0)]
 
-
 Abbot_main_ingredients.rename(columns={'value' : 'ingredient'},inplace=True)
 del Abbot_main_ingredients['variable']
 Abbot_main_ingredients.head()
 Abbot_main_ingredients.sort_values('item_type', inplace=True, ascending=True)
 Abbot_main_ingredients.drop_duplicates(keep='first', inplace=True)
 Abbot_main_ingredients
-
 
 
 # Remove white space and "AND" 
@@ -148,12 +106,6 @@ Abbot_main_ingredients['ingredient'] = Abbot_main_ingredients['ingredient'].str.
 
 # Send to CSV
 Abbot_main_ingredients.to_csv("../Data/Abbott/Abott_products_ingredients.csv")
-
-
-# In[281]:
-
-
-
 
 # -----------
 

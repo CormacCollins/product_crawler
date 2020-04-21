@@ -1,5 +1,8 @@
+'''All crawlers to use the same columns to make merging data easier'''
+
 
 PRODUCT_INFORMATION = {'url':'',
+                        'store':'',
                         'name':'',
                         'price':'',
                         'size_or_weight':'',
@@ -32,6 +35,8 @@ PRODUCT_INFORMATION = {'url':'',
                         'Sizes':'',
                         'Form':'',
                         'Flavours':'',
+                        'Cans Type X': '',
+                        'Cans Type Y': '',
                         'clinical indications': '',
                         'benefits':'' ,
                         'clinical_indications':'' ,
@@ -39,15 +44,3 @@ PRODUCT_INFORMATION = {'url':'',
                         'usage':'',
                         'entry_date':''}
 
-
-PRODUCT_INFORMATION = {'url':[],
-                    'name':[],
-                    'category':[],
-                    'brand':[],
-                    'pack_size':[],
-                    'case_size':[],
-                    'indications':[],
-                    'precautions':[],
-                    'directions_for_use':[],
-                    'shelf_life':[],
-                    'flavours':[]}

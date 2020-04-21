@@ -12,7 +12,7 @@ def remove_list_duplicates(dupl_list):
 
 
 def get_tables_by_th_name(dict_table_names_wanted, children_tbody):
-    '''Pass a dictionary with keys being the names of tables you want and
+    '''Pass a dictionary with keys being the names (these names are in the table headers) of tables you want and
     pass a list object full of html tables, it will return a dictionary of those html tables corresponding
     to the names'''
     

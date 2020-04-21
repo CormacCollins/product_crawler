@@ -4,6 +4,7 @@ import re
 import string
 from Source.crawler_interface import crawler_interface
 import sys
+import Source.product_info_JSON
 
 class AbbottStore_crawler(crawler_interface):
 
@@ -46,17 +47,9 @@ class AbbottStore_crawler(crawler_interface):
     def get_product_info(self, prod_url, store_name, path):
         
         #print(prod_url)
+        PRODUCT_INFORMATION = Source.product_info_JSON.PRODUCT_INFORMATION.copy()
 
-        PRODUCT_INFORMATION = {'url':'', 'name':'', 'price':'', 'size_or_weight':'','availability':'',	
-                                'item_type':'',	'description':'', 'ingredients':'',	'allergin_info':'',	'serving_size_1':'', 
-                                'serving_size_2':'', 'serving_size_3':'', 'serving_size_4':'', 'serving_size_5':'', 
-                                'footnotes':'', 'nutrient_table_1': '', 'nutrient_table_2': '', 'nutrient_table_3': '', 
-                                'nutrient_table_4': '', 'nutrient_table_5': '', 
-                                'vitamin_table_1':'', 'vitamin_table_2':'', 'vitamin_table_3':'', 'vitamin_table_4':'', 'vitamin_table_5':'',	
-                                'mineral_table_1':'', 'mineral_table_2':'', 'mineral_table_3':'', 'mineral_table_4':'', 'mineral_table_5':'', 
-                                'Sizes':'', 'Form':'', 'Flavours':'', 'Cans Type X': '',
-                                'Cans Type Y': '',	'entry_date':''}
-
+        PRODUCT_INFORMATION['store'] = store_name
         PRODUCT_INFORMATION['url'] = prod_url
         
         try:
@@ -123,6 +116,7 @@ class AbbottStore_crawler(crawler_interface):
             row_data = add_attr.find_all('td')
             for i in range(0, len(rows)):
                 info_title = rows[i].text.strip()
+                #print('Info title {}'.format(info_title))
                 # flavor will be a seperate dictionary of values added later
                 if info_title != 'Flavor':
                     PRODUCT_INFORMATION[info_title] = row_data[i].text.strip()
@@ -225,6 +219,7 @@ class AbbottStore_crawler(crawler_interface):
         #for k,v in PRODUCT_INFORMATION.items():
         #    print('{}:{}'.format(k,v))
 
+        print(PRODUCT_INFORMATION['name'])
         return PRODUCT_INFORMATION
 
 
