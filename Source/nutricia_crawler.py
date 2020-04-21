@@ -25,7 +25,7 @@ class Nutricia_crawler:
       
       for u in prod_url:
 
-          PRODUCT_INFORMATION['url'] = u
+          PRODUCT_INFORMATION['url'].append(u)
 
 
           page = requests.get(u)
