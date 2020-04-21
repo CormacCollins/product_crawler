@@ -24,7 +24,7 @@ class Ncare_crawler(crawler_interface):
         """ Write a html table to csv for later analysis"""
         dfs = pd.read_html(str(html_table))
         df = dfs[0]
-        df.to_csv(csv_name)
+        df.to_csv(csv_name, mode='w', header=True)   
 
 
     #get information on 1 link

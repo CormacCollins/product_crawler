@@ -8,6 +8,8 @@ import Source.write_customer_data_to_csv as writer
 import sys
 from pathlib import Path   
 import time
+import os
+
 
 import Source.task_threader as task_threader  
 
@@ -24,9 +26,11 @@ def run_scrapper(stores_list, command_types, link_loader, crawler, command, stor
 
     #TODO: Have writer create new abbotts_data csv file to write new info to (instead of having to delete it before a re-run)
 
-    if command == 'scrape_stored':          
-        start = time.time()
+    if command == 'scrape_stored':  
+        #remove old scrape data
+        os.remove(file_path + store + '_scrape_data.csv')
 
+        start = time.time()
         #Get links - pass true if you want to requery the product urls
         links = l_loader.get_product_links(stores_list[store], False)
 
@@ -56,14 +60,31 @@ def run_scrapper(stores_list, command_types, link_loader, crawler, command, stor
          #   writer.write(info, file_path + store + '_scrape_data.csv')
 
     elif command == 'full_scrape':
+        #remove old scrape data
+        os.remove(file_path + store + '_scrape_data.csv')
 
         #Get links - pass true if you want to requery the product urls
         links = l_loader.get_product_links(stores_list[store], True)
-        
-        #get each ind prod info and write to db        
-        for l in links:
-            print("Getting product from url {}".format(l))
-            info = crawler.get_product_info(l, store_name=store, path=file_path)
+
+        #get each ind prod info and write to db 
+        info_list = list()  
+        count = 0
+
+        if M_THREADING:
+            print('Threading:')
+            while links:
+                task_threader.thread_tasks(links, info_list, crawler, count, store, file_path)
+                count += 1  
+        else:
+            for l in links:
+                print("Getting product from url {}".format(l))
+                info = crawler.get_product_info(l, store_name=store, path=file_path)
+                info_list.append(info)
+
+        end = time.time()
+
+        print('Crawl time: {}'.format(end - start))  
+        for info in info_list:
             writer.write(info, file_path + store + '_scrape_data.csv')
 
     elif 'single_url' in command:
