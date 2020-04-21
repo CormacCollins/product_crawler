@@ -76,7 +76,7 @@ class Ncare_crawler(crawler_interface):
             text = [i.text + '\n' for i in children]
             text = helper_functions.remove_utf_charactars_and_strip(''.join(text))
             text = text.replace('Nestl', 'Nestle')
-            print(text)
+            #print(text)
             PRODUCT_INFORMATION['description'] = text
         except:
             print("Could not add description (Features) category")
@@ -162,13 +162,12 @@ class Ncare_crawler(crawler_interface):
 
         #------------------------ CLINICAL INDICATIONS --------------------------------
         #Writing tables to csv instead
-        
+        table_dict = {'FEATURES': '', 'CLINICAL INDICATIONS': ''}
         try: 
             #clin_ind = soup.find("div", id = 'clinical-indications')
             clin_ind = soup.find(id="clinical-indications")
             children_tbody = clin_ind.findAll("table", recursive=True)
             
-            table_dict = {'FEATURES': '', 'CLINICAL INDICATIONS': ''}
             table_dict = helper_functions.get_tables_by_th_name(table_dict, children_tbody)
             
             for k,v in table_dict.items():

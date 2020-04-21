@@ -3,6 +3,7 @@ import os.path
 from os import path
 import csv
 from datetime import datetime
+import numpy as np
 #write data frame as a row to csv
 #data needs to be cleaned more before entering
 
