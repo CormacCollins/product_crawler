@@ -25,4 +25,5 @@ def write(data_dict, file_name):
         __write_new(data_dict, file_name)
     else:
         df = pd.DataFrame([data_dict])
+        #print(df.head())
         df.to_csv(file_name, mode='a', header=False)    

@@ -74,18 +74,18 @@ class Ncare_crawler(crawler_interface):
             prod_feat = soup.find(class_ = 'product-features')
             children = prod_feat.find_all('p')
             text = [i.text + '\n' for i in children]
-            #print(text)
-            PRODUCT_INFORMATION['description'] = ''.join(text)
+            text = helper_functions.remove_utf_charactars_and_strip(''.join(text))
+            text = text.replace('Nestl', 'Nestle')
+            print(text)
+            PRODUCT_INFORMATION['description'] = text
         except:
             print("Could not add description (Features) category")
 
 
 
         # get product-info: Flavours, Unit of Measure, Product Code        
-        try:
-            
+        try:            
             info = soup.find(class_ = 'product-info')
-
             values = info.find_all('td')
             col_num = len(info.find_all('tr')[0].find_all('td'))
             pos_to_name_dict = {}
@@ -154,52 +154,34 @@ class Ncare_crawler(crawler_interface):
             heads = body.find_all('th')
             heads.pop(0) # remove name row
             serving_size = heads[0].text
-            PRODUCT_INFORMATION['serving_size_1'] = serving_size
+            PRODUCT_INFORMATION['serving_size_1'] = helper_functions.remove_utf_charactars_and_strip(serving_size)
         except:
             print("could not get serving size")
 
     
-        clinical_indications = None
-        benefits = None
-        features_table = list()
+
+        #------------------------ CLINICAL INDICATIONS --------------------------------
+        #Writing tables to csv instead
         
         try: 
             #clin_ind = soup.find("div", id = 'clinical-indications')
             clin_ind = soup.find(id="clinical-indications")
-            #body = clin_ind.find('table') # get first child table
-
-            ## Need to get the parent table and extract all children tables from it, avoid getting weird tables in addition
-            
-
-            #print(body)
             children_tbody = clin_ind.findAll("table", recursive=True)
             
+            table_dict = {'FEATURES': '', 'CLINICAL INDICATIONS': ''}
+            table_dict = helper_functions.get_tables_by_th_name(table_dict, children_tbody)
+            
+            for k,v in table_dict.items():
+                file_name = str(prod_name) + '_' + k.lower() + '_table.csv'
 
-            for tb in children_tbody:
-                #print(tb.find('th').text)
-                if tb.find('th').text == 'BENEFITS':    
-                    benefits = [i.text.strip() for i in tb.find_all('td')]
-                elif tb.find('th').text == 'CLINICAL INDICATIONS':                
-                    clinical_indications = [i.text.strip() for i in tb.find_all('td')]
-                elif tb.find('th').text == 'FEATURES': 
-                    for row in tb.find_all('tr'):
-                        print([ i.text.strip().strip('\r\n') for i in row.find_all('td')])
-                        features_table.append([i.text.strip() for i in row.find_all('td')])
+                self.write_html_table_to_csv(v, csv_name= '{}{}{}'.format(path, 
+                    'Clinical_indications_tables/', file_name))
 
-            PRODUCT_INFORMATION['feature_table_rows'] = helper_functions.remove_list_duplicates(features_table)
-            PRODUCT_INFORMATION['benefits'] = helper_functions.remove_list_duplicates(benefits)
-            PRODUCT_INFORMATION['clinical_indications'] = helper_functions.remove_list_duplicates(clinical_indications)
-
+            
         except:
-            missing_traits = ''
-            if not clinical_indications:
-                missing_traits = "Clinical indications "
-            if not benefits:
-                missing_traits += 'benefits '
-            if not features_table:
-                missing_traits += 'features_table '
+            print("Could not fetch one of {}".format(''.join(table_dict.keys())))
 
-            print("Could not fetch one of {}".format(''.join(missing_traits)))
-
-        #helper_functions.print_dictionary_in_rows(PRODUCT_INFORMATION)
+            #helper_functions.print_dictionary_in_rows(PRODUCT_INFORMATION)
+        
+        
         return PRODUCT_INFORMATION    

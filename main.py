@@ -132,6 +132,7 @@ if __name__ == "__main__":
     #create sub folders for data files if it doesn't exist
     Path('Data/' + store).mkdir(parents=True, exist_ok=True)
     Path('Data/' + store + '/Nutrition_tables').mkdir(parents=True, exist_ok=True)
+    Path('Data/' + store + '/Clinical_indications_tables').mkdir(parents=True, exist_ok=True)
 
     #for reading saved links list
     file_path = 'Data/' + store + '/'
