@@ -1,0 +1,33 @@
+<lookup>
+  <product_format>
+    <format>Batteries</format>
+    <format>Case</format>
+    <format>Pack</format>
+    <format>Packs</format>
+    <format>packs</format>  
+    <format>stickpack</format> 
+    <format>bottle</format>
+    <format>Tetra</format>
+    <format>can</format>
+    <format>carton</format>
+    <format>container</format>
+    <format>cup</format>
+    <format>packet</format>
+    <format>packets</format>    
+  </product_format>
+  <product_weight_metric>
+    <metric>L</metric>
+    <metric>QT</metric>
+    <metric>g</metric>
+    <metric>lb</metric>
+    <metric>mL</metric>
+    <metric>ml</metric>    
+    <metric>fl oz</metric>
+    <metric>oz</metric>
+  </product_weight_metric>
+  <bulk_form>
+    <form>Case</form>
+    <form>Pack</form>
+  </bulk_form>
+  
+</lookup>
