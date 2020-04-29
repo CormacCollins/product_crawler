@@ -5,6 +5,7 @@ import string
 from Source.crawler_interface import crawler_interface
 import sys
 import Source.product_info_JSON
+import pandas as pd
 
 class AbbottStore_crawler(crawler_interface):
 
@@ -29,14 +30,20 @@ class AbbottStore_crawler(crawler_interface):
             rows = section_data.find_all(class_ = 'nutrition-name')
             row_data = section_data.find_all(class_ = 'nutrition-value amt')
             #sometimes the normal value is not there so at least we also get the daily % value
-            row_data_2 = section_data.find_all(class_ = 'nutrition-value dv')
+
+            # ------------------
+            # have removed this because not necessary when providing serving size info
+            #row_data_2 = section_data.find_all(class_ = 'nutrition-value dv')
 
             #print(section_data.text)
             #print([r.text for r in row_data])
 
             for i in range(0, len(rows)):
                 new_dict[rows[i].text.strip()] = row_data[i].text.strip()
-                new_dict[rows[i].text.strip() + '(DV)'] = row_data_2[i].text.strip() + '%'
+
+                # ------------------
+                #have removed this because not necessary when providing serving size info
+                #new_dict[rows[i].text.strip() + '(DV)'] = row_data_2[i].text.strip() + '%'
 
             dict_list.append(new_dict)
 
@@ -97,7 +104,7 @@ class AbbottStore_crawler(crawler_interface):
             it_type = item_attr.find(class_="type")
             it = it_type.text
             type_num = item_attr.find(class_= "value").text
-            PRODUCT_INFORMATION['item_type'] = it + "#:" + type_num
+            PRODUCT_INFORMATION['item_type'] = (it + "#:" + type_num).replace('#:', '')
         except:
             print("Could not add item_type category")
 
@@ -180,19 +187,26 @@ class AbbottStore_crawler(crawler_interface):
         # --------------------------------------------------------------------------------------------------
         # there can be a special case where there are 2 nutrient datas - relative to 2 types of serving size
 
-
+        unique_id = PRODUCT_INFORMATION['item_type'].replace('#:', '')
+        
         #Get up to 2 times nutrient table data
         try:
             add_attr = soup.find_all(class_ = 'section nutrient-data')
             #gets list of nutrient table data dictionaries and adds them
             count = 1
             for nutrient_dict in self.__get_prod_table_data(add_attr, soup):
-                if count > 5:
-                    print("Nutrient table number {} could not be added".format(count))
-                #print('nutrient_table_' + str(count))
-                PRODUCT_INFORMATION['nutrient_table_' + str(count)] = nutrient_dict
+                #for now we are getting only the first tables
+                if count > 1:
+                    break
+
+                #PRODUCT_INFORMATION['nutrient_table_' + str(count)] = nutrient_dict
                 count = count + 1
-                                
+                #create a dataframe from dictionary, using the unique code as the row index 
+                new_data_frame = pd.DataFrame(nutrient_dict, index=[unique_id])
+                path_ = path + 'Nutrition_tables'
+                #print(path_)
+                new_data_frame.transpose().to_csv(path_ + '/nutrient_table_' + unique_id + '.csv')
+
         except:
             print("Could not add nutrient_tables categories")
         #Get up to 2 times vitamin table data
@@ -201,8 +215,16 @@ class AbbottStore_crawler(crawler_interface):
             #print(add_attr)
             count = 1
             for vitamin_dict in self.__get_prod_table_data(add_attr, soup):
-                PRODUCT_INFORMATION['vitamin_table_' + str(count)] = vitamin_dict
+                #for now we are getting only the first tables
+                if count > 1:
+                    break
+                
+                #PRODUCT_INFORMATION['vitamin_table_' + str(count)] = vitamin_dict
                 count = count + 1
+                new_data_frame = pd.DataFrame(vitamin_dict, index=[unique_id])
+                path_ = path + 'Vitamin_tables'
+                #print(path_)
+                new_data_frame.transpose().to_csv(path_ + '/vitamin_table_' + unique_id + '.csv')
 
         except:
             print("Could not add vitamin_table categories")
@@ -212,14 +234,22 @@ class AbbottStore_crawler(crawler_interface):
             add_attr = soup.find_all(class_ = 'section minerals-data')
             count = 1
             for minerals_dicts in self.__get_prod_table_data(add_attr, soup):
-                PRODUCT_INFORMATION['mineral_table_' + str(count)] = minerals_dicts
+                #for now we are getting only the first tables
+                if count > 1:
+                    break
+
+                #PRODUCT_INFORMATION['mineral_table_' + str(count)] = minerals_dicts
                 count = count + 1
+                new_data_frame = pd.DataFrame(minerals_dicts, index=[unique_id])
+                path_ = path + 'Mineral_tables'
+                new_data_frame.transpose().to_csv(path_ + '/mineral_table_' + unique_id + '.csv')
+
         except:
             print("Could not add mineral_table categories")
         #for k,v in PRODUCT_INFORMATION.items():
         #    print('{}:{}'.format(k,v))
 
-        print(PRODUCT_INFORMATION['name'])
+        #print(PRODUCT_INFORMATION['name'])
         return PRODUCT_INFORMATION
 
 

@@ -53,7 +53,7 @@ def run_scrapper(stores_list, command_types, link_loader, crawler, command, stor
 
         print('Crawl time: {}'.format(end - start))  
         for info in info_list:
-            print(info['name'])
+            #print(info['name'])
             writer.write(info, file_path + store + '_scrape_data.csv')
 
 
@@ -156,6 +156,8 @@ if __name__ == "__main__":
     #create sub folders for data files if it doesn't exist
     Path('Data/' + store).mkdir(parents=True, exist_ok=True)
     Path('Data/' + store + '/Nutrition_tables').mkdir(parents=True, exist_ok=True)
+    Path('Data/' + store + '/Vitamin_tables').mkdir(parents=True, exist_ok=True)
+    Path('Data/' + store + '/Mineral_tables').mkdir(parents=True, exist_ok=True)
     Path('Data/' + store + '/Clinical_indications_tables').mkdir(parents=True, exist_ok=True)
 
     #for reading saved links list

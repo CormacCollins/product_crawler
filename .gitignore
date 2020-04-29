@@ -11,3 +11,9 @@ __pycache__/
 
 # Rope project settings
 .ropeproject
+
+#avoid uploading a heap of csv files
+Mineral_tables/*
+Nutrition_tables/*
+Vitamin_tables/*
+Clinical_indications_tables/*
