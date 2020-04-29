@@ -13,7 +13,7 @@ __pycache__/
 .ropeproject
 
 #avoid uploading a heap of csv files
-Mineral_tables/*
-Nutrition_tables/*
-Vitamin_tables/*
-Clinical_indications_tables/*
+Mineral_tables/*.csv
+Nutrition_tables/*.csv
+Vitamin_tables/*.csv
+Clinical_indications_tables/*.csv
