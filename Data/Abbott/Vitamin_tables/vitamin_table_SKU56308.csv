@@ -1,16 +1,17 @@
-,SKU56308
-"Vitamin A, IU",300
-"Vitamin D, IU",60
-"Vitamin E, IU",1.5
-"Vitamin K, mcg",11
-"Thiamin (Vitamin B1), mcg",63
-"Riboflavin (Vitamin B2), mcg",95
-"Vitamin B6, mcg",63
-"Vitamin B12, mcg",0.47
-"Niacin, mcg",1400
-"Folic Acid (Folacin), mcg",16
-"Pantothenic Acid, mcg",780
-"Biotin, mcg",4.7
-"Vitamin C (Ascorbic Acid), mg",9
-"Choline, mg",24
-"Inositol, mg",5
+,SKU56308,mineral,metric
+0,110.0,Calcium, mg
+1,5.5,Calcium, mEq
+2,79.0,Phosphorus, mg
+3,7.9,Magnesium, mg
+4,1.9,Iron, mg
+5,0.79,Zinc, mg
+6,25.0,Manganese, mcg
+7,79.0,Copper, mcg
+8,16.0,Iodine, mcg
+9,2.0,Selenium, mcg
+10,46.0,Sodium, mg
+11,2.0,Sodium, mEq
+12,110.0,Potassium, mg
+13,2.8,Potassium, mEq
+14,65.0,Chloride, mg
+15,1.8,Chloride, mEq

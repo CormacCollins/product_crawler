@@ -1,0 +1,63 @@
+
+<table_columns>
+    <!-- Main fact table for schema -->
+    <products_table>
+        <col_name>product_id</col_name>
+        <col_name>name</col_name> 
+        <col_name>url</col_name>               
+
+        <col_name>price</col_name>
+        <col_name>entry_date</col_name>  
+    </products_list_table>
+
+    <store_table>
+        <col_name>product_id</col_name> 
+        <col_name>store</col_name> 
+    </store_table>
+
+    <clinical_indications_table>
+        <col_name>product_id</col_name> 
+        <col_name>clinical_indication</col_name> 
+    </clinical_indications_table>
+
+    <vitamins_table>
+        <col_name>product_id</col_name> 
+        <col_name>vitamin</col_name> 
+    </vitamins_table>
+
+    <minerals_table>
+        <col_name>product_id</col_name> 
+        <col_name>mineral</col_name> 
+    </minerals_table>
+
+    <nutrition_table>
+        <col_name>product_id</col_name> 
+        <col_name>mineral</col_name> 
+    </nutrition_table>
+
+    <products_type_data_table>
+        <col_name>product_id</col_name> 
+        <col_name>Form</col_name> 
+        <col_name>product_format</col_name> 
+        <col_name>product_measurement_metric</col_name> 
+        <col_name>product_measurement_numeric</col_name> 
+        <col_name>bulk_sales_type</col_name> 
+        <col_name>bulk_sales_numeric</col_name> 
+        <col_name>serving_size_metric</col_name> 
+        <col_name>serving_size_numeric</col_name> 
+
+    </products_type_data_table>
+
+    <descriptions_table>
+        <col_name>product_id</col_name> 
+        <col_name>description</col_name> 
+    </descriptions_table>
+
+    <allergin_info_table>
+        <col_name>product_id</col_name> 
+        <col_name>allergin_info</col_name> 
+    </allergin_info_table>
+
+
+
+</table_columns>
