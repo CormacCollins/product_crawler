@@ -1,3 +1,6 @@
+### NOTICE! - 29/4 Site was under contruction for Abbott, will have to test appropriately  
+
+
 ### General usage of crawler
  Call function  main.py by passing 2 arguments: 
  * A store name: eg. Abbott  
