@@ -204,8 +204,8 @@ class AbbottStore_crawler(crawler_interface):
                 #create a dataframe from dictionary, using the unique code as the row index 
                 
                 new_data_frame = pd.DataFrame(nutrient_dict, index=[unique_id])
-                print(new_data_frame)
-                return
+                #print(new_data_frame)
+                
                 path_ = path + 'Nutrition_tables'
                 #print(path_)
                 new_data_frame.transpose().to_csv(path_ + '/nutrient_table_' + unique_id + '.csv')
@@ -228,8 +228,8 @@ class AbbottStore_crawler(crawler_interface):
                 path_ = path + 'Vitamin_tables'
                 #print(path_)
                 new_data_frame.transpose().to_csv(path_ + '/vitamin_table_' + unique_id + '.csv')
-                print(new_data_frame)
-                return
+                #print(new_data_frame)
+                
         except:
             print("Could not add vitamin_table categories")
         
@@ -247,8 +247,8 @@ class AbbottStore_crawler(crawler_interface):
                 new_data_frame = pd.DataFrame(minerals_dicts, index=[unique_id])
                 path_ = path + 'Mineral_tables'
                 new_data_frame.transpose().to_csv(path_ + '/mineral_table_' + unique_id + '.csv')
-                print(new_data_frame)
-                return
+                #print(new_data_frame)
+                
         except:
             print("Could not add mineral_table categories")
         #for k,v in PRODUCT_INFORMATION.items():

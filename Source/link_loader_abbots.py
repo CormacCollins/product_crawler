@@ -4,6 +4,13 @@ import csv
 import requests
 import re
 
+import selenium
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import Select
+from selenium.webdriver.support.ui import WebDriverWait
+from time import sleep
+
 class Link_loader_abbotts:
     def __init__(self, abbots_file_name_csv):
         """ Gets links for crawler, either by initial crawl from website, or by getting 
@@ -45,32 +52,38 @@ class Link_loader_abbotts:
             soup = BeautifulSoup(page.content, 'html.parser')
 
             #get menu with links
-            menu_list = soup.find(class_='groupmenu')
+            menu_list = soup.find(class_='abbott-brands-nav d-none d-md-flex flex-column')
 
             #get links in drop down for each product category
-            menu_links = menu_list.find_all('a', class_='menu-link')
+            menu_links = menu_list.find_all('p', class_='list-comp__title')
 
             links = list()
             names = list()
             #for each link go to new url and get items
             for l in menu_links:
-                if 'menu-link' in l['class']:
-                    links.append(l['href'])
-                    names.append(l.find("span").text)
+                #print(l.a['href'])
+                if 'list-comp__title' in l['class']:
+                    links.append(l.a['href'])
+                    names.append(l.a.text)
 
+
+            print(names) #['Similac', 'Ensure', 'PEDIASURE', 'FREE STYLE BRAND', 'PEDIALYTE', 'NEPRO', 'GLUCERNA', 'ZONEPERFECT', 'MORE BRANDS']
             #To note: the shop by brands link may have duplicates, but I havn't researched, it will be easier to remove duplicates later
             # Also does not continue crawling in shop by brand
-
             
             for link in links:
                 n = names.pop(0)
                 print('Searching brand range {}'.format(n))
                 
-                print(link)
-                self.__get_products_from_product_page(link, product_links)
-                
+                if n == 'MORE BRANDS':
+                    print(link)
+                    self.get_more_brands(link, product_links)
+                    continue
 
-            print("Prod num {}".format(len(product_links)))
+                print(link)
+                self.use_selenium_get_links(link, product_links)
+
+            print("Total number of links fetched {}".format(len(product_links)))
             #print(product_links[1:10])
 
             #write to csv for easier work during development:
@@ -94,11 +107,78 @@ class Link_loader_abbotts:
     # recursive function that keeps getting moving to next page
     # TODO: need safety mech for max recursive depth and memory
 
+    def elment_exists_selenium(self, driver, el_name):
+        return (len(driver.find_elements_by_id(el_name)) > 0)
+
+    def use_selenium_get_links(self, prod_page_link, product_links):
+        print('searching: {}'.format(prod_page_link))
+
+        page = requests.get(prod_page_link)
+        soup = BeautifulSoup(page.content, 'html.parser')
+        # Need to set the driver in the for loop, otherwise website blocks it
+        driver =  webdriver.Chrome("../Drivers/chromedriver.exe")
+        driver.set_page_load_timeout(500)
+
+        # Initiate driver with url
+        driver.get(prod_page_link)
+        
+        # Wait until page loads
+        driver.implicitly_wait(30)
+
+
+        # Click "I am a HCP"
+        times = 1
+        button_available = False
+
+        try:
+            button_available = driver.find_element_by_id("loadMore")
+        except:
+            print('Button not available - fetching available links')
+            menu_list = driver.find_elements_by_class_name('search-page-product__card--figure')
+
+            for item in menu_list: 
+                product_links.append((item.get_attribute('href')))
+            print('Obtained {} links'.format(len(menu_list)))
+            return
+
+        while self.elment_exists_selenium(driver, 'loadMore'):
+            print('Pressing button {} times'.format(times))
+            driver.find_element_by_id("loadMore").click()    
+            driver.implicitly_wait(5)
+            sleep(1.5)
+            times += 1
+            
+        print('Button finished')
+
+
+        menu_list = driver.find_elements_by_class_name('search-page-product__card--figure')
+
+        for item in menu_list: 
+            product_links.append((item.get_attribute('href')))
+        print('Obtained {} links'.format(len(menu_list)))
+        
+        driver.close()    
+        driver.quit()
+
+    def get_more_brands(self, prod_page_link, product_links):
+        page = requests.get(prod_page_link)
+        soup = BeautifulSoup(page.content, 'html.parser')
+
+        #print(soup.prettify())
+        menu_list = soup.find_all('a', class_='cmp-text')
+        count = 0
+        for l in menu_list:
+            count += 1
+            product_links.append(l['href'])
+
+        print('More brands found: {}'.format(len(menu_list)))
+
     def __get_products_from_product_page(self, prod_page_link, product_links):
         page = requests.get(prod_page_link)
         soup = BeautifulSoup(page.content, 'html.parser')
+
         #print(soup.prettify())
-        menu_list = soup.find_all('a', class_='product photo product-item-photo')
+        menu_list = soup.find_all('a', class_='col-md-3 col-sm-4 col-6 search-page-product__card')
         count = 0
         for l in menu_list:
             count += 1

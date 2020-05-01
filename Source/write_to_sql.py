@@ -75,5 +75,6 @@ for row in Abbot_main_ingredients.iterrows():
     sql = "INSERT INTO Abbot_main_ingredients ({}) VALUES ({})".format(' ,'.join(Abbot_main_ingredients.columns), ','.join(['?']*len(Abbot_main_ingredients.columns)))
     c.execute(sql, tuple(row[1]))
 conn.commit()
+
 print("Records Added to SQLLite Database")
 
