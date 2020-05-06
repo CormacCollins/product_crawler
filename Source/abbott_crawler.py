@@ -147,7 +147,8 @@ class AbbottStore_crawler(crawler_interface):
         # All nutritional facts togethar, i.e. ingredients, allergin info...
         try:
             nutritionalinfo = soup.find_all(class_ = 'pdp-tab__nutri-info-text')
-            
+            #[print(i) for i in nutritionalinfo]
+            n = len(nutritionalinfo)
             #ingredients
             try:    
                 PRODUCT_INFORMATION['ingredients'] = nutritionalinfo[0].text.lstrip()
@@ -160,12 +161,13 @@ class AbbottStore_crawler(crawler_interface):
                 print('Could not add allergin_info')
 
             try:    
-                PRODUCT_INFORMATION['serving_size_1'] = nutritionalinfo[2].text.lstrip()
+                PRODUCT_INFORMATION['serving_size_1'] = nutritionalinfo[3].text.lstrip()
             except:
                 print('Could not add serving_size_1')
 
-            try:    
-                PRODUCT_INFORMATION['footnotes'] = nutritionalinfo[3].text.lstrip().rstrip()
+            try:  
+                print('Not adding footnotes currently')  
+                #PRODUCT_INFORMATION['footnotes'] = nutritionalinfo[4].text.lstrip().rstrip()
             except:
                 print('Could not add footnotes')
 

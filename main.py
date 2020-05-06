@@ -9,6 +9,7 @@ import sys
 from pathlib import Path   
 import time
 import os
+import path
 
 
 import Source.task_threader as task_threader  
@@ -51,10 +52,12 @@ def run_scrapper(stores_list, command_types, link_loader, crawler, command, stor
 
         end = time.time()
 
-        print('Crawl time: {}'.format(end - start))  
-        for info in info_list:
-            #print(info['name'])
-            writer.write(info, file_path + store + '_scrape_data.csv')
+        print('Crawl time: {}'.format(end - start))
+        write_path = file_path + store + '_scrape_data.csv'
+        if path.exists(write_path):
+            os.remove(write_path) 
+        for info in info_list:            
+            writer.write(write_path)
 
 
         #write to csv seperately to avoid multiplae thread access    
@@ -87,7 +90,10 @@ def run_scrapper(stores_list, command_types, link_loader, crawler, command, stor
         end = time.time()
 
         print('Crawl time: {}'.format(end - start))  
-        for info in info_list:
+        write_path = file_path + store + '_scrape_data.csv'
+        if path.exists(write_path):
+            os.remove(write_path)
+        for info in info_list:            
             writer.write(info, file_path + store + '_scrape_data.csv')
 
     elif 'single_url' in command:
@@ -177,7 +183,7 @@ if __name__ == "__main__":
                     store, 
                     file_path, 
                     file_uri,
-                    M_THREADING=False)
+                    M_THREADING=True)
 
     elif store == 'Ncare':
         l_loader = Link_loader_ncare( file_uri)
