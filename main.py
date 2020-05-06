@@ -96,7 +96,6 @@ def run_scrapper(stores_list, command_types, link_loader, crawler, command, stor
         print("Getting product from url {}".format(l))
         info = crawler.get_product_info(l, store_name=store, path=file_path)
 
-        
         writer.write(info, file_path + store + '_scrape_data.csv')
         
     else:
@@ -178,7 +177,7 @@ if __name__ == "__main__":
                     store, 
                     file_path, 
                     file_uri,
-                    M_THREADING=True)
+                    M_THREADING=False)
 
     elif store == 'Ncare':
         l_loader = Link_loader_ncare( file_uri)

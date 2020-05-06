@@ -6,6 +6,7 @@ from Source.crawler_interface import crawler_interface
 import sys
 import Source.product_info_JSON
 import pandas as pd
+import Source.helper_functions as helper_functions
 
 class AbbottStore_crawler(crawler_interface):
 
@@ -70,29 +71,29 @@ class AbbottStore_crawler(crawler_interface):
 
         # get product name
         try:
-            name = soup.find(class_ = 'base')
+            name = soup.find(class_ = 'pdp-info__title')
             nm = name.find_all(text=True)
-            nm = ''.join(nm)
+            nm = ''.join(nm).lstrip().rstrip()
             PRODUCT_INFORMATION['name'] = nm
         except:
             print("Could not add name category")
         try:    
-            price = soup.find(class_ = 'price')
+            price = soup.find(id = 'current-price')
             p = price.text
             PRODUCT_INFORMATION['price'] = p
         except:
             print("Could not add price category")
 
         try:
-            size_weight = soup.find(class_ = 'size-or-weight')
-            sw = size_weight.text.lstrip()
+            size_weight = soup.find(class_ = 'pdp-info__pack-detail m-0')
+            sw = size_weight.text.lstrip().rstrip()
             PRODUCT_INFORMATION['size_or_weight'] = sw
         except:
             print("Could not add size_or_weight category")
 
         # get availability info
         try:
-            availability = soup.find(title = 'Availability')
+            availability = soup.find(id = 'stock-status')
             a = availability.find_all(text=True)
             a = ''.join(a).strip('\n')
             PRODUCT_INFORMATION['availability'] = a
@@ -100,32 +101,34 @@ class AbbottStore_crawler(crawler_interface):
             print("Could not add availability category")
 
         try:
-            item_attr = soup.find(class_ = 'product attribute sku')
-            it_type = item_attr.find(class_="type")
-            it = it_type.text
-            type_num = item_attr.find(class_= "value").text
-            PRODUCT_INFORMATION['item_type'] = (it + "#:" + type_num).replace('#:', '')
+            item_attr = soup.find(id = 'pdp-sku')
+            #it_type = item_attr.find(class_="type")
+            it = item_attr.text
+            #type_num = item_attr.find(class_= "value").text
+            PRODUCT_INFORMATION['item_id'] = it.replace('SKU#:', '').lstrip()
         except:
             print("Could not add item_type category")
 
         try:
-            prod_descr = soup.find(class_ = 'product attribute description')
+            prod_descr = soup.find(class_ = 'product-description')
             descr = prod_descr.find_all(text=True)
-            info = ''.join(descr)
-            PRODUCT_INFORMATION['description'] = info.lstrip()
+            info = ''.join(descr).lstrip().replace('_x000D_', '') #this will likely be fixed from the web devs at some point
+            PRODUCT_INFORMATION['description'] = helper_functions.remove_utf_charactars_and_strip(info)
         except:
             print("Could not add name description")
 
         # data table additional-attributes ("More Information") section
         try:
-            add_attr = soup.find(class_ = 'data table additional-attributes').find('tbody')
+            add_attr = soup.find(class_ = 'more-information').find('table')
             rows = add_attr.find_all('th')
-            row_data = add_attr.find_all('td')
+            row_data = add_attr.find_all('td')   
             for i in range(0, len(rows)):
                 info_title = rows[i].text.strip()
+
                 #print('Info title {}'.format(info_title))
+                #print(row_data[i].text.strip())
                 # flavor will be a seperate dictionary of values added later
-                if info_title != 'Flavor':
+                if info_title != 'Flavor' or info_title != 'Flavors':
                     PRODUCT_INFORMATION[info_title] = row_data[i].text.strip()
         except:
             print("Could not add additional attributes categories")
@@ -133,126 +136,92 @@ class AbbottStore_crawler(crawler_interface):
 
         # flavour categories
         try:
-            product_cart_form = soup.find(id = 'product_addtocart_form')
-            div_titles = product_cart_form.find_all(class_ = 'falvour-title')
-            select_values = product_cart_form.find_all('select')
-            flavours = [select_values[i].text for i in range(0, len(div_titles)-1) if div_titles[i].text == 'Flavors']
-
-            f = flavours[0].split('\n')
-            #print(f)
-            final_flavours = list()
-            for i in f:
-                #probably not very efficient!
-                if any([c.isalpha() for c in i]):
-                    #print(i)
-                    final_flavours.append(i.strip().rstrip())
-                    
-            PRODUCT_INFORMATION['Flavours'] = final_flavours
+            product_cart_form = soup.find(id = 'pdp-Flavors')
+            #div_titles = product_cart_form.find_all(class_ = 'falvour-title')
+            select_values = product_cart_form.find_all(text=True)
+            flavors = [i for i in select_values if i != '\n']
+            PRODUCT_INFORMATION['Flavours'] = flavors
         except:
             print("Could not add flavour categories")
 
-        # nutrition-ingredient-value
+        # All nutritional facts togethar, i.e. ingredients, allergin info...
         try:
-            ingredients = soup.find(class_ = 'nutrition-ingredient-value')
-            PRODUCT_INFORMATION['ingredients'] = ingredients.text.lstrip()
-        except:
-            print("Could not add ingredients category")
+            nutritionalinfo = soup.find_all(class_ = 'pdp-tab__nutri-info-text')
+            
+            #ingredients
+            try:    
+                PRODUCT_INFORMATION['ingredients'] = nutritionalinfo[0].text.lstrip()
+            except:
+                print('Could not add ingredients')
 
-        try:
-            allergin_info = soup.find(class_ = 'nutrition-AllergenStatement-value')
-            PRODUCT_INFORMATION['allergin_info'] = allergin_info.text.lstrip()
-        except:
-            print("Could not add allergin_info category")
+            try:    
+                PRODUCT_INFORMATION['allergin_info'] = nutritionalinfo[1].text.lstrip()
+            except:
+                print('Could not add allergin_info')
 
-        #section serving-size
-        try:
-            serv_size = soup.find_all(class_ = 'section serving-size')
-            for i in range(0, len(serv_size)):
-                ss = serv_size[i].text
-                PRODUCT_INFORMATION['serving_size_' + str(i+1)] = ss.lstrip().strip('Serving Size:').lstrip()
-        except:
-            print("Could not add serving size category")
+            try:    
+                PRODUCT_INFORMATION['serving_size_1'] = nutritionalinfo[2].text.lstrip()
+            except:
+                print('Could not add serving_size_1')
 
-        try:
-            footnotes = soup.find_all(class_ = 'nutrition-footnote')
-            f = ''
-            for i in footnotes:
-                f = f + " " + i.find(class_='footnote').text + '\n'
-            PRODUCT_INFORMATION['footnotes'] = f.strip('*').lstrip()
-        except:
-            print("Could not add footnote categories")
+            try:    
+                PRODUCT_INFORMATION['footnotes'] = nutritionalinfo[3].text.lstrip().rstrip()
+            except:
+                print('Could not add footnotes')
 
+           
+        except:
+            print("Could not fetch nutritional facts")
+
+        
 
 
         # --------------------------------------------------------------------------------------------------
         # there can be a special case where there are 2 nutrient datas - relative to 2 types of serving size
 
-        unique_id = PRODUCT_INFORMATION['item_type'].replace('#:', '')
-        
+        unique_id = PRODUCT_INFORMATION['item_id']        
         #Get up to 2 times nutrient table data
         try:
-            add_attr = soup.find_all(class_ = 'section nutrient-data')
-            #gets list of nutrient table data dictionaries and adds them
-            count = 1
-            for nutrient_dict in self.__get_prod_table_data(add_attr, soup):
-                #for now we are getting only the first tables
-                if count > 1:
-                    break
-
-                #PRODUCT_INFORMATION['nutrient_table_' + str(count)] = nutrient_dict
-                count = count + 1
-                #create a dataframe from dictionary, using the unique code as the row index 
-                
-                new_data_frame = pd.DataFrame(nutrient_dict, index=[unique_id])
-                #print(new_data_frame)
-                
+            tables = soup.find_all(class_ = 'pdp-tab__nutri-info-table')
+            
+            #attempt nutrient table
+            try:            
+                new_data_frame = pd.read_html(str(tables[0]))[0]
+                #new_data_frame = pd.DataFrame(new_data_frame[0], index=[unique_id])
                 path_ = path + 'Nutrition_tables'
                 #print(path_)
-                new_data_frame.transpose().to_csv(path_ + '/nutrient_table_' + unique_id + '.csv')
+                new_data_frame.to_csv(path_ + '/nutrient_table_' + unique_id + '.csv')
+            except:
+                print("Could not add nutrient_tables categories")
 
-        except:
-            print("Could not add nutrient_tables categories")
-        #Get up to 2 times vitamin table data
-        try:
-            add_attr = soup.find_all(class_ = 'section vitamin-data')
-            #print(add_attr)
-            count = 1
-            for vitamin_dict in self.__get_prod_table_data(add_attr, soup):
-                #for now we are getting only the first tables
-                if count > 1:
-                    break
-                
-                #PRODUCT_INFORMATION['vitamin_table_' + str(count)] = vitamin_dict
-                count = count + 1
-                new_data_frame = pd.DataFrame(vitamin_dict, index=[unique_id])
+            #attempt vitamin table
+            try:
+                new_data_frame = pd.read_html(str(tables[1]))[0]
                 path_ = path + 'Vitamin_tables'
                 #print(path_)
-                new_data_frame.transpose().to_csv(path_ + '/vitamin_table_' + unique_id + '.csv')
-                #print(new_data_frame)
-                
-        except:
-            print("Could not add vitamin_table categories")
-        
-        #Get up to 2 times minerals table data
-        try:
-            add_attr = soup.find_all(class_ = 'section minerals-data')
-            count = 1
-            for minerals_dicts in self.__get_prod_table_data(add_attr, soup):
-                #for now we are getting only the first tables
-                if count > 1:
-                    break
+                new_data_frame.to_csv(path_ + '/vitamin_table_' + unique_id + '.csv')
+            except:
+                print("Could not add vitamin_table categories")
 
-                #PRODUCT_INFORMATION['mineral_table_' + str(count)] = minerals_dicts
-                count = count + 1
-                new_data_frame = pd.DataFrame(minerals_dicts, index=[unique_id])
+            #attempt mineral tables
+            try:
+                new_data_frame = new_data_frame = pd.read_html(str(tables[2]))[0]
                 path_ = path + 'Mineral_tables'
-                new_data_frame.transpose().to_csv(path_ + '/mineral_table_' + unique_id + '.csv')
-                #print(new_data_frame)
-                
+                new_data_frame.to_csv(path_ + '/mineral_table_' + unique_id + '.csv')
+                    
+            except:
+                print("Could not add mineral_table categories")
+
         except:
-            print("Could not add mineral_table categories")
+            print("Could not any of nutrient, mineral or vitamin tables")
+            #Get up to 2 times vitamin table data
+
+        
+        
         #for k,v in PRODUCT_INFORMATION.items():
-        #    print('{}:{}'.format(k,v))
+         #   print('{}:{}'.format(k,v))
+
+        
 
         #print(PRODUCT_INFORMATION['name'])
         return PRODUCT_INFORMATION
