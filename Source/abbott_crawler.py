@@ -181,7 +181,8 @@ class AbbottStore_crawler(crawler_interface):
         # --------------------------------------------------------------------------------------------------
         # there can be a special case where there are 2 nutrient datas - relative to 2 types of serving size
 
-        unique_id = PRODUCT_INFORMATION['item_id']        
+        unique_id = PRODUCT_INFORMATION['item_id'].strip()
+        print(unique_id)        
         #Get up to 2 times nutrient table data
         try:
             tables = soup.find_all(class_ = 'pdp-tab__nutri-info-table')
@@ -192,7 +193,7 @@ class AbbottStore_crawler(crawler_interface):
                 #new_data_frame = pd.DataFrame(new_data_frame[0], index=[unique_id])
                 path_ = path + 'Nutrition_tables'
                 #print(path_)
-                new_data_frame.to_csv(path_ + '/nutrient_table_' + unique_id + '.csv')
+                new_data_frame.to_csv(path_ + '/nutrient_table_' + unique_id + '.csv', index=False)
             except:
                 print("Could not add nutrient_tables categories")
 
@@ -201,7 +202,7 @@ class AbbottStore_crawler(crawler_interface):
                 new_data_frame = pd.read_html(str(tables[1]))[0]
                 path_ = path + 'Vitamin_tables'
                 #print(path_)
-                new_data_frame.to_csv(path_ + '/vitamin_table_' + unique_id + '.csv')
+                new_data_frame.to_csv(path_ + '/vitamin_table_' + unique_id + '.csv', index=False)
             except:
                 print("Could not add vitamin_table categories")
 
@@ -209,7 +210,7 @@ class AbbottStore_crawler(crawler_interface):
             try:
                 new_data_frame = new_data_frame = pd.read_html(str(tables[2]))[0]
                 path_ = path + 'Mineral_tables'
-                new_data_frame.to_csv(path_ + '/mineral_table_' + unique_id + '.csv')
+                new_data_frame.to_csv(path_ + '/mineral_table_' + unique_id + '.csv', index=False)
                     
             except:
                 print("Could not add mineral_table categories")
