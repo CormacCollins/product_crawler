@@ -1,4 +1,4 @@
-### NOTICE! - 29/4 changed for Abbott, Cormac fixing crawler currentlty
+* Currently less data in Abbott scrape due to site changes and still adapting the link loader
 
 
 ### General usage of crawler
@@ -16,6 +16,9 @@
  ```
 # program general structure
 ![Image description](https://github.com/CormacCollins/product_crawler/blob/master/Images/5.2%20structure%20chart%20(2).png)
+
+# Generalized schema
+![Image description](https://github.com/CormacCollins/product_crawler/blob/master/Images/Products%20schema.png)
 
 # product_crawler
 
