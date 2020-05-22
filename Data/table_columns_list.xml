@@ -33,17 +33,26 @@
 
     <vitamins_table>
         <col_name>item_id</col_name>
-        <col_name>vitamin</col_name> 
+        <col_name>vitamin</col_name>
+        <col_name>measure</col_name>
+        <col_name>value</col_name> 
+        <col_name>perc_daily_recom</col_name>   
     </vitamins_table>
 
     <minerals_table>
         <col_name>item_id</col_name> 
         <col_name>mineral</col_name> 
+        <col_name>measure</col_name>
+        <col_name>value</col_name> 
+        <col_name>perc_daily_recom</col_name> 
     </minerals_table>
 
     <nutrition_table>
         <col_name>item_id</col_name> 
         <col_name>nutrient</col_name> 
+        <col_name>measure</col_name>
+        <col_name>value</col_name>
+        <col_name>perc_daily_recom</col_name> 
     </nutrition_table>
 
     <products_type_data_table>

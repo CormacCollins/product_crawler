@@ -1,16 +1,16 @@
-,Unnamed: 0,Amount per serving,% Daily Value*
-0,"Vitamin D, mcg : 6",6.0,30
-1,Vitamin A :,,15
-2,Vitamin C :,,20
-3,Vitamin E :,,20
-4,Vitamin K :,,15
-5,Thiamin :,,30
-6,Riboflavin :,,50
-7,Niacin :,,30
-8,Vitamin B6 :,,40
-9,Folate :,,30
-10,"Folic Acid, mcg :",,72
-11,Vitamin B12 :,,10
-12,Biotin :,,30
-13,Pantothenic Acid :,,50
-14,Choline :,,10
+Unnamed: 0,Amount per serving,% Daily Value*
+"Vitamin D, mcg : 6",6.0,30.0
+Vitamin A :,,15.0
+Vitamin C :,,20.0
+Vitamin E :,,20.0
+Vitamin K :,,15.0
+Thiamin :,,30.0
+Riboflavin :,,50.0
+Niacin :,,30.0
+Vitamin B6 :,,40.0
+Folate :,,30.0
+"Folic Acid, mcg : 72",72.0,
+Vitamin B12 :,,10.0
+Biotin :,,30.0
+Pantothenic Acid :,,50.0
+Choline :,,10.0

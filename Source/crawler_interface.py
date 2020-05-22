@@ -1,7 +1,9 @@
 from abc import ABC, abstractmethod
 
 """
-Forces any crawler instance to have the below functions
+Forces any crawler instance to adhere to simple requirement of taking
+url link and returning information from it. 
+Function can also have abilities to write to csv file with the provided path
 """
 class crawler_interface(ABC):
 

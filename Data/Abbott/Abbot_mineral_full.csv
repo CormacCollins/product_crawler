@@ -1,0 +1,1752 @@
+item_id,mineral,measure,value,perc_daily_recom
+56525,Calcium, mg , 78,
+56525,Calcium, mEq , 3.9,
+56525,Phosphorus, mg , 42,
+56525,Magnesium, mg , 6,
+56525,Iron, mg , 1.8,
+56525,Zinc, mg , 0.75,
+56525,Manganese, mcg , 5,
+56525,Copper, mcg , 90,
+56525,Iodine, mcg , 6,
+56525,Selenium, mcg , 2,
+56525,Sodium, mg , 24,
+56525,Sodium, mEq , 1.04,
+56525,Potassium, mg , 105,
+56525,Potassium, mEq , 2.7,
+56525,Chloride, mg , 65,
+56525,Chloride, mEq , 1.8,
+56308,Calcium, mg , 110,
+56308,Calcium, mEq , 5.5,
+56308,Phosphorus, mg , 79,
+56308,Magnesium, mg , 7.9,
+56308,Iron, mg , 1.9,
+56308,Zinc, mg , 0.79,
+56308,Manganese, mcg , 25,
+56308,Copper, mcg , 79,
+56308,Iodine, mcg , 16,
+56308,Selenium, mcg , 2,
+56308,Sodium, mg , 46,
+56308,Sodium, mEq , 2,
+56308,Potassium, mg , 110,
+56308,Potassium, mEq , 2.8,
+56308,Chloride, mg , 65,
+56308,Chloride, mEq , 1.8,
+62139,Calcium, mg , 88,
+62139,Calcium, mEq , 4.4,
+62139,Phosphorus, mg , 59,
+62139,Magnesium, mg , 6,
+62139,Iron, mg , 1.9,
+62139,Zinc, mg , 0.79,
+62139,Manganese, mcg , 5,
+62139,Copper, mcg , 95,
+62139,Iodine, mcg , 9,
+62139,Selenium, mcg , 2,
+62139,Sodium, mg , 32,
+62139,Sodium, mEq , 1.4,
+62139,Potassium, mg , 110,
+62139,Potassium, mEq , 2.8,
+62139,Chloride, mg , 68,
+62139,Chloride, mEq , 1.9,
+66937e,Calcium, mg , 105,
+66937e,Calcium, mEq , 5.3,
+66937e,Phosphorus, mg , 70,
+66937e,Magnesium, mg , 6,
+66937e,Iron, mg , 1.9,
+66937e,Zinc, mg , 0.79,
+66937e,Manganese, mcg , 5,
+66937e,Copper, mcg , 95,
+66937e,Iodine, mcg , 9,
+66937e,Selenium, mcg , 2,
+66937e,Sodium, mg , 46,
+66937e,Sodium, mEq , 2,
+66937e,Potassium, mg , 121,
+66937e,Potassium, mEq , 3.1,
+66937e,Chloride, mg , 68,
+66937e,Chloride, mEq , 1.9,
+66939e,Calcium, mg , 105,
+66939e,Calcium, mEq , 5.3,
+66939e,Phosphorus, mg , 70,
+66939e,Magnesium, mg , 6,
+66939e,Iron, mg , 1.9,
+66939e,Zinc, mg , 0.79,
+66939e,Manganese, mcg , 5,
+66939e,Copper, mcg , 95,
+66939e,Iodine, mcg , 9,
+66939e,Selenium, mcg , 2,
+66939e,Sodium, mg , 46,
+66939e,Sodium, mEq , 2,
+66939e,Potassium, mg , 121,
+66939e,Potassium, mEq , 3.1,
+66939e,Chloride, mg , 68,
+66939e,Chloride, mEq , 1.9,
+66937,Calcium, mg , 105,
+66937,Calcium, mEq , 5.3,
+66937,Phosphorus, mg , 70,
+66937,Magnesium, mg , 6,
+66937,Iron, mg , 1.9,
+66937,Zinc, mg , 0.79,
+66937,Manganese, mcg , 5,
+66937,Copper, mcg , 95,
+66937,Iodine, mcg , 9,
+66937,Selenium, mcg , 2,
+66937,Sodium, mg , 46,
+66937,Sodium, mEq , 2,
+66937,Potassium, mg , 121,
+66937,Potassium, mEq , 3.1,
+66937,Chloride, mg , 68,
+66937,Chloride, mEq , 1.9,
+67446,Calcium, mg , 180,
+67446,Calcium, mEq , 9.0,
+67446,Phosphorus, mg , 100,
+67446,Magnesium, mg , 12,
+67446,Iron, mg , 1.8,
+67446,Zinc, mg , 1.5,
+67446,Manganese, mcg , 12,
+67446,Copper, mcg , 250,
+67446,Iodine, mcg , 6,
+67446,Selenium, mcg , 2,
+67446,Sodium, mg , 43,
+67446,Sodium, mEq , 1.9,
+67446,Potassium, mg , 129,
+67446,Potassium, mEq , 3.3,
+67446,Chloride, mg , 81,
+67446,Chloride, mEq , 2.3,
+66939,Calcium, mg , 105,
+66939,Calcium, mEq , 5.3,
+66939,Phosphorus, mg , 70,
+66939,Magnesium, mg , 6,
+66939,Iron, mg , 1.9,
+66939,Zinc, mg , 0.79,
+66939,Manganese, mcg , 5,
+66939,Copper, mcg , 95,
+66939,Iodine, mcg , 9,
+66939,Selenium, mcg , 2,
+66939,Sodium, mg , 46,
+66939,Sodium, mEq , 2,
+66939,Potassium, mg , 121,
+66939,Potassium, mEq , 3.1,
+66939,Chloride, mg , 68,
+66939,Chloride, mEq , 1.9,
+67448p4,Calcium, mg , 180,
+67448p4,Calcium, mEq , 9.0,
+67448p4,Phosphorus, mg , 100,
+67448p4,Magnesium, mg , 12,
+67448p4,Iron, mg , 1.8,
+67448p4,Zinc, mg , 1.5,
+67448p4,Manganese, mcg , 12,
+67448p4,Copper, mcg , 250,
+67448p4,Iodine, mcg , 6,
+67448p4,Selenium, mcg , 2,
+67448p4,Sodium, mg , 43,
+67448p4,Sodium, mEq , 1.9,
+67448p4,Potassium, mg , 129,
+67448p4,Potassium, mEq , 3.3,
+67448p4,Chloride, mg , 81,
+67448p4,Chloride, mEq , 2.3,
+67448,Calcium, mg , 180,
+67448,Calcium, mEq , 9.0,
+67448,Phosphorus, mg , 100,
+67448,Magnesium, mg , 12,
+67448,Iron, mg , 1.8,
+67448,Zinc, mg , 1.5,
+67448,Manganese, mcg , 12,
+67448,Copper, mcg , 250,
+67448,Iodine, mcg , 6,
+67448,Selenium, mcg , 2,
+67448,Sodium, mg , 43,
+67448,Sodium, mEq , 1.9,
+67448,Potassium, mg , 129,
+67448,Potassium, mEq , 3.3,
+67448,Chloride, mg , 81,
+67448,Chloride, mEq , 2.3,
+5372976e,Calcium, mg , 88,
+5372976e,Calcium, mEq , 4.4,
+5372976e,Phosphorus, mg , 59,
+5372976e,Magnesium, mg , 6,
+5372976e,Iron, mg , 1.9,
+5372976e,Zinc, mg , 0.79,
+5372976e,Manganese, mcg , 5,
+5372976e,Copper, mcg , 95,
+5372976e,Iodine, mcg , 9,
+5372976e,Selenium, mcg , 2,
+5372976e,Sodium, mg , 32,
+5372976e,Sodium, mEq , 1.4,
+5372976e,Potassium, mg , 110,
+5372976e,Potassium, mEq , 2.8,
+5372976e,Chloride, mg , 68,
+5372976e,Chloride, mEq , 1.9,
+5081978e,Calcium, mg , 110,
+5081978e,Calcium, mEq , 5.5,
+5081978e,Phosphorus, mg , 79,
+5081978e,Magnesium, mg , 7.9,
+5081978e,Iron, mg , 1.9,
+5081978e,Zinc, mg , 0.79,
+5081978e,Manganese, mcg , 25,
+5081978e,Copper, mcg , 79,
+5081978e,Iodine, mcg , 16,
+5081978e,Selenium, mcg , 2,
+5081978e,Sodium, mg , 46,
+5081978e,Sodium, mEq , 2,
+5081978e,Potassium, mg , 110,
+5081978e,Potassium, mEq , 2.8,
+5081978e,Chloride, mg , 65,
+5081978e,Chloride, mEq , 1.8,
+00850e,Calcium, mg , 56,
+00850e,Calcium, mEq , 2.8,
+00850e,Phosphorus, mg , 28,
+00850e,Magnesium, mg , 6,
+00850e,Iron, mg , 0.7,
+00850e,Zinc, mg , 0.8,
+00850e,Manganese, mcg , 5,
+00850e,Copper, mcg , 90,
+00850e,Iodine, mcg , 6,
+00850e,Selenium, mcg , 2,
+00850e,Sodium, mg , 24,
+00850e,Sodium, mEq , 1.0,
+00850e,Potassium, mg , 80,
+00850e,Potassium, mEq , 2.1,
+00850e,Chloride, mg , 59,
+00850e,Chloride, mEq , 1.7,
+5082178e,Calcium, mg , 78,
+5082178e,Calcium, mEq , 3.9,
+5082178e,Phosphorus, mg , 42,
+5082178e,Magnesium, mg , 6,
+5082178e,Iron, mg , 1.8,
+5082178e,Zinc, mg , 0.75,
+5082178e,Manganese, mcg , 5,
+5082178e,Copper, mcg , 90,
+5082178e,Iodine, mcg , 6,
+5082178e,Selenium, mcg , 2,
+5082178e,Sodium, mg , 24,
+5082178e,Sodium, mEq , 1.04,
+5082178e,Potassium, mg , 105,
+5082178e,Potassium, mEq , 2.7,
+5082178e,Chloride, mg , 65,
+5082178e,Chloride, mEq , 1.8,
+62599,Calcium, mg , 105,
+62599,Calcium, mEq , 5.3,
+62599,Phosphorus, mg , 70,
+62599,Magnesium, mg , 6,
+62599,Iron, mg , 1.9,
+62599,Zinc, mg , 0.79,
+62599,Manganese, mcg , 5,
+62599,Copper, mcg , 95,
+62599,Iodine, mcg , 9,
+62599,Selenium, mcg , 2,
+62599,Sodium, mg , 46,
+62599,Sodium, mEq , 2,
+62599,Potassium, mg , 121,
+62599,Potassium, mEq , 3.1,
+62599,Chloride, mg , 68,
+62599,Chloride, mEq , 1.9,
+54598p50,Calcium, mg , 29,
+54598p50,Calcium, mEq , 1.46,
+54598p50,Phosphorus, mg , 16,
+54598p50,Magnesium, mg , 1.7,
+54598p50,Iron, mg , 0.08<sup>*</sup>,
+54598p50,Zinc, mg , 0.25,
+54598p50,Manganese, mcg , 1.8,
+54598p50,Copper, mcg , 43,
+54598p50,Iodine, mcg , 0.8,
+54598p50,Selenium, mcg , 0.1,
+54598p50,Sodium, mg , 4,
+54598p50,Sodium, mEq , 0.16,
+54598p50,Potassium, mg , 16,
+54598p50,Potassium, mEq , 0.40,
+54598p50,Chloride, mg , 9,
+54598p50,Chloride, mEq , 0.27,
+5081978,Calcium, mg , 110,
+5081978,Calcium, mEq , 5.5,
+5081978,Phosphorus, mg , 79,
+5081978,Magnesium, mg , 7.9,
+5081978,Iron, mg , 1.9,
+5081978,Zinc, mg , 0.79,
+5081978,Manganese, mcg , 25,
+5081978,Copper, mcg , 79,
+5081978,Iodine, mcg , 16,
+5081978,Selenium, mcg , 2,
+5081978,Sodium, mg , 46,
+5081978,Sodium, mEq , 2,
+5081978,Potassium, mg , 110,
+5081978,Potassium, mEq , 2.8,
+5081978,Chloride, mg , 65,
+5081978,Chloride, mEq , 1.8,
+5596378,Calcium, mg , 105,
+5596378,Calcium, mEq , 5.2,
+5596378,Phosphorus, mg , 75,
+5596378,Magnesium, mg , 7.5,
+5596378,Iron, mg , 1.8,
+5596378,Zinc, mg , 0.75,
+5596378,Manganese, mcg , 25,
+5596378,Copper, mcg , 75,
+5596378,Iodine, mcg , 15,
+5596378,Selenium, mcg , 2,
+5596378,Sodium, mg , 44,
+5596378,Sodium, mEq , 1.9,
+5596378,Potassium, mg , 108,
+5596378,Potassium, mEq , 2.8,
+5596378,Chloride, mg , 62,
+5596378,Chloride, mEq , 1.8,
+56271,Calcium, mg , 180,
+56271,Calcium, mEq , 9.0,
+56271,Phosphorus, mg , 100,
+56271,Magnesium, mg , 12,
+56271,Iron, mg , 1.8,
+56271,Zinc, mg , 1.5,
+56271,Manganese, mcg , 12,
+56271,Copper, mcg , 250,
+56271,Iodine, mcg , 6,
+56271,Selenium, mcg , 2,
+56271,Sodium, mg , 43,
+56271,Sodium, mEq , 1.9,
+56271,Potassium, mg , 129,
+56271,Potassium, mEq , 3.3,
+56271,Chloride, mg , 81,
+56271,Chloride, mEq , 2.3,
+56265,Calcium, mg , 180,
+56265,Calcium, mEq , 9.0,
+56265,Phosphorus, mg , 100,
+56265,Magnesium, mg , 12,
+56265,Iron, mg , 1.8,
+56265,Zinc, mg , 1.5,
+56265,Manganese, mcg , 12,
+56265,Copper, mcg , 250,
+56265,Iodine, mcg , 6,
+56265,Selenium, mcg , 2,
+56265,Sodium, mg , 43,
+56265,Sodium, mEq , 1.9,
+56265,Potassium, mg , 129,
+56265,Potassium, mEq , 3.3,
+56265,Chloride, mg , 81,
+56265,Chloride, mEq , 2.3,
+5697578,Calcium, mg , 105,
+5697578,Calcium, mEq , 5.2,
+5697578,Phosphorus, mg , 75,
+5697578,Magnesium, mg , 7.5,
+5697578,Iron, mg , 1.8,
+5697578,Zinc, mg , 0.75,
+5697578,Manganese, mcg , 25,
+5697578,Copper, mcg , 75,
+5697578,Iodine, mcg , 15,
+5697578,Selenium, mcg , 2,
+5697578,Sodium, mg , 44,
+5697578,Sodium, mEq , 1.9,
+5697578,Potassium, mg , 108,
+5697578,Potassium, mEq , 2.8,
+5697578,Chloride, mg , 62,
+5697578,Chloride, mEq , 1.8,
+62595,Calcium, mg , 105,
+62595,Calcium, mEq , 5.3,
+62595,Phosphorus, mg , 70,
+62595,Magnesium, mg , 6,
+62595,Iron, mg , 1.9,
+62595,Zinc, mg , 0.79,
+62595,Manganese, mcg , 5,
+62595,Copper, mcg , 95,
+62595,Iodine, mcg , 9,
+62595,Selenium, mcg , 2,
+62595,Sodium, mg , 46,
+62595,Sodium, mEq , 2,
+62595,Potassium, mg , 121,
+62595,Potassium, mEq , 3.1,
+62595,Chloride, mg , 68,
+62595,Chloride, mEq , 1.9,
+5367678,Calcium, mg , 88,
+5367678,Calcium, mEq , 4.4,
+5367678,Phosphorus, mg , 59,
+5367678,Magnesium, mg , 6,
+5367678,Iron, mg , 1.9,
+5367678,Zinc, mg , 0.79,
+5367678,Manganese, mcg , 5,
+5367678,Copper, mcg , 95,
+5367678,Iodine, mcg , 9,
+5367678,Selenium, mcg , 2,
+5367678,Sodium, mg , 32,
+5367678,Sodium, mEq , 1.4,
+5367678,Potassium, mg , 110,
+5367678,Potassium, mEq , 2.8,
+5367678,Chloride, mg , 68,
+5367678,Chloride, mEq , 1.9,
+5753378,Calcium, mg , 88,
+5753378,Calcium, mEq , 4.4,
+5753378,Phosphorus, mg , 59,
+5753378,Magnesium, mg , 6,
+5753378,Iron, mg , 1.9,
+5753378,Zinc, mg , 0.79,
+5753378,Manganese, mcg , 5,
+5753378,Copper, mcg , 95,
+5753378,Iodine, mcg , 9,
+5753378,Selenium, mcg , 2,
+5753378,Sodium, mg , 32,
+5753378,Sodium, mEq , 1.4,
+5753378,Potassium, mg , 110,
+5753378,Potassium, mEq , 2.8,
+5753378,Chloride, mg , 68,
+5753378,Chloride, mEq , 1.9,
+5753578,Calcium, mg , 84,
+5753578,Calcium, mEq , 4.2,
+5753578,Phosphorus, mg , 56,
+5753578,Magnesium, mg , 6,
+5753578,Iron, mg , 1.8,
+5753578,Zinc, mg , 0.75,
+5753578,Manganese, mcg , 5,
+5753578,Copper, mcg , 90,
+5753578,Iodine, mcg , 9,
+5753578,Selenium, mcg , 2,
+5753578,Sodium, mg , 30,
+5753578,Sodium, mEq , 1.3,
+5753578,Potassium, mg , 107,
+5753578,Potassium, mEq , 2.7,
+5753578,Chloride, mg , 65,
+5753578,Chloride, mEq , 1.8,
+54598,Calcium, mg , 29,
+54598,Calcium, mEq , 1.46,
+54598,Phosphorus, mg , 16,
+54598,Magnesium, mg , 1.7,
+54598,Iron, mg , 0.08<sup>*</sup>,
+54598,Zinc, mg , 0.25,
+54598,Manganese, mcg , 1.8,
+54598,Copper, mcg , 43,
+54598,Iodine, mcg , 0.8,
+54598,Selenium, mcg , 0.1,
+54598,Sodium, mg , 4,
+54598,Sodium, mEq , 0.16,
+54598,Potassium, mg , 16,
+54598,Potassium, mEq , 0.40,
+54598,Chloride, mg , 9,
+54598,Chloride, mEq , 0.27,
+5372976,Calcium, mg , 88,
+5372976,Calcium, mEq , 4.4,
+5372976,Phosphorus, mg , 59,
+5372976,Magnesium, mg , 6,
+5372976,Iron, mg , 1.9,
+5372976,Zinc, mg , 0.79,
+5372976,Manganese, mcg , 5,
+5372976,Copper, mcg , 95,
+5372976,Iodine, mcg , 9,
+5372976,Selenium, mcg , 2,
+5372976,Sodium, mg , 32,
+5372976,Sodium, mEq , 1.4,
+5372976,Potassium, mg , 110,
+5372976,Potassium, mEq , 2.8,
+5372976,Chloride, mg , 68,
+5372976,Chloride, mEq , 1.9,
+5095976,Calcium, mg , 88,
+5095976,Calcium, mEq , 4.4,
+5095976,Phosphorus, mg , 59,
+5095976,Magnesium, mg , 6,
+5095976,Iron, mg , 1.9,
+5095976,Zinc, mg , 0.79,
+5095976,Manganese, mcg , 5,
+5095976,Copper, mcg , 95,
+5095976,Iodine, mcg , 9,
+5095976,Selenium, mcg , 2,
+5095976,Sodium, mg , 32,
+5095976,Sodium, mEq , 1.4,
+5095976,Potassium, mg , 110,
+5095976,Potassium, mEq , 2.8,
+5095976,Chloride, mg , 68,
+5095976,Chloride, mEq , 1.9,
+5082178,Calcium, mg , 78,
+5082178,Calcium, mEq , 3.9,
+5082178,Phosphorus, mg , 42,
+5082178,Magnesium, mg , 6,
+5082178,Iron, mg , 1.8,
+5082178,Zinc, mg , 0.75,
+5082178,Manganese, mcg , 5,
+5082178,Copper, mcg , 90,
+5082178,Iodine, mcg , 6,
+5082178,Selenium, mcg , 2,
+5082178,Sodium, mg , 24,
+5082178,Sodium, mEq , 1.04,
+5082178,Potassium, mg , 105,
+5082178,Potassium, mEq , 2.7,
+5082178,Chloride, mg , 65,
+5082178,Chloride, mEq , 1.8,
+5697378,Calcium, mg , 78,
+5697378,Calcium, mEq , 3.9,
+5697378,Phosphorus, mg , 42,
+5697378,Magnesium, mg , 6,
+5697378,Iron, mg , 1.8,
+5697378,Zinc, mg , 0.75,
+5697378,Manganese, mcg , 5,
+5697378,Copper, mcg , 90,
+5697378,Iodine, mcg , 6,
+5697378,Selenium, mcg , 2,
+5697378,Sodium, mg , 24,
+5697378,Sodium, mEq , 1,
+5697378,Potassium, mg , 105,
+5697378,Potassium, mEq , 2.7,
+5697378,Chloride, mg , 65,
+5697378,Chloride, mEq , 1.8,
+57231,Calcium, mg , 330,25
+57231,Iron, mg , 4.5,25
+57231,Potassium, mg , 470,10
+57231,Phosphorus :,,,15
+57231,Iodine :,,,25
+57231,Magnesium :,,,20
+57231,Zinc :,,,30
+57231,Selenium :,,,25
+57231,Copper :,,,25
+57231,Manganese :,,,25
+57231,Chromium :,,,25
+57231,Molybdenum :,,,25
+57231,Chloride :,,,10
+66899,Calcium, mg , 650,50
+66899,Iron, mg , 4.5,25
+66899,Phosphorus :,,,40
+66899,Iodine :,,,25
+66899,Magnesium :,,,25
+66899,Zinc :,,,25
+66899,Selenium :,,,25
+66899,Copper :,,,25
+66899,Manganese :,,,25
+66899,Chromium :,,,25
+66899,Molybdenum :,,,25
+66899,Chloride :,,,10
+66893,Calcium, mg , 650,50
+66893,Iron, mg , 4.5,25
+66893,Phosphorus :,,,40
+66893,Iodine :,,,25
+66893,Magnesium :,,,25
+66893,Zinc :,,,25
+66893,Selenium :,,,25
+66893,Manganese :,,,25
+66893,Chromium :,,,25
+66893,Molybdenum :,,,25
+66893,Chloride :,,,10
+57237,Calcium, mg , 330,25
+57237,Iron, mg , 4.5,25
+57237,Potassium, mg , 470,10
+57237,Phosphorus :,,,15
+57237,Iodine :,,,25
+57237,Magnesium :,,,20
+57237,Zinc :,,,30
+57237,Selenium :,,,25
+57237,Copper :,,,25
+57237,Manganese :,,,25
+57237,Chromium :,,,25
+57237,Molybdenum :,,,25
+57237,Chloride :,,,10
+67281,Calcium, mg , 650,50
+67281,Iron, mg , 4.5,25
+67281,Potassium, mg , 470,10
+67281,Phosphorus :,,,40
+67281,Iodine :,,,25
+67281,Magnesium :,,,25
+67281,Zinc :,,,25
+67281,Selenium :,,,25
+67281,Copper :,,,25
+67281,Manganese :,,,25
+67281,Chromium :,,,25
+67281,Molybdenum :,,,25
+67281,Chloride :,,,10
+67165,Calcium, mg , 650,50
+67165,Iron, mg , 4.5,25
+67165,Potassium, mg , 470,10
+67165,Phosphorus :,,,40
+67165,Iodine :,,,25
+67165,Magnesium :,,,25
+67165,Zinc :,,,25
+67165,Selenium :,,,25
+67165,Copper :,,,25
+67165,Manganese :,,,25
+67165,Chromium :,,,25
+67165,Molybdenum :,,,25
+67165,Chloride :,,,10
+64903,Iron, mg , 2.7,15
+64903,Phosphorus :,,,15
+64903,Iodine :,,,30
+64903,Zinc :,,,30
+64903,Selenium :,,,15
+64903,Copper :,,,15
+64903,Manganese :,,,10
+64903,Chromium :,,,10
+64903,Molybdenum :,,,10
+64900,Iron, mg , 2.7,15
+64900,Phosphorus :,,,15
+64900,Iodine :,,,30
+64900,Zinc :,,,30
+64900,Selenium :,,,15
+64900,Copper :,,,15
+64900,Manganese :,,,10
+64900,Chromium :,,,10
+64900,Molybdenum :,,,10
+66910,Calcium, mg , 330,25
+66910,Iron, mg , 4.5,25
+66910,Potassium, mg , 470,10
+66910,Phosphorus :,,,15
+66910,Iodine :,,,25
+66910,Magnesium :,,,20
+66910,Zinc :,,,30
+66910,Selenium :,,,25
+66910,Copper :,,,25
+66910,Manganese :,,,25
+66910,Chromium :,,,25
+66910,Molybdenum :,,,25
+66910,Chloride :,,,10
+64117,Calcium, mg , 520,40
+64117,Iron, mg , 4.5,25
+64117,Potassium, mg , 470,10
+64117,Phosphorus :,,,25
+64117,Iodine :,,,25
+64117,Magnesium :,,,20
+64117,Zinc :,,,30
+64117,Selenium :,,,25
+64117,Copper :,,,25
+64117,Manganese :,,,25
+64117,Chromium :,,,25
+64117,Molybdenum :,,,25
+64117,Chloride :,,,10
+64115,Calcium, mg , 520,40
+64115,Iron, mg , 4.5,25
+64115,Potassium, mg , 470,10
+64115,Phosphorus :,,,25
+64115,Iodine :,,,25
+64115,Magnesium :,,,20
+64115,Zinc :,,,30
+64115,Selenium :,,,25
+64115,Copper :,,,25
+64115,Manganese :,,,25
+64115,Chromium :,,,25
+64115,Molybdenum :,,,25
+64115,Chloride :,,,10
+67330,Calcium, mg , 520,40
+67330,Iron, mg , 4.5,25
+67330,Potassium, mg , 470,10
+67330,Phosphorus :,,,25
+67330,Iodine :,,,25
+67330,Magnesium :,,,20
+67330,Zinc :,,,30
+67330,Selenium :,,,25
+67330,Copper :,,,25
+67330,Manganese :,,,25
+67330,Chromium :,,,25
+67330,Molybdenum :,,,25
+67330,Chloride :,,,10
+66546,Calcium, mg , 520,40
+66546,Iron, mg , 4.5,25
+66546,Potassium, mg , 470,10
+66546,Phosphorus :,,,25
+66546,Iodine :,,,25
+66546,Magnesium :,,,20
+66546,Zinc :,,,30
+66546,Selenium :,,,25
+66546,Copper :,,,25
+66546,Manganese :,,,25
+66546,Chromium :,,,25
+66546,Molybdenum :,,,25
+66546,Chloride :,,,10
+53809,Calcium, mg , 330,25
+53809,Iron, mg , 4.5,25
+53809,Potassium, mg , 550,10
+53809,Phosphorus :,,,15
+53809,Iodine :,,,25
+53809,Magnesium :,,,20
+53809,Zinc :,,,30
+53809,Selenium :,,,25
+53809,Copper :,,,25
+53809,Manganese :,,,25
+53809,Chromium :,,,25
+53809,Molybdenum :,,,25
+53809,Chloride :,,,10
+57266,Calcium, mg , 330,25
+57266,Iron, mg , 4.5,25
+57266,Potassium, mg , 470,10
+57266,Phosphorus :,,,15
+57266,Iodine :,,,25
+57266,Magnesium :,,,20
+57266,Zinc :,,,30
+57266,Selenium :,,,25
+57266,Copper :,,,25
+57266,Manganese :,,,25
+57266,Chromium :,,,25
+57266,Molybdenum :,,,25
+57266,Chloride :,,,10
+57269,Calcium, mg , 330,25
+57269,Iron, mg , 4.5,25
+57269,Potassium, mg , 470,10
+57269,Phosphorus :,,,15
+57269,Iodine :,,,25
+57269,Magnesium :,,,20
+57269,Zinc :,,,30
+57269,Selenium :,,,25
+57269,Copper :,,,25
+57269,Manganese :,,,25
+57269,Chromium :,,,25
+57269,Molybdenum :,,,25
+57269,Chloride :,,,10
+57263,Calcium, mg , 330,25
+57263,Iron, mg , 4.5,25
+57263,Potassium, mg , 470,10
+57263,Phosphorus :,,,15
+57263,Iodine :,,,25
+57263,Magnesium :,,,20
+57263,Zinc :,,,30
+57263,Selenium :,,,25
+57263,Copper :,,,25
+57263,Manganese :,,,25
+57263,Chromium :,,,25
+57263,Molybdenum :,,,25
+57263,Chloride :,,,10
+64121,Calcium, mg , 200,15
+64121,Iron, mg , 6.3,35
+64121,Potassium, mg , 390,8
+64121,Phosphorus :,,,15
+64121,Iodine :,,,20
+64121,Magnesium :,,,15
+64121,Zinc :,,,35
+64121,Selenium :,,,25
+64121,Manganese :,,,15
+64121,Chromium :,,,90
+64121,Molybdenum :,,,35
+64123,Calcium, mg , 200,15
+64123,Iron, mg , 4.5,25
+64123,Potassium, mg , 290,6
+64123,Phosphorus :,,,15
+64123,Iodine :,,,15
+64123,Magnesium :,,,15
+64123,Zinc :,,,25
+64123,Selenium :,,,25
+64123,Manganese :,,,15
+64123,Chromium :,,,70
+64123,Molybdenum :,,,25
+57272,Calcium, mg , 330,25
+57272,Iron, mg , 4.5,25
+57272,Potassium, mg , 470,10
+57272,Phosphorus :,,,15
+57272,Iodine :,,,25
+57272,Magnesium :,,,20
+57272,Zinc :,,,30
+57272,Selenium :,,,25
+57272,Copper :,,,25
+57272,Manganese :,,,25
+57272,Chromium :,,,25
+57272,Molybdenum :,,,25
+57272,Chloride :,,,10
+64293,Calcium, mg , 500,40
+64293,Iron, mg , 4.5,25
+64293,Potassium, mg , 560,10
+64293,Phosphorus :,,,30
+64293,Iodine :,,,25
+64293,Magnesium :,,,20
+64293,Zinc :,,,70
+64293,Selenium :,,,50
+64293,Copper :,,,25
+64293,Manganese :,,,25
+64293,Chromium :,,,25
+64293,Molybdenum :,,,25
+64293,Chloride :,,,2
+62479,Iron, mg , 2.7,15
+62479,Calcium, mg , 40,4
+62479,Phosphorus :,,,15
+62479,Magnesium :,,,2
+62479,Iodine :,,,15
+62479,Selenium :,,,15
+62479,Zinc :,,,30
+62479,Manganese :,,,15
+62479,Copper :,,,15
+62479,Molybdenum :,,,15
+62479,Chromium :,,,15
+56500,Iron, mg , 2.7,15
+56500,Calcium, mg , 40,4
+56500,Phosphorus :,,,15
+56500,Magnesium :,,,2
+56500,Iodine :,,,15
+56500,Selenium :,,,15
+56500,Zinc :,,,30
+56500,Manganese :,,,15
+56500,Copper :,,,15
+56500,Molybdenum :,,,15
+56500,Chromium :,,,15
+64296,Calcium, mg , 520,40
+64296,Iron, mg , 4.5,25
+64296,Potassium, mg , 590,10
+64296,Phosphorus :,,,30
+64296,Iodine :,,,25
+64296,Magnesium :,,,20
+64296,Zinc :,,,70
+64296,Selenium :,,,50
+64296,Copper :,,,25
+64296,Manganese :,,,25
+64296,Chromium :,,,35
+64296,Molybdenum :,,,25
+64296,Chloride :,,,2
+64291,Calcium, mg , 500,40
+64291,Iron, mg , 4.5,25
+64291,Potassium, mg , 560,10
+64291,Phosphorus :,,,30
+64291,Iodine :,,,25
+64291,Magnesium :,,,20
+64291,Zinc :,,,70
+64291,Selenium :,,,50
+64291,Copper :,,,25
+64291,Manganese :,,,25
+64291,Chromium :,,,25
+64291,Molybdenum :,,,25
+64291,Chloride :,,,2
+66436,Sodium, mg , 210,
+66436,Potassium, mg , 380,
+66436,Chloride, mg , 270,
+66436,Calcium, mg , 260,
+66436,Phosphorus, mg , 250,
+66436,Magnesium, mg , 80,
+66436,Iodine, mcg , 52.5,
+66436,Manganese, mg , 0.81,
+66436,Copper, mg , 0.32,
+66436,Zinc, mg , 5,
+66436,Iron, mg , 1.8,
+66436,Selenium, mcg , 19,
+66436,Chromium, mcg , 12,
+66436,Molybdenum, mcg , 16,
+65047,Sodium, mg , 210,
+65047,Potassium, mg , 380,
+65047,Chloride, mg , 270,
+65047,Calcium, mg , 260,
+65047,Phosphorus, mg , 250,
+65047,Magnesium, mg , 80,
+65047,Iodine, mcg , 52.5,
+65047,Manganese, mg , 0.81,
+65047,Copper, mg , 0.32,
+65047,Zinc, mg , 5,
+65047,Iron, mg , 1.8,
+65047,Selenium, mcg , 19,
+65047,Chromium, mcg , 12,
+65047,Molybdenum, mcg , 16,
+67453,Calcium, mg , 400,30
+67453,Iron, mg , 7.2,40
+67453,Potassium, mg , 700,15
+67453,Phosphorus :,,,40
+67453,Iodine :,,,25
+67453,Magnesium :,,,15
+67453,Zinc :,,,30
+67453,Selenium :,,,40
+67453,Copper :,,,50
+67453,Manganese :,,,25
+67453,Chromium :,,,40
+67453,Molybdenum :,,,40
+67450,Calcium, mg , 400,30
+67450,Iron, mg , 7.2,40
+67450,Potassium, mg , 470,10
+67450,Phosphorus :,,,40
+67450,Iodine :,,,25
+67450,Magnesium :,,,15
+67450,Zinc :,,,30
+67450,Selenium :,,,40
+67450,Copper :,,,50
+67450,Manganese :,,,25
+67450,Chromium :,,,40
+67450,Molybdenum :,,,40
+54844,Calcium, mg , 100,8
+54844,Iron, mg , 1.8,10
+54844,Potassium, mg , 110,2
+54844,Phosphorus :,,,8
+54844,Iodine :,,,10
+54844,Magnesium :,,,10
+54844,Zinc :,,,15
+54844,Selenium :,,,15
+54844,Copper :,,,20
+54844,Manganese :,,,20
+54844,Chromium :,,,35
+54844,Molybdenum :,,,50
+54846,Calcium, mg , 100,8
+54846,Iron, mg , 1.8,10
+54846,Potassium, mg , 200,4
+54846,Phosphorus :,,,8
+54846,Iodine :,,,10
+54846,Magnesium :,,,10
+54846,Zinc :,,,15
+54846,Selenium :,,,20
+54846,Copper :,,,35
+54846,Manganese :,,,25
+54846,Chromium :,,,35
+54846,Molybdenum :,,,50
+67217,Calcium, mg , 250,20
+67217,Iron, mg , 2.7,15
+67217,Potassium, mg , 470,10
+67217,Phosphorus :,,,15
+67217,Iodine :,,,15
+67217,Magnesium :,,,10
+67217,Zinc :,,,15
+67217,Selenium :,,,15
+67217,Copper :,,,15
+67217,Manganese :,,,20
+67217,Chromium :,,,25
+67217,Molybdenum :,,,20
+67217,Chloride :,,,15
+67214,Calcium, mg , 250,20
+67214,Iron, mg , 2.7,15
+67214,Potassium, mg , 470,10
+67214,Phosphorus :,,,15
+67214,Iodine :,,,15
+67214,Magnesium :,,,10
+67214,Zinc :,,,15
+67214,Selenium :,,,15
+67214,Copper :,,,15
+67214,Manganese :,,,20
+67214,Chromium :,,,25
+67214,Molybdenum :,,,20
+67214,Chloride :,,,15
+58049,Calcium, mg , 330,25
+58049,Iron, mg , 2.7,15
+58049,Potassium, mg , 470,10
+58049,Phosphorus :,,,20
+58049,Iodine :,,,15
+58049,Magnesium :,,,10
+58049,Zinc :,,,15
+58049,Selenium :,,,15
+58049,Copper :,,,15
+58049,Manganese :,,,20
+58049,Chromium :,,,25
+58049,Molybdenum :,,,20
+58049,Chloride :,,,10
+58055,Calcium, mg , 330,25
+58055,Iron, mg , 2.7,15
+58055,Potassium, mg , 470,10
+58055,Phosphorus :,,,20
+58055,Iodine :,,,15
+58055,Magnesium :,,,10
+58055,Zinc :,,,15
+58055,Selenium :,,,15
+58055,Copper :,,,15
+58055,Manganese :,,,20
+58055,Chromium :,,,25
+58055,Molybdenum :,,,20
+58055,Chloride :,,,10
+53818,Calcium, mg , 330,25
+53818,Iron, mg , 2.7,15
+53818,Potassium, mg , 470,10
+53818,Phosphorus :,,,20
+53818,Iodine :,,,15
+53818,Magnesium :,,,10
+53818,Zinc :,,,15
+53818,Selenium :,,,15
+53818,Copper :,,,15
+53818,Manganese :,,,20
+53818,Chromium :,,,25
+53818,Molybdenum :,,,20
+53818,Chloride :,,,10
+66912,Calcium, mg , 330,25
+66912,Iron, mg , 2.7,15
+66912,Potassium, mg , 470,10
+66912,Phosphorus :,,,20
+66912,Iodine :,,,15
+66912,Magnesium :,,,10
+66912,Zinc :,,,15
+66912,Selenium :,,,15
+66912,Copper :,,,15
+66912,Manganese :,,,20
+66912,Chromium :,,,25
+66912,Molybdenum :,,,20
+66912,Chloride :,,,10
+58058,Calcium, mg , 330,25
+58058,Iron, mg , 2.7,15
+58058,Potassium, mg , 470,10
+58058,Phosphorus :,,,20
+58058,Iodine :,,,15
+58058,Magnesium :,,,10
+58058,Zinc :,,,15
+58058,Selenium :,,,15
+58058,Copper :,,,15
+58058,Manganese :,,,20
+58058,Chromium :,,,35
+58058,Molybdenum :,,,20
+58058,Chloride :,,,10
+66639,Calcium, mg , 330,25
+66639,Iron, mg , 2.7,15
+66639,Potassium, mg , 470,10
+66639,Phosphorus :,,,20
+66639,Iodine :,,,15
+66639,Magnesium :,,,10
+66639,Zinc :,,,15
+66639,Selenium :,,,15
+66639,Copper :,,,15
+66639,Manganese :,,,20
+66639,Chromium :,,,35
+66639,Molybdenum :,,,20
+66639,Chloride :,,,10
+66959e,Calcium, mg , 180,15
+66959e,Iron, mg , 2.5,15
+66959e,Potassium, mg , 280,6
+66959e,Phosphorus :,,,10
+66959e,Iodine :,,,10
+66959e,Magnesium :,,,6
+66959e,Zinc :,,,10
+66959e,Selenium :,,,10
+66959e,Copper :,,,15
+66959e,Manganese :,,,10
+66959e,Chromium :,,,15
+66959e,Molybdenum :,,,15
+66959e,Chloride :,,,8
+66916,Calcium, mg , 330,25
+66916,Iron, mg , 2.7,15
+66916,Potassium, mg , 470,10
+66916,Phosphorus :,,,20
+66916,Iodine :,,,15
+66916,Magnesium :,,,10
+66916,Zinc :,,,15
+66916,Selenium :,,,15
+66916,Copper :,,,15
+66916,Manganese :,,,20
+66916,Chromium :,,,25
+66916,Molybdenum :,,,20
+66916,Chloride :,,,10
+66959,Calcium, mg , 180,15
+66959,Iron, mg , 2.5,15
+66959,Potassium, mg , 280,6
+66959,Phosphorus :,,,10
+66959,Iodine :,,,10
+66959,Magnesium :,,,6
+66959,Zinc :,,,10
+66959,Selenium :,,,10
+66959,Copper :,,,15
+66959,Manganese :,,,10
+66959,Chromium :,,,15
+66959,Molybdenum :,,,15
+66959,Chloride :,,,8
+66961e,Calcium, mg , 180,15
+66961e,Iron, mg , 2.5,15
+66961e,Potassium, mg , 280,6
+66961e,Phosphorus :,,,10
+66961e,Iodine :,,,10
+66961e,Magnesium :,,,6
+66961e,Zinc :,,,10
+66961e,Selenium :,,,10
+66961e,Copper :,,,15
+66961e,Manganese :,,,10
+66961e,Chromium :,,,15
+66961e,Molybdenum :,,,15
+66961e,Chloride :,,,8
+66961,Calcium, mg , 180,15
+66961,Iron, mg , 2.5,15
+66961,Potassium, mg , 280,6
+66961,Phosphorus :,,,10
+66961,Iodine :,,,10
+66961,Magnesium :,,,6
+66961,Zinc :,,,10
+66961,Selenium :,,,10
+66961,Copper :,,,15
+66961,Manganese :,,,10
+66961,Chromium :,,,15
+66961,Molybdenum :,,,15
+66961,Chloride :,,,8
+66960e,Calcium, mg , 180,15
+66960e,Iron, mg , 2.7,15
+66960e,Potassium, mg , 330,8
+66960e,Phosphorus :,,,10
+66960e,Iodine :,,,10
+66960e,Magnesium :,,,8
+66960e,Zinc :,,,10
+66960e,Selenium :,,,10
+66960e,Copper :,,,20
+66960e,Manganese :,,,15
+66960e,Chromium :,,,30
+66960e,Molybdenum :,,,15
+66960e,Chloride :,,,8
+66960,Calcium, mg , 180,15
+66960,Iron, mg , 2.7,15
+66960,Potassium, mg , 330,8
+66960,Phosphorus :,,,10
+66960,Iodine :,,,10
+66960,Magnesium :,,,8
+66960,Zinc :,,,10
+66960,Selenium :,,,10
+66960,Copper :,,,20
+66960,Manganese :,,,15
+66960,Chromium :,,,30
+66960,Molybdenum :,,,15
+66960,Chloride :,,,8
+66918,Calcium, mg , 330,25
+66918,Iron, mg , 2.7,15
+66918,Potassium, mg , 470,10
+66918,Phosphorus :,,,20
+66918,Iodine :,,,15
+66918,Magnesium :,,,10
+66918,Zinc :,,,15
+66918,Selenium :,,,15
+66918,Copper :,,,15
+66918,Manganese :,,,20
+66918,Chromium :,,,35
+66918,Molybdenum :,,,20
+66918,Chloride :,,,10
+56368,Calcium, mg , 330,25
+56368,Iron, mg , 2.7,15
+56368,Potassium, mg , 470,10
+56368,Phosphorus :,,,20
+56368,Iodine :,,,15
+56368,Magnesium :,,,10
+56368,Zinc :,,,15
+56368,Selenium :,,,15
+56368,Copper :,,,15
+56368,Manganese :,,,20
+56368,Chromium :,,,25
+56368,Molybdenum :,,,20
+56368,Chloride :,,,10
+58052,Calcium, mg , 330,25
+58052,Iron, mg , 2.7,15
+58052,Potassium, mg , 470,10
+58052,Phosphorus :,,,20
+58052,Iodine :,,,15
+58052,Magnesium :,,,10
+58052,Zinc :,,,15
+58052,Selenium :,,,15
+58052,Copper :,,,15
+58052,Manganese :,,,20
+58052,Chromium :,,,25
+58052,Molybdenum :,,,20
+58052,Chloride :,,,10
+58061,Calcium, mg , 330,25
+58061,Iron, mg , 2.7,15
+58061,Potassium, mg , 470,10
+58061,Phosphorus :,,,20
+58061,Iodine :,,,15
+58061,Magnesium :,,,10
+58061,Zinc :,,,15
+58061,Selenium :,,,15
+58061,Copper :,,,15
+58061,Manganese :,,,20
+58061,Chromium :,,,25
+58061,Molybdenum :,,,20
+58061,Chloride :,,,10
+67417,Sodium, mg , 255,
+67417,Potassium, mg , 710,
+67417,Chloride, mg , 360,
+67417,Calcium, mg , 500,
+67417,Phosphorus, mg , 380,
+67417,Magnesium, mg , 60,
+67417,Iodine, mcg , 35,
+67417,Manganese, mg , 0.7,
+67417,Copper, mg , 0.2,
+67417,Zinc, mg , 4.3,
+67417,Iron, mg , 5.0,
+67417,Selenium, mcg , 12,
+67417,Chromium, mcg , 14,
+67417,Molybdenum, mcg , 14,
+67401,Sodium, mg , 90,
+67401,Potassium, mg , 470,
+67401,Chloride, mg , 230,
+67401,Calcium, mg , 330,
+67401,Phosphorus, mg , 250,
+67401,Magnesium, mg , 40,
+67401,Iodine, mcg , 23,
+67401,Manganese, mg , 0.46,
+67401,Copper, mg , 0.14,
+67401,Zinc, mg , 1.7,
+67401,Iron, mg , 2.7,
+67401,Selenium, mcg , 8.0,
+67401,Chromium, mcg , 9.0,
+67401,Molybdenum, mcg , 9.0,
+67378,Sodium, mg , 90,
+67378,Potassium, mg , 470,
+67378,Chloride, mg , 230,
+67378,Calcium, mg , 330,
+67378,Phosphorus, mg , 250,
+67378,Magnesium, mg , 40,
+67378,Iodine, mcg , 23,
+67378,Manganese, mg , 0.46,
+67378,Copper, mg , 0.14,
+67378,Zinc, mg , 1.7,
+67378,Iron, mg , 2.7,
+67378,Selenium, mcg , 8.0,
+67378,Chromium, mcg , 9.0,
+67378,Molybdenum, mcg , 9.0,
+67403,Sodium, mg , 90,
+67403,Potassium, mg , 470,
+67403,Chloride, mg , 230,
+67403,Calcium, mg , 330,
+67403,Phosphorus, mg , 250,
+67403,Magnesium, mg , 40,
+67403,Iodine, mcg , 23,
+67403,Manganese, mg , 0.46,
+67403,Copper, mg , 0.14,
+67403,Zinc, mg , 1.7,
+67403,Iron, mg , 2.7,
+67403,Selenium, mcg , 8,
+67403,Chromium, mcg , 9,
+67403,Molybdenum, mcg , 9,
+67407,Sodium, mg , 170,
+67407,Potassium, mg , 470,
+67407,Chloride, mg , 240,
+67407,Calcium, mg , 330,
+67407,Phosphorus, mg , 250,
+67407,Magnesium, mg , 40,
+67407,Iodine, mcg , 23,
+67407,Manganese, mg , 0.46,
+67407,Copper, mg , 0.14,
+67407,Zinc, mg , 2.8,
+67407,Iron, mg , 3.3,
+67407,Selenium, mcg , 8,
+67407,Chromium, mcg , 9,
+67407,Molybdenum, mcg , 9,
+67612,Sodium, mg , 90,
+67612,Potassium, mg , 470,
+67612,Chloride, mg , 230,
+67612,Calcium, mg , 330,
+67612,Phosphorus, mg , 250,
+67612,Magnesium, mg , 40,
+67612,Iodine, mcg , 23,
+67612,Manganese, mg , 0.46,
+67612,Copper, mg , 0.14,
+67612,Zinc, mg , 1.7,
+67612,Iron, mg , 2.7,
+67612,Selenium, mcg , 8,
+67612,Chromium, mcg , 9.0,
+67612,Molybdenum, mcg , 9.0,
+67374,Sodium, mg , 90,
+67374,Potassium, mg , 470,
+67374,Chloride, mg , 230,
+67374,Calcium, mg , 330,
+67374,Phosphorus, mg , 250,
+67374,Magnesium, mg , 40,
+67374,Iodine, mcg , 23,
+67374,Manganese, mg , 0.46,
+67374,Copper, mg , 0.14,
+67374,Zinc, mg , 1.7,
+67374,Iron, mg , 2.7,
+67374,Selenium, mcg , 8.0,
+67374,Chromium, mcg , 9.0,
+67374,Molybdenum, mcg , 9.0,
+67411,Sodium, mg , 170,
+67411,Potassium, mg , 470,
+67411,Chloride, mg , 240,
+67411,Calcium, mg , 330,
+67411,Phosphorus, mg , 250,
+67411,Magnesium, mg , 40,
+67411,Iodine, mcg , 23,
+67411,Manganese, mg , 0.46,
+67411,Copper, mg , 0.14,
+67411,Zinc, mg , 2.8,
+67411,Iron, mg , 3.3,
+67411,Selenium, mcg , 8,
+67411,Chromium, mcg , 9,
+67411,Molybdenum, mcg , 9,
+67413,Sodium, mg , 170,
+67413,Potassium, mg , 470,
+67413,Chloride, mg , 240,
+67413,Calcium, mg , 330,
+67413,Phosphorus, mg , 250,
+67413,Magnesium, mg , 40,
+67413,Iodine, mcg , 23,
+67413,Manganese, mg , 0.46,
+67413,Copper, mg , 0.14,
+67413,Zinc, mg , 2.8,
+67413,Iron, mg , 3.3,
+67413,Selenium, mcg , 8,
+67413,Chromium, mcg , 9,
+67413,Molybdenum, mcg , 9,
+66645,Calories : 70,,,
+66645,Total Fat, g , 0,0.0
+66645,Sodium, mg , 1380,60.0
+66645,Total Carbohydrate, g , 16,6.0
+66645,Total Sugars, g , 16,
+66645,Added Sugars, g , 16,32.0
+66645,Protein, g , 0,
+67434,Calories : 70,,,
+67434,Total Fat, g , 0,0.0
+67434,Sodium, mg , 1380,60.0
+67434,Total Carbohydrate, g , 16,6.0
+67434,Total Sugars, g , 16,
+67434,Added Sugars, g , 16,32.0
+67434,Protein, g , 0,0.0
+66641,Calories : 70,,,
+66641,Total Fat, g , 0,0.0
+66641,Sodium, mg , 1380,60.0
+66641,Total Carbohydrate, g , 16,6.0
+66641,Total Sugars, g , 16,
+66641,Added Sugars, g , 16,32.0
+66641,Protein, g , 0,0.0
+63059,Calories : 70,,,
+63059,Total Fat, g , 0,0.0
+63059,Total Carbohydrate, g , 16,6.0
+63059,Total Sugars, g , 16,
+63059,Added Sugars, g , 16,32.0
+63059,Protein, g , 0,
+64301,Calories : 70,,,
+64301,Total Fat, g , 0,0.0
+64301,Total Carbohydrate, g , 16,6.0
+64301,Total Sugars, g , 16,
+64301,Added Sugars, g , 16,32.0
+64301,Protein, g , 0,
+64307,Calories : 70,,,
+64307,Total Fat, g , 0,0.0
+64307,Total Carbohydrate, g , 16,6.0
+64307,Total Sugars, g , 16,
+64307,Added Sugars, g , 16,32.0
+64307,Protein, g , 0,
+63057,Calories : 70,,,
+63057,Total Fat, g , 0,0.0
+63057,Total Carbohydrate, g , 16,6.0
+63057,Total Sugars, g , 16,
+63057,Added Sugars, g , 16,32.0
+63057,Protein, g , 0,
+59892,Calories : 100,,,
+59892,Total Fat, g , 0,0.0
+59892,Sodium, mg , 1030,45.0
+59892,Total Carbohydrate, g , 25,9.0
+59892,Total Sugars, g , 25,
+59892,Added Sugars, g , 25,50.0
+59892,Protein, g , 0,
+66855,Calories : 70,,,0.0
+66855,Total Fat, g , 0,0.0
+66855,Sodium, mg , 1380,60.0
+66855,Total Carbohydrate, g , 16,6.0
+66855,Total Sugars, g , 16,
+66855,Added Sugars, g , 16,32.0
+66855,Protein, g , 0,
+66643,Calories : 70,,,
+66643,Total Fat, g , 0,0.0
+66643,Sodium, mg , 1380,60.0
+66643,Total Carbohydrate, g , 16,6.0
+66643,Total Sugars, g , 16,
+66643,Added Sugars, g , 16,32.0
+66643,Protein, g , 0,
+64307e,Calories : 70,,,
+64307e,Total Fat, g , 0,0.0
+64307e,Total Carbohydrate, g , 16,6.0
+64307e,Total Sugars, g , 16,
+64307e,Added Sugars, g , 16,32.0
+64307e,Protein, g , 0,
+59892p4,Calories : 100,,,
+59892p4,Total Fat, g , 0,0.0
+59892p4,Sodium, mg , 1030,45.0
+59892p4,Total Carbohydrate, g , 25,9.0
+59892p4,Total Sugars, g , 25,
+59892p4,Added Sugars, g , 25,50.0
+59892p4,Protein, g , 0,
+66645e,Calories : 70,,,
+66645e,Total Fat, g , 0,0.0
+66645e,Sodium, mg , 1380,60.0
+66645e,Total Carbohydrate, g , 16,6.0
+66645e,Total Sugars, g , 16,
+66645e,Added Sugars, g , 16,32.0
+66645e,Protein, g , 0,
+66855e,Calories : 70,,,0.0
+66855e,Total Fat, g , 0,0.0
+66855e,Sodium, mg , 1380,60.0
+66855e,Total Carbohydrate, g , 16,6.0
+66855e,Total Sugars, g , 16,
+66855e,Added Sugars, g , 16,32.0
+66855e,Protein, g , 0,
+66641e,Calories : 70,,,
+66641e,Total Fat, g , 0,0.0
+66641e,Sodium, mg , 1380,60.0
+66641e,Total Carbohydrate, g , 16,6.0
+66641e,Total Sugars, g , 16,
+66641e,Added Sugars, g , 16,32.0
+66641e,Protein, g , 0,0.0
+67434e,Calories : 70,,,
+67434e,Total Fat, g , 0,0.0
+67434e,Sodium, mg , 1380,60.0
+67434e,Total Carbohydrate, g , 16,6.0
+67434e,Total Sugars, g , 16,
+67434e,Added Sugars, g , 16,32.0
+67434e,Protein, g , 0,0.0
+66643e,Calories : 70,,,
+66643e,Total Fat, g , 0,0.0
+66643e,Sodium, mg , 1380,60.0
+66643e,Total Carbohydrate, g , 16,6.0
+66643e,Total Sugars, g , 16,
+66643e,Added Sugars, g , 16,32.0
+66643e,Protein, g , 0,
+64301e,Calories : 70,,,
+64301e,Total Fat, g , 0,0.0
+64301e,Total Carbohydrate, g , 16,6.0
+64301e,Total Sugars, g , 16,
+64301e,Added Sugars, g , 16,32.0
+64301e,Protein, g , 0,
+63059e,Calories : 70,,,
+63059e,Total Fat, g , 0,0.0
+63059e,Total Carbohydrate, g , 16,6.0
+63059e,Total Sugars, g , 16,
+63059e,Added Sugars, g , 16,32.0
+63059e,Protein, g , 0,
+63057e,Calories : 70,,,
+63057e,Total Fat, g , 0,0.0
+63057e,Total Carbohydrate, g , 16,6.0
+63057e,Total Sugars, g , 16,
+63057e,Added Sugars, g , 16,32.0
+63057e,Protein, g , 0,
+64796,Sodium, mg , 250,
+64796,Potassium, mg , 225,
+64796,Chloride, mg , 200,
+64796,Calcium, mg , 250,
+64796,Phosphorus, mg , 170,
+64796,Magnesium, mg , 40,
+64796,Iodine, mcg , 38,
+64796,Manganese, mg , 0.6,
+64796,Copper, mg , 0.42,
+64796,Zinc, mg , 3,
+64796,Iron, mg , 3.3,
+64796,Selenium, mcg , 13.8,
+64796,Chromium, mcg , 7.5,
+64796,Molybdenum, mcg , 11,
+62585,Sodium, mg , 250,
+62585,Potassium, mg , 225,
+62585,Chloride, mg , 200,
+62585,Calcium, mg , 250,
+62585,Phosphorus, mg , 170,
+62585,Magnesium, mg , 40,
+62585,Iodine, mcg , 38,
+62585,Manganese, mg , 0.6,
+62585,Copper, mg , 0.42,
+62585,Zinc, mg , 3,
+62585,Iron, mg , 3.3,
+62585,Selenium, mcg , 13.8,
+62585,Chromium, mcg , 7.5,
+62585,Molybdenum, mcg , 11,
+64798,Sodium, mg , 250,
+64798,Potassium, mg , 225,
+64798,Chloride, mg , 200,
+64798,Calcium, mg , 250,
+64798,Phosphorus, mg , 170,
+64798,Magnesium, mg , 40,
+64798,Iodine, mcg , 38,
+64798,Manganese, mg , 0.6,
+64798,Copper, mg , 0.42,
+64798,Zinc, mg , 3,
+64798,Iron, mg , 3.3,
+64798,Selenium, mcg , 13.8,
+64798,Chromium, mcg , 7.5,
+64798,Molybdenum, mcg , 11,
+66534,Calcium, mg , 330,25
+66534,Iron, mg , 4.5,25
+66534,Potassium, mg , 330,8
+66534,Phosphorus :,,,25
+66534,Iodine :,,,25
+66534,Magnesium :,,,25
+66534,Zinc :,,,30
+66534,Selenium :,,,25
+66534,Copper :,,,25
+66534,Manganese :,,,20
+66534,Chromium :,,,50
+66534,Molybdenum :,,,40
+66534,Chloride :,,,10
+62885,Calcium, mg , 260,20
+62885,Iron, mg , 4.5,25
+62885,Potassium, mg , 610,15
+62885,Phosphorus :,,,25
+62885,Iodine :,,,25
+62885,Magnesium :,,,25
+62885,Zinc :,,,30
+62885,Selenium :,,,25
+62885,Copper :,,,60
+62885,Manganese :,,,35
+62885,Chromium :,,,100
+62885,Molybdenum :,,,40
+62885,Chloride :,,,10
+62882,Calcium, mg , 330,25
+62882,Iron, mg , 4.5,25
+62882,Potassium, mg , 330,8
+62882,Phosphorus :,,,25
+62882,Iodine :,,,25
+62882,Magnesium :,,,25
+62882,Zinc :,,,30
+62882,Selenium :,,,25
+62882,Copper :,,,25
+62882,Manganese :,,,20
+62882,Chromium :,,,50
+62882,Molybdenum :,,,40
+62882,Chloride :,,,10
+57801,Calcium, mg , 260,20
+57801,Iron, mg , 3.6,20
+57801,Potassium, mg , 380,8
+57801,Phosphorus :,,,20
+57801,Iodine :,,,25
+57801,Magnesium :,,,25
+57801,Zinc :,,,25
+57801,Selenium :,,,25
+57801,Copper :,,,20
+57801,Manganese :,,,20
+57801,Chromium :,,,50
+57801,Molybdenum :,,,35
+57801,Chloride :,,,10
+57807,Calcium, mg , 260,20
+57807,Iron, mg , 3.6,20
+57807,Potassium, mg , 380,8
+57807,Phosphorus :,,,20
+57807,Iodine :,,,25
+57807,Magnesium :,,,25
+57807,Zinc :,,,25
+57807,Selenium :,,,25
+57807,Copper :,,,20
+57807,Manganese :,,,20
+57807,Chromium :,,,50
+57807,Molybdenum :,,,35
+57807,Chloride :,,,10
+66794,Calcium, mg , 260,20
+66794,Iron, mg , 3.6,20
+66794,Potassium, mg , 470,10
+66794,Phosphorus :,,,20
+66794,Iodine :,,,25
+66794,Magnesium :,,,25
+66794,Zinc :,,,25
+66794,Selenium :,,,25
+66794,Copper :,,,30
+66794,Manganese :,,,20
+66794,Chromium :,,,50
+66794,Molybdenum :,,,35
+66794,Chloride :,,,10
+57810,Calcium, mg , 260,20
+57810,Iron, mg , 3.6,20
+57810,Potassium, mg , 380,8
+57810,Phosphorus :,,,20
+57810,Iodine :,,,25
+57810,Magnesium :,,,25
+57810,Zinc :,,,25
+57810,Selenium :,,,25
+57810,Copper :,,,20
+57810,Manganese :,,,20
+57810,Chromium :,,,50
+57810,Molybdenum :,,,35
+57810,Chloride :,,,10
+57804,Calcium, mg , 260,20
+57804,Iron, mg , 3.6,20
+57804,Potassium, mg , 470,10
+57804,Phosphorus :,,,20
+57804,Iodine :,,,25
+57804,Magnesium :,,,25
+57804,Zinc :,,,25
+57804,Selenium :,,,25
+57804,Copper :,,,30
+57804,Manganese :,,,20
+57804,Chromium :,,,50
+57804,Molybdenum :,,,35
+57804,Chloride :,,,10
+67067,Calcium, mg , 460,35
+67067,Iron, mg , 6.3,35
+67067,Potassium, mg , 380,8
+67067,Phosphorus :,,,30
+67067,Iodine :,,,35
+67067,Magnesium :,,,40
+67067,Zinc :,,,50
+67067,Selenium :,,,45
+67067,Copper :,,,40
+67067,Manganese :,,,35
+67067,Chromium :,,,80
+67067,Molybdenum :,,,60
+67067,Chloride :,,,15
+59856,Calcium, mg , 260,20
+59856,Iron, mg , 2.7,15
+59856,Potassium, mg , 280,6
+59856,Phosphorus :,,,15
+59856,Iodine :,,,20
+59856,Magnesium :,,,15
+59856,Zinc :,,,20
+59856,Selenium :,,,15
+59856,Copper :,,,15
+59856,Manganese :,,,15
+59856,Chromium :,,,40
+59856,Molybdenum :,,,25
+59856,Chloride :,,,15
+67070,Calcium, mg , 460,35
+67070,Iron, mg , 6.3,35
+67070,Potassium, mg , 850,20
+67070,Phosphorus :,,,30
+67070,Iodine :,,,35
+67070,Magnesium :,,,40
+67070,Zinc :,,,35
+67070,Selenium :,,,25
+67070,Copper :,,,60
+67070,Manganese :,,,35
+67070,Chromium :,,,100
+67070,Molybdenum :,,,45
+67070,Chloride :,,,15
+59859,Calcium, mg , 130,10
+59859,Iron, mg , 2.7,15
+59859,Potassium, mg , 280,6
+59859,Phosphorus :,,,15
+59859,Iodine :,,,20
+59859,Magnesium :,,,15
+59859,Zinc :,,,15
+59859,Selenium :,,,10
+59859,Copper :,,,20
+59859,Manganese :,,,15
+59859,Chromium :,,,35
+59859,Molybdenum :,,,20
+59859,Chloride :,,,15
+64913,Sodium, mg , 220,
+64913,Potassium, mg , 370,
+64913,Chloride, mg , 340,
+64913,Calcium, mg , 170,
+64913,Phosphorus, mg , 170,
+64913,Magnesium, mg , 67,
+64913,Iodine, mcg , 25,
+64913,Manganese, mg , 0.84,
+64913,Copper, mg , 0.34,
+64913,Zinc, mg , 3.8,
+64913,Iron, mg , 3.0,
+64913,Selenium, mcg , 12,
+64913,Chromium, mcg , 20,
+64913,Molybdenum, mcg , 25,
+64918,Sodium, mg , 265,
+64918,Potassium, mg , 480,
+64918,Chloride, mg , 305,
+64918,Calcium, mg , 190,
+64918,Phosphorus, mg , 190,
+64918,Magnesium, mg , 76,
+64918,Iodine, mcg , 29,
+64918,Manganese, mg , 0.38,
+64918,Copper, mg , 0.38,
+64918,Zinc, mg , 2.9,
+64918,Iron, mg , 3.5,
+64918,Selenium, mcg , 14,
+64918,Chromium, mcg , 38,
+64918,Molybdenum, mcg , 19,
+66906,Calcium, mg , 100,8
+66906,Iron, mg , 1.4,8
+66906,Potassium, mg , 50,<2
+66906,Phosphorus :,,,8
+66906,Iodine :,,,10
+66906,Magnesium :,,,8
+66906,Zinc :,,,15
+66906,Selenium :,,,15
+66906,Copper :,,,20
+66906,Manganese :,,,8
+66906,Chromium :,,,50
+66906,Molybdenum :,,,15
+64920,Sodium, mg , 330,
+64920,Potassium, mg , 600,
+64920,Chloride, mg , 380,
+64920,Calcium, mg , 240,
+64920,Phosphorus, mg , 240,
+64920,Magnesium, mg , 95,
+64920,Iodine, mcg , 36,
+64920,Manganese, mg , 0.48,
+64920,Copper, mg , 0.48,
+64920,Zinc, mg , 3.6,
+64920,Iron, mg , 4.3,
+64920,Selenium, mcg , 17,
+64920,Chromium, mcg , 48,
+64920,Molybdenum, mcg , 23,
+66905,Calcium, mg , 20,<2
+66905,Iron, mg , 1.4,8
+66905,Potassium, mg , 40,0
+66905,Phosphorus :,,,4
+66905,Iodine :,,,10
+66905,Magnesium :,,,8
+66905,Zinc :,,,15
+66905,Selenium :,,,15
+66905,Copper :,,,20
+66905,Manganese :,,,8
+66905,Chromium :,,,50
+66905,Molybdenum :,,,15
+66884,Calcium, mg , 200,15
+66884,Iron, mg , 3.5,20
+66884,Potassium, mg (mEq) , 380,8
+66884,Phosphorus :,,,20
+66884,Iodine :,,,20
+66884,Magnesium :,,,15
+66884,Zinc :,,,20
+66884,Copper :,,,45
+66884,Manganese :,,,45
+66887,Calcium, mg , 200,15
+66887,Iron, mg , 2,10
+66887,Potassium, mg , 370,8
+66887,Phosphorus :,,,20
+66887,Iodine :,,,20
+66887,Magnesium :,,,15
+66887,Zinc :,,,20
+66887,Copper :,,,45
+66887,Manganese :,,,45
+66903,Calcium, mg , 100,8
+66903,Iron, mg , 1.4,8
+66903,Potassium, mg , 30,0
+66903,Phosphorus :,,,8
+66903,Iodine :,,,10
+66903,Magnesium :,,,8
+66903,Zinc :,,,15
+66903,Selenium :,,,15
+66903,Copper :,,,20
+66903,Manganese :,,,8
+66903,Chromium :,,,50
+66903,Molybdenum :,,,15
+67272,Calcium, mg , 630,50
+67272,Potassium, mg , 190,4
+67272,Phosphorus :,,,25
+67272,Iodine :,,,30
+67272,Molybdenum :,,,40
+67272,Zinc :,,,50
+67272,Selenium :,,,35
+67272,Chloride :,,,8
+67272,Manganese :,,,20
+67272,Chromium :,,,150
+67257,Calcium, mg , 630,50
+67257,Potassium, mg , 190,4
+67257,Phosphorus :,,,35
+67257,Iodine :,,,30
+67257,Zinc :,,,50
+67257,Selenium :,,,35
+67257,Manganese :,,,20
+67257,Chromium :,,,150
+67257,Molybdenum :,,,40
+67257,Chloride :,,,8
+67247,Calcium, mg , 400,30
+67247,Iron, mg , 6,35
+67247,Potassium, mg , 370,8
+67247,Phosphorus :,,,20
+67247,Iodine :,,,25
+67247,Magnesium :,,,8
+67247,Zinc :,,,35
+67247,Selenium :,,,50
+67247,Copper :,,,35
+67247,Manganese :,,,25
+67247,Chromium :,,,40
+67247,Molybdenum :,,,70
+67254,Calcium, mg , 710,55
+67254,Potassium, mg , 420,8
+67254,Phosphorus :,,,25
+67254,Iodine :,,,25
+67254,Molybdenum :,,,35
+67254,Zinc :,,,10
+67254,Selenium :,,,25
+67254,Chloride :,,,8
+67254,Manganese :,,,15
+67254,Chromium :,,,100
+67500,Calcium, mg , 195,15
+67500,Iron, mg , 2,10
+67500,Potassium, mg , 40,0
+67500,Phosphorus :,,,15
+67500,Zinc :,,,30
+67500,Selenium :,,,30
+67500,Chromium :,,,80
+67500,Molybdenum :,,,30
+67495,Calcium, mg , 195,15
+67495,Iron, mg , 2,10
+67495,Potassium, mg , 0,0
+67495,Phosphorus :,,,15
+67495,Zinc :,,,30
+67495,Selenium :,,,30
+67495,Chromium :,,,80
+67495,Molybdenum :,,,30
+67510,Calcium, mg , 195,15
+67510,Iron, mg , 2,10
+67510,Potassium, mg , 40,0
+67510,Phosphorus :,,,15
+67510,Zinc :,,,30
+67510,Selenium :,,,30
+67510,Chromium :,,,80
+67510,Molybdenum :,,,30
+67500p12,Calcium, mg , 195,15
+67500p12,Iron, mg , 2,10
+67500p12,Potassium, mg , 40,0
+67500p12,Phosphorus :,,,15
+67500p12,Zinc :,,,30
+67500p12,Selenium :,,,30
+67500p12,Chromium :,,,80
+67500p12,Molybdenum :,,,30
+67510p12,Calcium, mg , 195,15
+67510p12,Iron, mg , 2,10
+67510p12,Potassium, mg , 40,0
+67510p12,Phosphorus :,,,15
+67510p12,Zinc :,,,30
+67510p12,Selenium :,,,30
+67510p12,Chromium :,,,80
+67510p12,Molybdenum :,,,30
+67495p12,Calcium, mg , 195,15
+67495p12,Iron, mg , 2,10
+67495p12,Potassium, mg , 0,0
+67495p12,Phosphorus :,,,15
+67495p12,Zinc :,,,30
+67495p12,Selenium :,,,30
+67495p12,Chromium :,,,80
+67495p12,Molybdenum :,,,30

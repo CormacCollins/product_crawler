@@ -1,16 +1,15 @@
-from Source.abbott_crawler import AbbottStore_crawler
-from Source.ncare_crawler import Ncare_crawler
+from Source.Abbott.abbott_crawler import AbbottStore_crawler
+from Source.Ncare.ncare_crawler import Ncare_crawler
 
-from Source.link_loader_abbots import Link_loader_abbotts
-from Source.link_loader_ncare import Link_loader_ncare
+from Source.Abbott.link_loader_abbots import Link_loader_abbotts
+from Source.Ncare.link_loader_ncare import Link_loader_ncare
 
 import Source.write_customer_data_to_csv as writer
 import sys
 from pathlib import Path   
 import time
 import os
-import path
-
+import Source.helper_functions as helper_functions
 
 import Source.task_threader as task_threader  
 
@@ -26,7 +25,6 @@ def give_instructions(command_types, stores_list):
 def run_scrapper(stores_list, command_types, link_loader, crawler, command, store, file_path, file_uri, M_THREADING):
 
     #TODO: Have writer create new abbotts_data csv file to write new info to (instead of having to delete it before a re-run)
-
     if command == 'scrape_stored':  
         #remove old scrape data
         #if os.path.exists(file_path + store + '_scrape_data.csv'):
@@ -54,10 +52,10 @@ def run_scrapper(stores_list, command_types, link_loader, crawler, command, stor
 
         print('Crawl time: {}'.format(end - start))
         write_path = file_path + store + '_scrape_data.csv'
-        if path.exists(write_path):
+        if os.path.exists(write_path):
             os.remove(write_path) 
         for info in info_list:            
-            writer.write(write_path)
+            writer.write(info, write_path)
 
 
         #write to csv seperately to avoid multiplae thread access    
@@ -91,51 +89,26 @@ def run_scrapper(stores_list, command_types, link_loader, crawler, command, stor
 
         print('Crawl time: {}'.format(end - start))  
         write_path = file_path + store + '_scrape_data.csv'
-        if path.exists(write_path):
+        if os.path.exists(write_path):
             os.remove(write_path)
         for info in info_list:            
-            writer.write(info, file_path + store + '_scrape_data.csv')
+            writer.write(info, write_path)
 
+    #currently using for test not writing
     elif 'single_url' in command:
 
         l = command.split('\\')[1]       
         print("Getting product from url {}".format(l))
         info = crawler.get_product_info(l, store_name=store, path=file_path)
 
-        writer.write(info, file_path + store + '_scrape_data.csv')
-        
+        #writer.write(info, file_path + store + '_scrape_data.csv')
+        helper_functions.print_dictionary_in_rows(info)
     else:
         give_instructions(command_types, stores_list)
     
-    return
-
-
-def ryan_main(stores_list, command_types, crawler):
-
-    '''
-    store = #'Nutricia'
-
-    #create sub folder for data files if it doesn't exist
-    Path('Data/' + store).mkdir(parents=True, exist_ok=True)
-
-    #for reading saved links list
-    file_path = 'Data/' + store + '/'
-    file_uri = file_path + store + '_product_links.csv'
-    
-    #Get links - pass true if you want to requery the product urls
-    l_loader = #Link_loader_ncare(file_uri)
-    links = #l_loader.get_product_links_abbotstore(stores_list[store], False)
-    
-    #get each ind prod info and write to db        
-    for l in links:
-        print("Getting product from url {}".format(l))
-        info = #crawler.get_product_info(l)
-        writer.write(info, file_path + store + '_scrape_data.csv')
-        '''
 
 
 if __name__ == "__main__":
-
 
     # ------------------ Get args --------------------------------------
 

@@ -2,7 +2,11 @@
 # threading code
 import multiprocessing
 import threading
-
+'''
+Allows for threading of crawl activities between available cores
+Should accept any 'Crawler' type. 
+This does not show big speed up effects for crawlers that write considerably to csv.
+'''
 
 thr_count = multiprocessing.cpu_count()
 
@@ -25,7 +29,6 @@ class Crawl_thread(threading.Thread):
 
 
 def thread_tasks(links, info_list, crawler, batch_count, store, file_path):
-
     print('Running batch {}'.format(batch_count))
     # run multiple threds at once in line with the number of cores on machine
     for i in range(0, thr_count):

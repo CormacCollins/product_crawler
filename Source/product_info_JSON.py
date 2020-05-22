@@ -1,4 +1,7 @@
-'''All crawlers to use the same columns to make merging data easier'''
+'''
+WARNING: Changing these will require changes throughout each crawler
+All crawlers to use the same columns to make merging data easier
+'''
 
 
 PRODUCT_INFORMATION = {'url':'',

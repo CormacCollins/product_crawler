@@ -1,14 +1,17 @@
-,Unnamed: 0,Amount per serving,% Daily Value*
-0,Vitamin A :,,40
-1,Vitamin C :,,35
-2,Vitamin D :,,50
-3,Vitamin E :,,50
-4,Vitamin K :,,30
-5,Thiamin :,,30
-6,Riboflavin :,,35
-7,Niacin :,,25
-8,Vitamin B6 :,,25
-9,Folate :,,20
-10,Vitamin B12 :,,35
-11,Biotin :,,25
-12,Pantothenic Acid :,,30
+Unnamed: 0,Amount per serving,% Daily Value*
+"Vitamin A, mcg RAE : 450",450.0,
+"Beta-Carotene, mcg : 500",500.0,
+"Vitamin D, mcg : 5",5.0,
+"Vitamin E, mg : 8",8.0,
+"Vitamin K, mcg : 24",24.0,
+"Vitamin C, mg : 23",23.0,
+"Folate, mcg DFE : 142",142.0,
+"Folic Acid, mcg : 85",85.0,
+"Thiamin (Vitamin B1), mg : 0.48",0.48,
+"Riboflavin (Vitamin B2), mg : 0.65",0.65,
+"Vitamin B6, mg : 0.68",0.68,
+"Vitamin B12, mcg : 0.72",0.72,
+"Niacin, mg NE : 6.4",6.4,
+"Choline, mg : 82.5",82.5,
+"Biotin, mcg : 11",11.0,
+"Pantothenic Acid, mg : 2.7",2.7,
