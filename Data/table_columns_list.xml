@@ -2,8 +2,6 @@
 <table_columns>
     <!-- Main fact table for schema -->
 
-    <!-- NOTE NEED TO MAKE THE DIMENSION TABLES HAVE ID's-->
-
     <products_table>
         <col_name>item_id</col_name>
         <col_name>name</col_name> 

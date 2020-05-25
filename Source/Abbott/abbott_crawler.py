@@ -105,7 +105,7 @@ class AbbottStore_crawler(crawler_interface):
             #it_type = item_attr.find(class_="type")
             it = item_attr.text
             #type_num = item_attr.find(class_= "value").text
-            PRODUCT_INFORMATION['item_id'] = it.replace('SKU#:', '').lstrip()
+            PRODUCT_INFORMATION['item_id'] = store_name + it.replace('SKU#:', '').lstrip()
         except:
             print("Could not add item_type category")
 
@@ -147,21 +147,29 @@ class AbbottStore_crawler(crawler_interface):
         # All nutritional facts togethar, i.e. ingredients, allergin info...
         try:
             nutritionalinfo = soup.find_all(class_ = 'pdp-tab__nutri-info-text')
+            
+            titles = soup.find_all(class_ = 'pdp-tab__nutri-info-title')
             #[print(i) for i in nutritionalinfo]
             n = len(nutritionalinfo)
             #ingredients
-            try:    
-                PRODUCT_INFORMATION['ingredients'] = nutritionalinfo[0].text.lstrip()
+            index = 0
+            try:  
+                if "Ingredients" in titles[index].text:   
+                    PRODUCT_INFORMATION['ingredients'] = nutritionalinfo[index].text.lstrip()
+                    index += 1
             except:
                 print('Could not add ingredients')
 
             try:    
-                PRODUCT_INFORMATION['allergin_info'] = nutritionalinfo[1].text.lstrip()
+                if "Allergen" in titles[index].text:  
+                    PRODUCT_INFORMATION['allergin_info'] = nutritionalinfo[index].text.lstrip()
+                    index += 1
             except:
                 print('Could not add allergin_info')
 
             try:    
-                PRODUCT_INFORMATION['serving_size_1'] = nutritionalinfo[3].text.lstrip()
+                if "Serving Size:" in nutritionalinfo[index].text.lstrip():
+                    PRODUCT_INFORMATION['serving_size_1'] = nutritionalinfo[index].text.lstrip()
             except:
                 print('Could not add serving_size_1')
 
@@ -182,7 +190,7 @@ class AbbottStore_crawler(crawler_interface):
         # there can be a special case where there are 2 nutrient datas - relative to 2 types of serving size
 
         unique_id = PRODUCT_INFORMATION['item_id'].strip()
-        print(unique_id)        
+        #print(unique_id)        
         #Get up to 2 times nutrient table data
         try:
             tables = soup.find_all(class_ = 'pdp-tab__nutri-info-table')
@@ -220,13 +228,6 @@ class AbbottStore_crawler(crawler_interface):
             #Get up to 2 times vitamin table data
 
         
-        
-        #for k,v in PRODUCT_INFORMATION.items():
-         #   print('{}:{}'.format(k,v))
-
-        
-
-        #print(PRODUCT_INFORMATION['name'])
         return PRODUCT_INFORMATION
 
 

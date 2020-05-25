@@ -70,6 +70,8 @@ def run_scrapper(stores_list, command_types, link_loader, crawler, command, stor
         #Get links - pass true if you want to requery the product urls
         links = l_loader.get_product_links(stores_list[store], True)
 
+        start = time.time()
+
         #get each ind prod info and write to db 
         info_list = list()  
         count = 0

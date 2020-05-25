@@ -132,8 +132,9 @@ class Link_loader_abbotts:
                 DO_QUERY = False 
             except page.status_code == 429:
                 #too many reuqests
-                print('Too many requests error')
-                sleep(10.0)
+                retry_after_time = int(page.headers["Retry-After"])
+                print('Too many requests error. Retrying after {} seconds'.format(retry_after_time))
+                sleep(retry_after_time)
                 retries -= 1
                 if retries < 1:
                     DO_QUERY = False

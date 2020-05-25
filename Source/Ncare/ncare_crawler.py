@@ -5,6 +5,7 @@ import string
 from Source.crawler_interface import crawler_interface
 import sys
 import Source.product_info_JSON
+import Source.helper_functions as helper_functions
 
 #pandas helper stuff
 from IPython.display import display_html
