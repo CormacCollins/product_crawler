@@ -1,6 +1,3 @@
-* Currently less data in Abbott scrape due to site changes and still adapting the link loader
-
-
 ### General usage of crawler
  Call function  main.py by passing 2 arguments: 
  * A store name: eg. Abbott  
