@@ -56,11 +56,11 @@ class Ncare_crawler(crawler_interface):
             print("Could not add name category")
 
         # get product size
-        try:
-            size = soup.find(class_ = 'product-size')
-            PRODUCT_INFORMATION['Sizes'] = size.text.strip('\n').lstrip()
-        except:
-            print("Could not add Sizes category")
+        #try:
+        #    size = soup.find(class_ = 'product-size')
+        #    PRODUCT_INFORMATION['Sizes'] = size.text.strip('\n').lstrip()
+        #except:
+        #    print("Could not add Sizes category")
 
         # get product features
         try:
@@ -99,13 +99,18 @@ class Ncare_crawler(crawler_interface):
                     product_codes.append(values[i].text)
 
             #keeping potential to related product code and flavours and units
-            for i in range(0, len(product_codes)):
-                product_codes[i] = product_codes[i] + ':' + flavours[i] + '|' + units[i]
+            #for i in range(0, len(product_codes)):
+            #    product_codes[i] = product_codes[i] + ':' + flavours[i] + '|' + units[i]
 
             #these names might not look quite matching, but these are the best matching fields from the last crawl fields
-            PRODUCT_INFORMATION['Flavours'] = list(set(flavours))
-            PRODUCT_INFORMATION['Sizes'] = list(set(units))
-            PRODUCT_INFORMATION['item_type'] = product_codes
+            PRODUCT_INFORMATION['Flavours'] = ', '.join(list(set(flavours)))
+            PRODUCT_INFORMATION['item_type'] = ', '.join(list(set(units)))
+            #avoiding errorr where this table has no id's
+            try:
+                PRODUCT_INFORMATION['item_id'] = product_codes[0].replace('CASE', '') 
+            except:
+                print('No item id available')
+
         except:
             print('Could not get product-info: Flavours, Unit of Measure, Product Code')
 
@@ -125,14 +130,21 @@ class Ncare_crawler(crawler_interface):
         except:
             print("Could not add usage category")
 
+
+        #setup for writing unique csv file names
+        prod_id = ''
+        if PRODUCT_INFORMATION['item_id']:
+            prod_id = PRODUCT_INFORMATION['item_id']
+
+
         # get nutri_info
         try:
             soup2 = BeautifulSoup(page.content,'lxml')
             nutri_info = soup2.find(id = 'nutritional-information')
             body = nutri_info.find('table')
-        
+         
             # Now writing tables straight to csv fr ease
-            file_name = str(prod_name) + "_nutrition_table.csv"
+            file_name = store_name + prod_id + "_nutrition_table.csv"
             print(file_name)
             self.write_html_table_to_csv(body, csv_name= '{}{}{}'.format(path, 
             'Nutrition_tables/', file_name))
@@ -164,14 +176,14 @@ class Ncare_crawler(crawler_interface):
             table_dict = helper_functions.get_tables_by_th_name(table_dict, children_tbody)
             
             for k,v in table_dict.items():
-                file_name = str(prod_name) + '_' + k.lower() + '_table.csv'
+                file_name = store_name + prod_id + '_' + k.lower() + '_table.csv'
 
                 self.write_html_table_to_csv(v, csv_name= '{}{}{}'.format(path, 
                     'Clinical_indications_tables/', file_name))
 
             
         except:
-            print("Could not fetch one of {}".format(''.join(table_dict.keys())))
+            print("Could not fetch one of {}".format(', '.join(table_dict.keys())))
 
             #helper_functions.print_dictionary_in_rows(PRODUCT_INFORMATION)
         
