@@ -194,7 +194,9 @@ class Link_loader_abbotts:
             product_links.append((item.get_attribute('href')))
         print('Obtained {} links'.format(len(menu_list)))
         
-        driver.close()    
+        #Close browser
+        driver.stop_client()
+        driver.close()
         driver.quit()
 
     def get_more_brands(self, prod_page_link, product_links):
