@@ -4,22 +4,22 @@ item_id,flavour
 12114005,Neutral
 12317536,Chocolate
 12317536, Vanilla
-12371262,Cappuccino
+12371262,Assorted
+12371262, Chocolate
 12371262, Berry Crunch
 12371262, Cranberry
-12371262, Assorted
-12371262, Chocolate
-12335966,Mixed Vegetables
-12335966, Tomato
+12371262, Cappuccino
+12335966,Tomato
 12335966, Chicken
-12316505,Banana
-12316505, Vanilla
-12316505, Caramel
-12316505, Coffee
-12316505, Assorted
+12335966, Mixed Vegetables
+12316505,Assorted
 12316505, Chai
-12316505, Strawberry
 12316505, Chocolate
+12316505, Caramel
+12316505, Vanilla
+12316505, Coffee
+12316505, Strawberry
+12316505, Banana
 12147940,Neutral
 12244614,Vanilla
 12358289,Vanilla
@@ -30,10 +30,10 @@ item_id,flavour
 12338428,Chocolate
 12338428, Vanilla
 12353317,Vanilla
-12339185,Neutral
+12339185,Chocolate
 12339185, Coffee
+12339185, Neutral
 12339185, Vanilla
-12339185, Chocolate
 12358952,Neutral
 12371413,Neutral
 12370717,Neutral

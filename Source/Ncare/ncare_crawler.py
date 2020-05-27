@@ -107,7 +107,8 @@ class Ncare_crawler(crawler_interface):
             PRODUCT_INFORMATION['item_type'] = ', '.join(list(set(units)))
             #avoiding errorr where this table has no id's
             try:
-                PRODUCT_INFORMATION['item_id'] = product_codes[0].replace('CASE', '') 
+                it = product_codes[0].replace('CASE', '')
+                PRODUCT_INFORMATION['item_id'] = it.replace('EACH', '') 
             except:
                 print('No item id available')
 
@@ -176,7 +177,7 @@ class Ncare_crawler(crawler_interface):
             table_dict = helper_functions.get_tables_by_th_name(table_dict, children_tbody)
             
             for k,v in table_dict.items():
-                file_name = store_name + prod_id + '_' + k.lower() + '_table.csv'
+                file_name = store_name + prod_id + '_' + 'clinical_indications_table.csv'
 
                 self.write_html_table_to_csv(v, csv_name= '{}{}{}'.format(path, 
                     'Clinical_indications_tables/', file_name))

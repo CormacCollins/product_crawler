@@ -71,12 +71,22 @@ delete_tables(DATABASE_PATH)
 table_info = get_table_names_with_attributes_dict()
 
 #eventually when all tables are good from the workbook end - won't need this approved list, just get them all
-approved_tables = {'products_table':r"..\..\Data\Abbott\Abbot_products.csv", 
+approved_tables = {
+    #eventually have all naming the same
+                #ABBOTT
+                'products_table':r"..\..\Data\Abbott\Abbot_products.csv", 
                 'flavour_table':r"..\..\Data\Abbott\flavours.csv",
                 'ingredient_table':r"..\..\Data\Abbott\ingredients.csv",
                 'vitamins_table':r"..\..\Data\Abbott\Abbot_vitamins_full.csv",
                 'minerals_table':r"..\..\Data\Abbott\Abbot_mineral_full.csv",
-                'nutrition_table':r"..\..\Data\Abbott\Abbot_nutrients_full.csv"}
+                'nutrition_table':r"..\..\Data\Abbott\Abbot_nutrients_full.csv",
+                # NCARE
+                'products_table':r"..\..\Data\Ncare\products_table.csv", 
+                'flavour_table':r"..\..\Data\Ncare\flavour_table.csv",
+                'ingredient_table':r"..\..\Data\Ncare\ingredient_table.csv",
+                'nutrition_table':r"..\..\Data\Ncare\nutrition_table.csv",
+                'clinical_indications_table':r"..\..\Data\Ncare\clinical_indications_table.csv" 
+                 }
 
 for tbl, csv_path in approved_tables.items():
     columns = table_info[tbl]
@@ -85,6 +95,8 @@ for tbl, csv_path in approved_tables.items():
     data = pd.read_csv(r'' + csv_path)
 
     #get the exact columns as per table column list data schema
+    print(tbl)
+    print(columns)
     data = data[columns]
 
     #Abbot_main_ingredients = pd.read_csv(r"..\Data\Abbott\Abott_products_ingredients.csv")

@@ -21,7 +21,7 @@
 
     <flavour_table>
         <col_name>item_id</col_name>
-        <col_name>Flavours</col_name> 
+        <col_name>flavour</col_name> 
     </flavour_table>
 
     <ingredient_table>

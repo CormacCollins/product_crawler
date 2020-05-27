@@ -11,7 +11,7 @@ class reader():
         '''
         self.tree = ET.parse(path)
         self.root = self.tree.getroot()
-        self.table_names = self.__get_root_children_names()
+        self.table_names = self.get_root_children_names(self.root)
 
     
     def get_text_contents_children(self, parent_name):
@@ -24,9 +24,18 @@ class reader():
                 children_text.append(col.text)
         return children_text
 
+    def get_children_names_of_parent(self, parent_name):
+        '''
+        Get the names of children tags of the parent
+        '''
+        children_names = list()
+        for tbl in self.root.findall(parent_name):
+            for col in tbl:
+                children_names.append(col.tag)
+        return children_names
 
-    def __get_root_children_names(self):
+    def get_root_children_names(self, root):
         tables = list()
-        for tbl in self.root:
+        for tbl in root:
             tables.append(tbl.tag)
         return tables
